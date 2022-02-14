@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6976B14327B16A1500F08FEA /* TaletripApp.swift */; };
-		6976B14627B16A1500F08FEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6976B14527B16A1500F08FEA /* ContentView.swift */; };
 		6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6976B14727B16A1600F08FEA /* Assets.xcassets */; };
 		6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6976B14A27B16A1600F08FEA /* Preview Assets.xcassets */; };
+		69CD2EC227B664EC00EACAC3 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 69CD2EC127B664EC00EACAC3 /* SwiftSpeech */; };
+		69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EC427BA65A700EACAC3 /* HomeView.swift */; };
+		69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6976B14027B16A1500F08FEA /* Taletrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taletrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6976B14327B16A1500F08FEA /* TaletripApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaletripApp.swift; sourceTree = "<group>"; };
-		6976B14527B16A1500F08FEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6976B14727B16A1600F08FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6976B14A27B16A1600F08FEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		69CD2EC327B6650A00EACAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		69CD2EC427BA65A700EACAC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CD2EC227B664EC00EACAC3 /* SwiftSpeech in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +40,7 @@
 		6976B13727B16A1500F08FEA = {
 			isa = PBXGroup;
 			children = (
+				69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */,
 				6976B14227B16A1500F08FEA /* Taletrip */,
 				6976B14127B16A1500F08FEA /* Products */,
 			);
@@ -51,10 +57,11 @@
 		6976B14227B16A1500F08FEA /* Taletrip */ = {
 			isa = PBXGroup;
 			children = (
+				69CD2EC327B6650A00EACAC3 /* Info.plist */,
 				6976B14327B16A1500F08FEA /* TaletripApp.swift */,
-				6976B14527B16A1500F08FEA /* ContentView.swift */,
 				6976B14727B16A1600F08FEA /* Assets.xcassets */,
 				6976B14927B16A1600F08FEA /* Preview Content */,
+				69CD2EC427BA65A700EACAC3 /* HomeView.swift */,
 			);
 			path = Taletrip;
 			sourceTree = "<group>";
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = Taletrip;
+			packageProductDependencies = (
+				69CD2EC127B664EC00EACAC3 /* SwiftSpeech */,
+			);
 			productName = Taletrip;
 			productReference = 6976B14027B16A1500F08FEA /* Taletrip.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 6976B13727B16A1500F08FEA;
+			packageReferences = (
+				69CD2EC027B664EC00EACAC3 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
+			);
 			productRefGroup = 6976B14127B16A1500F08FEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6976B14627B16A1500F08FEA /* ContentView.swift in Sources */,
+				69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */,
 				6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */,
+				69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +286,9 @@
 				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Taletrip/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the mircrophone to record audio for speech recognition.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to convert your speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +318,9 @@
 				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Taletrip/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the mircrophone to record audio for speech recognition.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to convert your speech into text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		69CD2EC027B664EC00EACAC3 /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cay-Zhang/SwiftSpeech";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		69CD2EC127B664EC00EACAC3 /* SwiftSpeech */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69CD2EC027B664EC00EACAC3 /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
+			productName = SwiftSpeech;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6976B13827B16A1500F08FEA /* Project object */;
 }
