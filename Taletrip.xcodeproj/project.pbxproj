@@ -13,6 +13,7 @@
 		69CD2EC227B664EC00EACAC3 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 69CD2EC127B664EC00EACAC3 /* SwiftSpeech */; };
 		69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EC427BA65A700EACAC3 /* HomeView.swift */; };
 		69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */; };
+		69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		69CD2EC327B6650A00EACAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		69CD2EC427BA65A700EACAC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				6976B14727B16A1600F08FEA /* Assets.xcassets */,
 				6976B14927B16A1600F08FEA /* Preview Content */,
 				69CD2EC427BA65A700EACAC3 /* HomeView.swift */,
+				69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */,
 			);
 			path = Taletrip;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */,
 				6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */,
+				69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */,
 				69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
