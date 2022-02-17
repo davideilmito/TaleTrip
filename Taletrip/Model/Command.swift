@@ -10,8 +10,12 @@ import Foundation
 
 struct Command {
     
-    
-    let description : String
-    
+    let sfSymbol : String
+    let name: String
+    let goToIndexOfTheStory: Int
+    var hasToBeDisplayed: Bool
+    var isFaded: Bool     
     
 }
+
+
