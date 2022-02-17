@@ -25,12 +25,13 @@ struct Story {
     var isPaused: Bool
     var completed: Bool
     let chapters:[Chapter]
-    var commands: [Command]  //WE DON'T NEED THIS HERE
+    var commands: [Command]  //WE DON'T NEED THIS
     var length : Longevity
     //  VoiceRecognition stuff
     
-    let storedAnswers : [(session: SwiftSpeech.Session, text: String)]   //Array that contains all the responses that the user give
+//Question: does the voice recognition stuff stay in the story or outside? maybe in the ModelView?
     
+    let storedAnswers : [(session: SwiftSpeech.Session, text: String)]   //Array that contains all the responses that the user give
     var currentAnswer : (session: SwiftSpeech.Session, text: String)  {
     
         return storedAnswers[storedAnswers.count - 1]
