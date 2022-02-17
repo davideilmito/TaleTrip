@@ -27,7 +27,7 @@ struct Story {
 
     //  VoiceRecognition stuff
     
-    let currentAnswers : [(session: SwiftSpeech.Session, text: String)]
+    @State var currentAnswers : [(session: SwiftSpeech.Session, text: String)] = []
    
     var currentAnswer : (session: SwiftSpeech.Session, text: String)  {
         
