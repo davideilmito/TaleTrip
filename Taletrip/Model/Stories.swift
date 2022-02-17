@@ -27,13 +27,16 @@ struct Story {
 
     //  VoiceRecognition stuff
     
-    let currentAnswers : [(session: SwiftSpeech.Session, text: String)]
-   
+    let storedAnswers : [(session: SwiftSpeech.Session, text: String)]   //Array that contains all the responses that the user gave
+    
     var currentAnswer : (session: SwiftSpeech.Session, text: String)  {
-        
-        return currentAnswers[currentAnswers.count - 1]
-        
+    
+        return storedAnswers[storedAnswers.count - 1]
+    
     }
+    
+    
+    
     
 }
 
