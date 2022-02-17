@@ -17,6 +17,7 @@
 		D9DAE69627BE6526008EB88D /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69527BE6525008EB88D /* Stories.swift */; };
 		D9DAE69927BE68D0008EB88D /* StoryChunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69827BE68D0008EB88D /* StoryChunks.swift */; };
 		D9DAE69B27BE6D2C008EB88D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69A27BE6D2C008EB88D /* Command.swift */; };
+		D9DAE69E27BE90E5008EB88D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69D27BE90E5008EB88D /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D9DAE69527BE6525008EB88D /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		D9DAE69827BE68D0008EB88D /* StoryChunks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryChunks.swift; sourceTree = "<group>"; };
 		D9DAE69A27BE6D2C008EB88D /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		D9DAE69D27BE90E5008EB88D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				6976B14927B16A1600F08FEA /* Preview Content */,
 				69CD2EC427BA65A700EACAC3 /* HomeView.swift */,
 				69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */,
+				D9DAE6A027BE9C70008EB88D /* Fonts */,
 				D9DAE69727BE6531008EB88D /* Model */,
 			);
 			path = Taletrip;
@@ -90,8 +93,24 @@
 				D9DAE69527BE6525008EB88D /* Stories.swift */,
 				D9DAE69A27BE6D2C008EB88D /* Command.swift */,
 				D9DAE69827BE68D0008EB88D /* StoryChunks.swift */,
+				D9DAE69F27BE90F0008EB88D /* ViewModel */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D9DAE69F27BE90F0008EB88D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAE69D27BE90E5008EB88D /* Card.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D9DAE6A027BE9C70008EB88D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +196,7 @@
 				D9DAE69B27BE6D2C008EB88D /* Command.swift in Sources */,
 				D9DAE69627BE6526008EB88D /* Stories.swift in Sources */,
 				69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */,
+				D9DAE69E27BE90E5008EB88D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
