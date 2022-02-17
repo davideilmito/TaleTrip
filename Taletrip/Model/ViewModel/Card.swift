@@ -25,18 +25,18 @@ struct Card: View {
             VStack(alignment:.leading) {
                 Spacer()
         Text(storyType)
-                .padding(.leading)
-                
+                    .padding(.leading)
+                .foregroundColor(.white)
                 .font(.system(size: 17, weight:.semibold, design: .serif))
-                .foregroundColor(.black)
         Text(storyTitle)
                     .padding(.leading)
-                  
+                    .foregroundColor(.white)
                     .font(.system(size: 37, weight:.semibold, design: .serif))
-                    .foregroundColor(.black)
+                    
             }
+            .frame (width: 260, height: 400)
             
-            
+                Spacer()
         }
            
         }
@@ -45,7 +45,7 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card(nameOfTheImage: "the\n detectivesdayoff", storyType: "MYSTERY", storyTitle: """
+        Card(nameOfTheImage: "thedetectivesdayoff", storyType: "MYSTERY", storyTitle: """
              The
              Detectives
              Day Off
