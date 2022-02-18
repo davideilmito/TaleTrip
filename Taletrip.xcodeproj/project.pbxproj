@@ -17,10 +17,10 @@
 		D780098527BEB6BF00885612 /* PossibleVocalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */; };
 		D780098727BEBDA300885612 /* InteractiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098627BEBDA200885612 /* InteractiveButton.swift */; };
 		D780098927BECEF800885612 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098827BECEF800885612 /* Chapter.swift */; };
+		D78009F427BF9CC200885612 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009F327BF9CC200885612 /* Color.swift */; };
 		D9DAE69627BE6526008EB88D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69527BE6525008EB88D /* Story.swift */; };
 		D9DAE69927BE68D0008EB88D /* StoryChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69827BE68D0008EB88D /* StoryChunk.swift */; };
 		D9DAE69B27BE6D2C008EB88D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69A27BE6D2C008EB88D /* Command.swift */; };
-		D9DAE69E27BE90E5008EB88D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69D27BE90E5008EB88D /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,10 @@
 		D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleVocalResponse.swift; sourceTree = "<group>"; };
 		D780098627BEBDA200885612 /* InteractiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveButton.swift; sourceTree = "<group>"; };
 		D780098827BECEF800885612 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		D78009F327BF9CC200885612 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D9DAE69527BE6525008EB88D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		D9DAE69827BE68D0008EB88D /* StoryChunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryChunk.swift; sourceTree = "<group>"; };
 		D9DAE69A27BE6D2C008EB88D /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		D9DAE69D27BE90E5008EB88D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,8 @@
 				6976B14927B16A1600F08FEA /* Preview Content */,
 				69CD2EC427BA65A700EACAC3 /* HomeView.swift */,
 				69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */,
-				D9DAE6A027BE9C70008EB88D /* Fonts */,
+				D9DAE69F27BE90F0008EB88D /* Views */,
+				D78009F227BF9ABD00885612 /* Extensions */,
 				D9DAE69727BE6531008EB88D /* Model */,
 			);
 			path = Taletrip;
@@ -93,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D78009F227BF9ABD00885612 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D78009F327BF9CC200885612 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D9DAE69727BE6531008EB88D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,24 +111,15 @@
 				D780098627BEBDA200885612 /* InteractiveButton.swift */,
 				D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */,
 				D9DAE69A27BE6D2C008EB88D /* Command.swift */,
-				D9DAE69F27BE90F0008EB88D /* ViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D9DAE69F27BE90F0008EB88D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D9DAE69D27BE90E5008EB88D /* Card.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D9DAE6A027BE9C70008EB88D /* Fonts */ = {
+		D9DAE69F27BE90F0008EB88D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Fonts;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +201,7 @@
 				D780098927BECEF800885612 /* Chapter.swift in Sources */,
 				D780098727BEBDA300885612 /* InteractiveButton.swift in Sources */,
 				69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */,
+				D78009F427BF9CC200885612 /* Color.swift in Sources */,
 				D9DAE69927BE68D0008EB88D /* StoryChunk.swift in Sources */,
 				D780098527BEB6BF00885612 /* PossibleVocalResponse.swift in Sources */,
 				6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */,
@@ -208,7 +209,6 @@
 				D9DAE69B27BE6D2C008EB88D /* Command.swift in Sources */,
 				D9DAE69627BE6526008EB88D /* Story.swift in Sources */,
 				69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */,
-				D9DAE69E27BE90E5008EB88D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V7K684LPH;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
@@ -355,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willMerlet.Taletrip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davideBiancardi.Taletrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -371,7 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V7K684LPH;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
@@ -387,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willMerlet.Taletrip;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davideBiancardi.Taletrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

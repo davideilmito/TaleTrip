@@ -56,6 +56,20 @@ enum Longevity: String {
     case brief = "Brief"
     case medium = "Medium"
     case long = "Long"
+    
+    
+    
+    func associatedColor() -> Color{
+        
+        switch Self {
+            
+        case .brief : return 
+            
+            
+        }
+        
+        
+    }
        
 }
 

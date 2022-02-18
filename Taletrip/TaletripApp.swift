@@ -11,7 +11,10 @@ import SwiftUI
 struct TaletripApp: App {
     var body: some Scene {
         WindowGroup {
-            ComeView()
+            //ComeView()
+            
+            CardView(nameOfTheImage: "story", storyType: "MYSTERY", storyTitle: "The\nMortal\nPortrait"
+            )
         }
     }
 }
