@@ -14,6 +14,7 @@ extension Color {
     static let suyashBlue = Color("suyashBlue")
     static let briefGreen = Color("briefGreen")
     static let mediumOrange = Color("mediumOrange")
+    static let longRed = Color("longRed")
     static let backgroundBeige = Color("backgroundBeige")
     
     

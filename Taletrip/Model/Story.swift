@@ -61,10 +61,13 @@ enum Longevity: String {
     
     func associatedColor() -> Color{
         
-        switch Self {
+        switch self {
             
-        case .brief : return 
+        case .brief : return  Color.briefGreen
             
+        case .medium : return Color.mediumOrange
+          
+        case .long : return Color.longRed
             
         }
         
