@@ -16,6 +16,7 @@ extension Color {
     static let mediumOrange = Color("mediumOrange")
     static let longRed = Color("longRed")
     static let backgroundBeige = Color("backgroundBeige")
+    static let cardGenreColor = Color("cardGenreColor")
     
     
 }

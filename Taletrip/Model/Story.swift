@@ -27,17 +27,18 @@ struct Story {
     let chapters:[Chapter]
     var commands: [Command]  //WE DON'T NEED THIS
     var length : Longevity
+    
     //  VoiceRecognition stuff
     
-//Question: does the voice recognition stuff stay in the story or outside? maybe in the ModelView?
+    //Question: does the voice recognition stuff stay in the story or outside? maybe in the ModelView?
     
     let storedAnswers : [(session: SwiftSpeech.Session, text: String)]   //Array that contains all the responses that the user give
     var currentAnswer : (session: SwiftSpeech.Session, text: String)  {
-    
+        
         return storedAnswers[storedAnswers.count - 1]
-    
+        
     }
-       
+    
 }
 
 
@@ -48,7 +49,7 @@ enum Genre: String {
     case crime = "Crime"
     case adventure = "Adventure"
     case mystery = "Mystery"
-       
+    
 }
 
 enum Longevity: String {
@@ -58,7 +59,6 @@ enum Longevity: String {
     case long = "Long"
     
     
-    
     func associatedColor() -> Color{
         
         switch self {
@@ -66,13 +66,13 @@ enum Longevity: String {
         case .brief : return  Color.briefGreen
             
         case .medium : return Color.mediumOrange
-          
+            
         case .long : return Color.longRed
             
         }
         
         
     }
-       
+    
 }
 
