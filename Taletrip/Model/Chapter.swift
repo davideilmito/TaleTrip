@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Chapter {
+struct Chapter : Decodable {
     
     let name: String
     let storyChunks: [StoryChunk]

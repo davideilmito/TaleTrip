@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct PossibleVocalResponse{
+struct PossibleVocalResponse : Decodable{
     
     let description: String
     let descriptionToBeDisplayed : String

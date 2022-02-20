@@ -15,6 +15,8 @@
 		69CD2EE427BACD9600EACAC3 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */; };
 		69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */; };
 		D772A1B227BFBBD9006EB1CE /* LargeCardLongevity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */; };
+		D772A1B727C1A81D006EB1CE /* Themortalportrait.json in Resources */ = {isa = PBXBuildFile; fileRef = D772A1B627C1A81D006EB1CE /* Themortalportrait.json */; };
+		D772A25127C2C627006EB1CE /* StoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A25027C2C627006EB1CE /* StoriesStore.swift */; };
 		D780098527BEB6BF00885612 /* PossibleVocalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */; };
 		D780098727BEBDA300885612 /* InteractiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098627BEBDA200885612 /* InteractiveButton.swift */; };
 		D780098927BECEF800885612 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098827BECEF800885612 /* Chapter.swift */; };
@@ -36,6 +38,8 @@
 		69CD2EE327BACD9600EACAC3 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
 		D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardLongevity.swift; sourceTree = "<group>"; };
+		D772A1B627C1A81D006EB1CE /* Themortalportrait.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themortalportrait.json; sourceTree = "<group>"; };
+		D772A25027C2C627006EB1CE /* StoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesStore.swift; sourceTree = "<group>"; };
 		D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleVocalResponse.swift; sourceTree = "<group>"; };
 		D780098627BEBDA200885612 /* InteractiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveButton.swift; sourceTree = "<group>"; };
 		D780098827BECEF800885612 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -86,7 +90,9 @@
 				69CD2EC427BA65A700EACAC3 /* HomeView.swift */,
 				69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */,
 				D9DAE69F27BE90F0008EB88D /* Views */,
+				D772A25227C2C62E006EB1CE /* ViewModel */,
 				D78009F227BF9ABD00885612 /* Extensions */,
+				D772A1B327C1A723006EB1CE /* Resources */,
 				D9DAE69727BE6531008EB88D /* Model */,
 			);
 			path = Taletrip;
@@ -98,6 +104,22 @@
 				6976B14A27B16A1600F08FEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D772A1B327C1A723006EB1CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D772A1B627C1A81D006EB1CE /* Themortalportrait.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D772A25227C2C62E006EB1CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D772A25027C2C627006EB1CE /* StoriesStore.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D78009F227BF9ABD00885612 /* Extensions */ = {
@@ -205,6 +227,7 @@
 			files = (
 				6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */,
 				6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */,
+				D772A1B727C1A81D006EB1CE /* Themortalportrait.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D772A25127C2C627006EB1CE /* StoriesStore.swift in Sources */,
 				D78009FB27BFB2C600885612 /* LargeCardText.swift in Sources */,
 				D780098927BECEF800885612 /* Chapter.swift in Sources */,
 				D780098727BEBDA300885612 /* InteractiveButton.swift in Sources */,
@@ -368,6 +392,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -400,6 +425,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -27,12 +27,12 @@ struct LargeCard: View {
                 .scaledToFit()
                 .shadow(color: .black .opacity(0.3), radius: 20, x: 0, y: 10)
             VStack(alignment: .leading,spacing: 208){
-            
-            LargeCardLongevity(longevity: length)
+                
+                LargeCardLongevity(longevity: length)
                     .padding(.top,5)
-      
-            LargeCardText(storyTitle: storyTitle, storyType: storyType).padding(.bottom,5)
-                    
+                
+                LargeCardText(storyTitle: storyTitle, storyType: storyType).padding(.bottom,5)
+                
                 
             }.frame(maxWidth: 310, maxHeight: 400,alignment: .bottomLeading)
                 .padding(.leading,15)
@@ -45,6 +45,6 @@ struct LargeCard: View {
 
 struct LargeCard_Previews: PreviewProvider {
     static var previews: some View {
-        LargeCard(storyImageName: "story", storyType: .mystery, length: .medium, storyTitle: "the\ndetective's\nday off")
+        LargeCard(storyImageName: "themortalportrait", storyType: .mystery, length: .medium, storyTitle: "the\ndetective's\nday off")
     }
 }

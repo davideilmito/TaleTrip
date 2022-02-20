@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InteractiveButton {
+struct InteractiveButton : Decodable {
     
     let name: String
     let listOfCommands : [Command]

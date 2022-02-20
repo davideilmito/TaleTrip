@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct TaletripApp: App {
+    
+    @StateObject var ViewModel = StoriesStore()
+    
     var body: some Scene {
+         
         WindowGroup {
 //            ComeView()
    
-            LargeCard(storyImageName: "story", storyType: .mystery, length: .medium, storyTitle: "the\ndetective's\nday off")
+            LargeCard(storyImageName: "themortalportrait", storyType: .mystery, length: .medium, storyTitle: "the\ndetective's\nday off")
+        
         }
     }
 }

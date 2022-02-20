@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StoryChunk {
+struct StoryChunk : Decodable {
     
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]

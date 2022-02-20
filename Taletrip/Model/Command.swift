@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Command {
+struct Command : Decodable{
     
     let sfSymbol : String
     let name: String

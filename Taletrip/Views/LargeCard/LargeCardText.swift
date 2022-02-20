@@ -14,11 +14,12 @@ struct LargeCardText: View {
     
     var body: some View {
         
-        VStack(alignment: .leading,spacing: 0){
+        VStack(alignment: .leading,spacing: -5){
             
             Text(storyType.rawValue.uppercased())
                 .font(.system(size: 17, weight: .regular, design: .serif))
                 .foregroundColor(Color.cardGenreColor)
+                
             
             Text(storyTitle.uppercased())
                 .font(.system(size: 37, weight: .bold, design: .serif))
@@ -35,6 +36,6 @@ struct LargeCardText: View {
 struct LargeCardText_Previews: PreviewProvider {
     static var previews: some View {
         LargeCardText(storyTitle: "the\ndetective's\nday off", storyType: .mystery).preferredColorScheme(.dark)
-       
+        
     }
 }
