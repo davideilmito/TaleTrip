@@ -1,0 +1,19 @@
+{
+        "imageName": "title4",
+        "genre": "Adventure",
+        "title": "The\nSuyash\nStory",
+        "author": "Suyash Lunawat",
+        "completionRate": 0,
+        "inventory": [],
+        "isStoryOfTheMonth": false,
+        "isStoryYouWillLike": false,
+        "hints": [
+        ],
+        "isPaused": false,
+        "completed": false,
+        "length": "Medium",
+        "path" : []
+
+
+}
+

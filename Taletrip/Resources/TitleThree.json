@@ -1,0 +1,18 @@
+{
+        "imageName": "title3",
+        "genre": "Adventure",
+        "title": "The\nTitle\nThree",
+        "author": "Anonymous",
+        "completionRate": 0,
+        "inventory": [],
+        "isStoryOfTheMonth": false,
+        "isStoryYouWillLike": false,
+        "hints": [
+        ],
+        "isPaused": false,
+        "completed": false,
+        "length": "Medium",
+        "path" : []
+
+
+}
