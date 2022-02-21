@@ -92,7 +92,7 @@
 				D9DAE69F27BE90F0008EB88D /* Views */,
 				D772A25227C2C62E006EB1CE /* ViewModel */,
 				D78009F227BF9ABD00885612 /* Extensions */,
-				D772A1B327C1A723006EB1CE /* Resources */,
+				D772A1B327C1A723006EB1CE /* Resource */,
 				D9DAE69727BE6531008EB88D /* Model */,
 			);
 			path = Taletrip;
@@ -106,12 +106,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D772A1B327C1A723006EB1CE /* Resources */ = {
+		D772A1B327C1A723006EB1CE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				D772A1B627C1A81D006EB1CE /* Themortalportrait.json */,
 			);
-			path = Resources;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		D772A25227C2C62E006EB1CE /* ViewModel */ = {
