@@ -25,6 +25,7 @@ struct Story : Decodable{
     var completed: Bool
     let chapters:[Chapter]
     var length : Longevity
+    var path: [String]
     
     //  VoiceRecognition stuff
     
@@ -43,48 +44,7 @@ struct Story : Decodable{
 //    }
     
     
-    enum CodingKeys : String,CodingKey {
-        
-        case imageName
-        case genre
-        case title
-        case author
-        case completionRate
-        case inventory
-        case isStoryOfTheMonth
-        case isStoryYouWillLike
-        case hints
-        case isPaused
-        case completed
-        case chapters
-        case length
-        
-        
-    }
-    
-    
-    init(from decoder: Decoder) throws {
-        
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        
-        
-        self.imageName = try values.decode(String.self, forKey: .imageName)
-        self.genre = try values.decode(Genre.self, forKey: .genre)
-        self.title = try values.decode(String.self, forKey: .title)
-        self.author = try values.decode(String.self, forKey: .author)
-       
-        self.completionRate = try values.decode(Int.self, forKey: .completionRate)
-        self.inventory = try values.decode([String].self, forKey: .inventory)
-        self.isStoryOfTheMonth = try values.decode(Bool.self, forKey: .isStoryOfTheMonth)
-        self.isStoryYouWillLike = try values.decode(Bool.self, forKey: .isStoryYouWillLike)
-        self.hints = try values.decode([String].self, forKey: .hints)
-        self.isPaused = try values.decode(Bool.self, forKey: .isPaused)
-        self.completed = try values.decode(Bool.self, forKey: .completed)
-        self.chapters = try values.decode([Chapter].self, forKey: .chapters)
-        self.length = try values.decode(Longevity.self, forKey: .length)
-//        self.storedAnswers = []
-        
-    }
+   
     
     
 }

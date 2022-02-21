@@ -13,11 +13,35 @@ import AVFoundation
 
 class StoriesStore : ObservableObject{
     
+    @Published var  stories : [Story]
     
-    @Published var  stories : Story = load("Themortalportrait.json")
+    @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     
     
-   private  static  func load<T: Decodable>(_ filename: String) -> T {
+    var currentAnswer : (session: SwiftSpeech.Session, text: String)?  {
+        
+        if !storedAnswers.isEmpty{
+            
+            return storedAnswers[storedAnswers.count - 1]
+        }
+        
+        return nil
+        
+    }
+    
+    
+    
+    
+    init(){
+        
+        self.stories = []
+        
+        self.stories.append(load("Themortalportrait.json"))
+        
+    }
+    
+    
+    private func load<T: Decodable>(_ filename: String) -> T {
         let data: Data
         guard
             let file = Bundle.main.url(forResource: filename, withExtension: nil)

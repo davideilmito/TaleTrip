@@ -17,7 +17,7 @@ struct TaletripApp: App {
         WindowGroup {
 //            ComeView()
    
-            LargeCard(storyImageName: "themortalportrait", storyType: .mystery, length: .medium, storyTitle: "the\ndetective's\nday off")
+            LargeCard(storyImageName: ViewModel.stories[0].imageName, storyType: ViewModel.stories[0].genre, length: ViewModel.stories[0].length, storyTitle: ViewModel.stories[0].title)
         
         }
     }
