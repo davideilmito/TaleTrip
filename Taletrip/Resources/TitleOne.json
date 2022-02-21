@@ -1,0 +1,18 @@
+{
+        "imageName": "title1",
+        "genre": "Mystery",
+        "title": "The\nDavide\nStory",
+        "author": "Davide Biancardi",
+        "completionRate": 0,
+        "inventory": [],
+        "isStoryOfTheMonth": false,
+        "isStoryYouWillLike": false,
+        "hints": [
+        ],
+        "isPaused": false,
+        "completed": false,
+        "length": "Medium",
+        "path" : []
+
+
+}
