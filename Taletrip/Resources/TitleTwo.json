@@ -1,0 +1,18 @@
+{
+        "imageName": "title2",
+        "genre": "Adventure",
+        "title": "The\nWilly\nStory",
+        "author": "Willy Merlet",
+        "completionRate": 0,
+        "inventory": [],
+        "isStoryOfTheMonth": false,
+        "isStoryYouWillLike": false,
+        "hints": [
+        ],
+        "isPaused": false,
+        "completed": false,
+        "length": "Medium",
+        "path" : []
+
+
+}

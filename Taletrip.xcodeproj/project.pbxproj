@@ -24,6 +24,11 @@
 		D78009F827BFB12E00885612 /* LargeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009F727BFB12E00885612 /* LargeCard.swift */; };
 		D78009FB27BFB2C600885612 /* LargeCardText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009FA27BFB2C600885612 /* LargeCardText.swift */; };
 		D943B33127C3FB9B00871C0B /* TitleOne.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33027C3FB9B00871C0B /* TitleOne.json */; };
+		D943B33727C3FBF100871C0B /* TitleFive.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33227C3FBF100871C0B /* TitleFive.json */; };
+		D943B33827C3FBF100871C0B /* TitleTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33327C3FBF100871C0B /* TitleTwo.json */; };
+		D943B33927C3FBF100871C0B /* TitleThree.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33427C3FBF100871C0B /* TitleThree.json */; };
+		D943B33A27C3FBF100871C0B /* TitleFour.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33527C3FBF100871C0B /* TitleFour.json */; };
+		D943B33B27C3FBF100871C0B /* TitleSix.json in Resources */ = {isa = PBXBuildFile; fileRef = D943B33627C3FBF100871C0B /* TitleSix.json */; };
 		D9DAE69627BE6526008EB88D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69527BE6525008EB88D /* Story.swift */; };
 		D9DAE69927BE68D0008EB88D /* StoryChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69827BE68D0008EB88D /* StoryChunk.swift */; };
 		D9DAE69B27BE6D2C008EB88D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DAE69A27BE6D2C008EB88D /* Command.swift */; };
@@ -48,6 +53,11 @@
 		D78009F727BFB12E00885612 /* LargeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCard.swift; sourceTree = "<group>"; };
 		D78009FA27BFB2C600885612 /* LargeCardText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardText.swift; sourceTree = "<group>"; };
 		D943B33027C3FB9B00871C0B /* TitleOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleOne.json; sourceTree = "<group>"; };
+		D943B33227C3FBF100871C0B /* TitleFive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleFive.json; sourceTree = "<group>"; };
+		D943B33327C3FBF100871C0B /* TitleTwo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleTwo.json; sourceTree = "<group>"; };
+		D943B33427C3FBF100871C0B /* TitleThree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleThree.json; sourceTree = "<group>"; };
+		D943B33527C3FBF100871C0B /* TitleFour.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleFour.json; sourceTree = "<group>"; };
+		D943B33627C3FBF100871C0B /* TitleSix.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TitleSix.json; sourceTree = "<group>"; };
 		D9DAE69527BE6525008EB88D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		D9DAE69827BE68D0008EB88D /* StoryChunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryChunk.swift; sourceTree = "<group>"; };
 		D9DAE69A27BE6D2C008EB88D /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -112,6 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				D772A1B627C1A81D006EB1CE /* Themortalportrait.json */,
+				D943B33227C3FBF100871C0B /* TitleFive.json */,
+				D943B33527C3FBF100871C0B /* TitleFour.json */,
+				D943B33627C3FBF100871C0B /* TitleSix.json */,
+				D943B33427C3FBF100871C0B /* TitleThree.json */,
+				D943B33327C3FBF100871C0B /* TitleTwo.json */,
 				D943B33027C3FB9B00871C0B /* TitleOne.json */,
 			);
 			path = Resources;
@@ -230,7 +245,12 @@
 			files = (
 				6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */,
 				D943B33127C3FB9B00871C0B /* TitleOne.json in Resources */,
+				D943B33927C3FBF100871C0B /* TitleThree.json in Resources */,
 				6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */,
+				D943B33A27C3FBF100871C0B /* TitleFour.json in Resources */,
+				D943B33827C3FBF100871C0B /* TitleTwo.json in Resources */,
+				D943B33B27C3FBF100871C0B /* TitleSix.json in Resources */,
+				D943B33727C3FBF100871C0B /* TitleFive.json in Resources */,
 				D772A1B727C1A81D006EB1CE /* Themortalportrait.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
