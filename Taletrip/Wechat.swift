@@ -117,6 +117,8 @@ struct ComeView: View {
     let answer2 = "Use map"
     let john = "Inspect John"
     let john1 = "Talk to John"
+    let men = "Inspect men playing pool table"
+    let men1 = "Talk to men"
     
     func correct(ind: Int) {
         print("answer matched")
@@ -165,7 +167,7 @@ struct ComeView: View {
                         VStack(alignment: .trailing){
                         Text(pair.text)
                             .fontWeight(.bold)
-                            .foregroundColor(Color("bluish"))
+                            .foregroundColor(Color("suyashBlue"))
                             .autocapitalization(.none)
                             .frame(width: 150)
                             .padding(.trailing, 35)
@@ -232,6 +234,23 @@ struct ComeView: View {
                                      .lineSpacing(6)
                                      .onAppear(perform: {
                                          correct(ind: 6)
+                                     })
+                             }
+                             if(pair.text == men) {
+                                 Text(desc[9])
+                                     .padding()
+                                     .padding(.trailing, 15)
+                                     .lineSpacing(6)
+                                     .onAppear(perform: {
+                                         correct(ind: 9)
+                                     })
+                             } else if (pair.text == men1) {
+                                 Text(desc[10])
+                                     .padding()
+                                     .padding(.trailing, 15)
+                                     .lineSpacing(6)
+                                     .onAppear(perform: {
+                                         correct(ind: 10)
                                      })
                              }
                             }

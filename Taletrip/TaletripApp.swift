@@ -15,7 +15,7 @@ struct TaletripApp: App {
     var body: some Scene {
          
         WindowGroup {
-//            ComeView()
+           ComeView()
    
             LargeCard(storyImageName: ViewModel.stories[0].imageName, storyType: ViewModel.stories[0].genre, length: ViewModel.stories[0].length, storyTitle: ViewModel.stories[0].title)
         
