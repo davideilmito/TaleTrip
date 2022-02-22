@@ -59,9 +59,7 @@ class StoriesStore : ObservableObject{
         self.stories.append(load("TitleTwo.json"))
         self.stories.append(load("TitleThree.json"))
         self.stories.append(load("TitleOne.json"))
-    
     }
-    
     
     private func load<T: Decodable>(_ filename: String) -> T {
         let data: Data
