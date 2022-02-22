@@ -17,6 +17,7 @@ extension Color {
     static let longRed = Color("longRed")
     static let backgroundBeige = Color("backgroundBeige")
     static let cardGenreColor = Color("cardGenreColor")
+    static let smallCardTitleColor = Color("smallCardTitleColor")
     
     
 }

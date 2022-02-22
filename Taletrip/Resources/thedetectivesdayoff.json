@@ -1,0 +1,354 @@
+{
+    "imageName": "thedetectivesdayoff",
+    "genre": "Mystery",
+    "title": "The\nDetective's\nDay Off",
+    "author": "Eugenio Raja",
+    "completionRate": 0,
+    "inventory": [],
+    "isStoryOfTheMonth": true,
+    "isStoryYouWillLike": false,
+    "hints": [
+        "Hint ",
+        "Hint ",
+        "Hint "
+    ],
+    "isPaused": false,
+    "completed": false,
+    "chapters": [{
+        "name": "Prelude",
+        "storyChunks": [{
+            "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar, but living in such a small city, there are very few options when it comes to it.\n\nLet’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to “Puzzles” or “Beergarden”?\n",
+            "possibleVocalResponses": [{
+                    "description": "Beergarden",
+                    "descriptionToBeDisplayed": "You decided to go to beer garden",
+                    "arrayIndexOfTheStory": [1]
+                },
+                {
+                    "description": "Puzzles",
+                    "descriptionToBeDisplayed": "You decided to go to Puzzles",
+                    "arrayIndexOfTheStory": [1]
+                }
+            ],
+            "interactiveButtons": [{
+                "name": " Beergarden",
+                "listOfCommands": [{
+                    "sfSymbol": "figure.walk",
+                    "name": "Go to",
+                    "arrayIndexOfTheStory": [1],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+            }]
+        },
+     {
+        "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar, but fortunately you have a map. Try using it.",
+        "possibleVocalResponses": [{
+                "description": "Use map",
+                "descriptionToBeDisplayed": "You opened the map",
+                "arrayIndexOfTheStory": [2]
+            }
+        ],
+        "interactiveButtons": [{
+            "name": "map",
+            "listOfCommands": [{
+                "sfSymbol": "figure.walk",
+                "name": "Use",
+                "arrayIndexOfTheStory": [2],
+                "hasToBeDisplayed": true,
+                "isFaded": false
+            }],
+            "isTappable": true
+        }]
+       }
+      ] 
+    },
+    {
+        "name": "Chapter ",
+        "storyChunks": [{
+            "description": "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar. The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two players. At the back of the room there are the toilets.",
+            "possibleVocalResponses": [{
+                    "description": "Inspect bar",
+                    "descriptionToBeDisplayed": "You look around the room.",
+                    "arrayIndexOfTheStory": [22]
+                },
+                {
+                   "description": "Inspect ladies",
+                   "descriptionToBeDisplayed": "You observe the ladies.",
+                   "arrayIndexOfTheStory": [16]
+                },
+                {
+                    "description": "Talk to ladies",
+                   "descriptionToBeDisplayed": "You speak with the ladies",
+                   "arrayIndexOfTheStory": [17]
+                },
+                {
+                    "description": "Inspect bartender",
+                   "descriptionToBeDisplayed": "You look attentively at the bartender.",
+                   "arrayIndexOfTheStory": [5]
+                },
+                {
+                    "description": "Talk to bartender",
+                   "descriptionToBeDisplayed": "You talk with the bartender.",
+                   "arrayIndexOfTheStory": [6]
+                },
+                {
+                    "description": "Talk to John",
+                    "descriptionToBeDisplayed": "You talk with John",
+                    "arrayIndexOfTheStory": [7]
+                },
+                {
+                    "description": "Inspect John",
+                    "descriptionToBeDisplayed": "You look attentively at John",
+                    "arrayIndexOfTheStory": [5]
+                },
+                {
+                    "description": "Inspect jukebox",
+                    "descriptionToBeDisplayed": "You try using the jukebox.",
+                    "arrayIndexOfTheStory": [56]
+                },
+                {
+                    "description": "Talk to guy by the jukebox",
+                    "descriptionToBeDisplayed": "You chat with the guy by the jukebox.",
+                    "arrayIndexOfTheStory": [14]
+                },
+                {
+                    "description": "Inspect guy by the jukebox",
+                    "descriptionToBeDisplayed": "You watch closely the guy by the jukebox",
+                    "arrayIndexOfTheStory": [13]
+                },
+                {
+                    "description": "Inspect players",
+                    "descriptionToBeDisplayed": "You study the two men playing pool table.",
+                    "arrayIndexOfTheStory": [9]
+                }, 
+                {
+                    "description": "Talk to players",
+                    "descriptionToBeDisplayed": "You try talking with the two men playing pool table.",
+                    "arrayIndexOfTheStory": [10]
+                }, 
+                { 
+                    "description": "Go to toilet",
+                    "descriptionToBeDisplayed": "You get to the toilets’ doors.",
+                    "arrayIndexOfTheStory": [20]
+                },
+                {
+                    "description": "Use drink",
+                    "descriptionToBeDisplayed": "You put the drink close to your mouth.",
+                    "arrayIndexOfTheStory": [23]
+                },
+                {
+                    "description": "Inspect medal",
+                    "descriptionToBeDisplayed": "You analyze the medal.",
+                    "arrayIndexOfTheStory": [21]
+                },
+                {
+                    "description": "Use cigarette on guy by the jukebox",
+                    "descriptionToBeDisplayed": "You give away the cigarette",
+                    "arrayIndexOfTheStory": [15]
+                }
+                
+            ],
+            "interactiveButtons": [{
+                "name": "bar",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [22],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+               },
+               {
+                "name": "ladies",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [16],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                },
+               {
+                "sfSymbol": "person.wave.",
+                "name": "Talk to",
+                "arrayIndexOfTheStory": [17],
+                "hasToBeDisplayed": true,
+                "isFaded": false
+               }],
+                "isTappable": true  
+               },
+               {
+                "name": "bartender",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [5],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                },
+                {
+                    "sfSymbol": "person.wave.",
+                    "name": "Talk to",
+                    "arrayIndexOfTheStory": [6],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+            }, 
+            {
+                "name": "jukebox",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [56],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+            },
+            {
+                "name": "guy",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [13],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                },
+               {
+                "sfSymbol": "person.wave.",
+                "name": "Talk to",
+                "arrayIndexOfTheStory": [14],
+                "hasToBeDisplayed": true,
+                "isFaded": false
+              }],
+                "isTappable": true
+            },
+            {
+                "name": "players",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [9],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }, 
+                {
+                    "sfSymbol": "person.wave.",
+                    "name": "Talk to",
+                    "arrayIndexOfTheStory": [10],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+            },
+            {
+                "name": "toilet",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [20],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true
+            },
+            {
+                "name": "drink",
+                "listOfCommands": [{
+                    "sfSymbol": "figure.walk",
+                    "name": "Use",
+                    "arrayIndexOfTheStory": [23],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true 
+            },
+            {
+                "name": "medal",
+                "listOfCommands": [{
+                    "sfSymbol": "magnifyingglass",
+                    "name": "Inspect",
+                    "arrayIndexOfTheStory": [21],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true 
+            },
+            {
+                "name": "cigarette",
+                "listOfCommands": [{
+                    "sfSymbol": "figure.walk",
+                    "name": "Use",
+                    "arrayIndexOfTheStory": [15],
+                    "hasToBeDisplayed": true,
+                    "isFaded": false
+                }],
+                "isTappable": true 
+            }
+        ]
+        }
+      ] 
+    }
+],
+    "length": "Brief",
+    "path" : [],
+    "allStoryChunksDescription":["You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar, but living in such a small city, there are very few options when it comes to it.\n\nLet’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to “Puzzles” or “Beer Garden”?\n",
+        "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar, but fortunately you have a map. Try using it.\n",
+        "You get lost a couple of times, but in the end you arrive at your destination.\n",
+        "With the help of the map you easily arrive at your destination.\n",
+        "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar.\nThe whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two men playing. At the back of the room there are the toilets.\n",
+        "An intimidating man in his fifties, maybe even more. He is really tall and has broad shoulders. Behind him, on the wall, there is a medal of courage that he got during an obscure war in the east. He has a limp, probably a memory of his life as a soldier.\n",
+        "New faces, huh? We don’t see new faces here often. My name is John, do you want a drink? Since you are new, the first one is on the house.\n",
+        "Have you seen the medal? Yeah, I was a soldier. Actually I am a soldier, in a way I feel like I never left the war… But let’s not talk about that now, shall we?\n",
+        "Hope you like the drink.\n",
+        "Two rough men are playing a game of pool table. They are not talking a lot, so it’s difficult to say if they know each other at all. The game is about even.\n",
+        "We are having a serious game, if you want to talk, offer us a drink first at least.\n",
+        "Ah, now we are talking… We are CJ and Rob. You seem cool, maybe later we could play together. We like to have really big stakes in our games, so maybe don’t interrupt us again.\n",
+        "You don’t think it’s a good idea.\n",
+        "A dude of eastern origin in his thirties. He is so nervous that he is trembling. Even his fixation with the jukebox tells you that something is wrong with him.\n",
+        "I really hate this stupid song. Why won’t this jukebox just shut up? I have an important meeting here in a bit. Yeah, I know, I know… It’s not the best place to do so, but I needed an inconspicuous place. Ok, I’m talking too much maybe… I need a cigarette.\n",
+        "Oh… that’s nice of you. I’m Omar. As I said I have to meet someone really important in a bit, this will help me relax. Thanks.\n",
+        "Two ladies are talking while sipping really colorful drinks with straws. They seem to be old friends catching up on their lives. They are talking friendly, but they are somewhat stiff.\n",
+        "Hi, we are Veronica and Jessica. Maybe join us for a smoke after we finish this conversation.\n",
+        "A cigarette for that guy over there? Yeah sure, if he’d help him calm down, he’s been really annoying… and I wanted to quit smoking anyway…\n",
+        "I finished my cigarettes, sorry!\n",
+        "You don’t feel the need right now. Maybe later?\n",
+        "The Medal of Courage was awarded to John Carter almost 30 years ago. It’s still shiny, he probably cleans it with pride regularly.\n",
+        "The pavement is a gray moquette mostly clean, the big exception is a big wine stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.\n",
+        "You don’t feel like drinking right now.\n",
+        "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette. In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.\n\nThe atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox. After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette. If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.\n\nSadly, the atmosphere didn’t really change, with CJ, Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police. They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.\n",
+        "Various policemen and policewomen are in front of the entrance. Amongst them there is the police chief: Belker. You have already collaborated with him in the past, he is a good and honest man, even if sometimes can seem a bit cold due to his job.\n",
+        "I see you are here too. Well, of course we are going to investigate what happened, but help us, will you? I have information that you don’t have, but you were here during the murder, so also the opposite is true.\n",
+        "I’m sorry, I know that you want to help but I can’t share with you that information.\n",
+        "I’m sorry but I really can’t reveal much. Let’s just say that I am here because I had to meet Omar for work related stuff.\n",
+        "Yeah, I get it. If we want your help, you’ll need the whole picture. Omar had a meeting with me, he was a key witness in an incoming case.\n",
+        "Are you ready to tell me who the culprit is?\nYes or no?\n",
+        "The intimidating man is the only one that has access to lots of knives. He was also the one that switched up the lights again and he seemed to despise Omar. But you need more than this to incriminate him.\n",
+        "Yeah, I know… I made a real scene, but  I was busy fixing the lights. Someone has killed that man, and that someone is not me.\n",
+        "Ok… You got me. I stabbed Omar, but I didn’t kill him. I was a soldier, ok? You have to believe me, when I got to him in the dark he was already dead. His face was on his table and he didn’t move or started screaming even when I stabbed him. If I wanted to kill him fast, I wouldn’t have stabbed him behind his neck. Inspect the corpse, I assure you I am right.\n",
+        "I told you. I don’t know what killed him, but I believe that it was something that doesn’t leave many traces. Maybe try to inspect the corpse again?\n",
+        "That could be it, yeah. Inspect the whole bar, toilets included for more clues.\n",
+        "The two rough men are completely silent. They don’t seem bothered by the police, even if they are suspects, it wouldn’t be surprising if this wasn’t the first time that they got in a situation like this. They also despised Omar, but a ruined game is not enough to incriminate them.\n",
+        "You wanna know about the stakes of our game? We like to bet a lot of money, but if you think that we killed Omar, you are completely wrong. We didn’t lose any money, we just have to restart the game, it’s not a problem to kill for. We would investigate John, all that war stuff was weird. Inspect the counter and see if there are any missing knives.\n",
+        "Inspect the counter and see if there are any missing knives.\n",
+        "The ladies are still talking with each other, even if they are just whispering right now. They also seemed off from the start in a way. Even if they are the least suspicious, their behavior is still very weird.\n",
+        "That was pretty crazy, right? We believe that Omar was killed by the men playing at the pool table. Have you seen how they shouted and pushed him before?\n",
+        "That is not ours, but it seems like it contained perfume maybe? We don’t know who left it there, sorry.\n",
+        "Ah, yeah. That was ours, it used to contain perfume, we left it in the toilet accidentally.\n",
+        "So you actually caught us. Congratulations. Yeah, the cigarette we gave him was poisoned. Omar was a key witness in the trial of Jessica’s son. We had to kill him to save her son from prison, not that matters now. Now go, tell the police.\n",
+        "The knife wound is deep and on the back of the neck. If someone wanted to kill this man this way is really slow and painful, but you didn’t hear any screams and the body was already dead when the lights were switched on… So what happened here?\n",
+        "Focusing on everything but the knife, you see some strange traces on his mouth. Did someone poison him? He didn’t drink anything though.\n",
+        "Do you want to go to the gentlemen’s or ladies’ toilet?\n",
+        "The toilet is not as clean as you’d hoped. Aside from that, there is nothing strange here.\n",
+        "You find a small empty glass vial in one of the stalls.\n",
+        "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?\n",
+        "There is one knife missing. They are really similar to the one that is in Omar’s neck.\n",
+        "The pavement is a gray moquette mostly clean, the big exception is a big blood stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.\n",
+        "So, who do you think is the murderer? “John”, “CJ and Rob” or “Veronica and Jessica”?\n",
+        "The police take John away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.\nDo you want to try again?\n",
+        "The police take CJ and Rob away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.\nDo you want to try again?\n",
+        "The police take Veronica and Jessica away. They killed Omar in a futile attempt of saving Jessica’s son from prison, since Omar was the only witness that could incriminate him. The police department is grateful again for your help, even if it was supposed to be your day off.\n",
+        "The old jukebox is stuck on a loop. The same song is repeating nonstop over and over again."]
+}
