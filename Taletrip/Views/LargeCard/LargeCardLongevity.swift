@@ -20,10 +20,9 @@ struct LargeCardLongevity: View {
                 .foregroundColor(longevity.associatedColor())
                 .frame(width: 82, height: 24)
                 .clipShape(Capsule())
-            Text(longevity.rawValue.uppercased())
+            TextView(title: longevity.rawValue.uppercased(),size: 13,weight: .regular)
                 .foregroundColor(.white)
-                .font(.system(size: 13, weight: .regular, design: .serif))
-            
+                
             
         }
         

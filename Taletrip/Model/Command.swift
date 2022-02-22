@@ -12,7 +12,7 @@ struct Command : Decodable{
     
     let sfSymbol : String
     let name: String
-    let goToIndexOfTheStory: Int
+    let arrayIndexOfTheStory: [Int]
     var hasToBeDisplayed: Bool
     var isFaded: Bool     
     

@@ -12,6 +12,6 @@ struct PossibleVocalResponse : Decodable{
     
     let description: String
     let descriptionToBeDisplayed : String
-    let goToIndexOfTheStory : Int
+    let arrayIndexOfTheStory : [Int]
     
 }

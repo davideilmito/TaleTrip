@@ -23,7 +23,7 @@ struct Story : Decodable{
     var hints: [String]
     var isPaused: Bool
     var completed: Bool
-    let chapters:[Chapter]
+    var chapters:[Chapter] = []
     var length : Longevity
     var path: [String]
     

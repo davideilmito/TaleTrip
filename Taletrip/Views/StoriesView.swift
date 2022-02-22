@@ -27,19 +27,16 @@ struct StoriesView: View {
                     
                 }
                 
-            }.frame(maxWidth:.infinity,alignment: .leading)
-                .padding(.leading,40)
+            
             
                 
                 
                 //             All Adventures
    
                 HorizontalCardsView(stories: storiesStore.adventureStories,title: "Adventure")
-                .frame(maxWidth:.infinity,alignment: .leading)
-                    .padding(.leading,40)
                 
                 
-            VStack(alignment: .leading, spacing: 35){
+                
                 
                 //             Story You will Like
                 if let storyYouWillLike = storiesStore.storyYouWillLike{
@@ -48,7 +45,7 @@ struct StoriesView: View {
                     
                 }
                 
-                
+            
         }.frame(maxWidth:.infinity,alignment: .leading)
             .padding(.leading,40)
             

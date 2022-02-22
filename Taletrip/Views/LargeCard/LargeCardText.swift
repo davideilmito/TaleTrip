@@ -16,15 +16,16 @@ struct LargeCardText: View {
         
         VStack(alignment: .leading,spacing: -5){
             
-            Text(storyType.rawValue.uppercased())
-                .font(.system(size: 17, weight: .regular, design: .serif))
+           
+            TextView(title:storyType.rawValue.uppercased(),size: 17,weight: .regular)
                 .foregroundColor(Color.cardGenreColor)
                 
             
-            Text(storyTitle.uppercased())
-                .font(.system(size: 37, weight: .bold, design: .serif))
+            TextView(title:storyTitle.uppercased(),size: 37,weight: .bold)
                 .foregroundColor(Color.white)
             
+            
+           
             
         }
         

@@ -12,7 +12,8 @@
         "isPaused": false,
         "completed": false,
         "length": "Medium",
-        "path" : []
-
+        "path" : [],
+        "allStoryChunksDescription" : [],
+        "chapters": []
 
 }
