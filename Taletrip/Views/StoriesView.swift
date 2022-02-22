@@ -36,7 +36,7 @@ struct StoriesView: View {
                 
                     
                     
-                    //             All Adventures
+                    //    All Adventures
        
                     HorizontalCardsView(stories: storiesStore.adventureStories,title: "Adventure")
                     

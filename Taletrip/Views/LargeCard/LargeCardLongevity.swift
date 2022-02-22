@@ -32,6 +32,6 @@ struct LargeCardLongevity: View {
 
 struct LargeCardLongevity_Previews: PreviewProvider {
     static var previews: some View {
-        LargeCardLongevity(longevity: .medium)
+        LargeCardLongevity(longevity: .brief)
     }
 }

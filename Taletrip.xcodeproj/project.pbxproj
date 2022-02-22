@@ -22,6 +22,7 @@
 		69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */; };
 		D772A1B227BFBBD9006EB1CE /* LargeCardLongevity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */; };
 		D772A25127C2C627006EB1CE /* StoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A25027C2C627006EB1CE /* StoriesStore.swift */; };
+		D772A27127C4F6D2006EB1CE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A27027C4F6D2006EB1CE /* DescriptionView.swift */; };
 		D780098527BEB6BF00885612 /* PossibleVocalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */; };
 		D780098727BEBDA300885612 /* InteractiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098627BEBDA200885612 /* InteractiveButton.swift */; };
 		D780098927BECEF800885612 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780098827BECEF800885612 /* Chapter.swift */; };
@@ -56,6 +57,7 @@
 		69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
 		D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardLongevity.swift; sourceTree = "<group>"; };
 		D772A25027C2C627006EB1CE /* StoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesStore.swift; sourceTree = "<group>"; };
+		D772A27027C4F6D2006EB1CE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		D780098427BEB6BF00885612 /* PossibleVocalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleVocalResponse.swift; sourceTree = "<group>"; };
 		D780098627BEBDA200885612 /* InteractiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveButton.swift; sourceTree = "<group>"; };
 		D780098827BECEF800885612 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				6978545C27C4DF3500128FC1 /* SmallCard */,
 				D78009F927BFB27800885612 /* LargeCard */,
 				6978544227C4DC1E00128FC1 /* StoriesView.swift */,
+				D772A27027C4F6D2006EB1CE /* DescriptionView.swift */,
 				6978544027C4DC1400128FC1 /* TextView.swift */,
 				6978544627C4DC3400128FC1 /* HorizontalCardsView.swift */,
 				6978544827C4DC5700128FC1 /* HighlightedCardView.swift */,
@@ -300,6 +303,7 @@
 				D780098527BEB6BF00885612 /* PossibleVocalResponse.swift in Sources */,
 				6978544327C4DC1E00128FC1 /* StoriesView.swift in Sources */,
 				6978544927C4DC5700128FC1 /* HighlightedCardView.swift in Sources */,
+				D772A27127C4F6D2006EB1CE /* DescriptionView.swift in Sources */,
 				6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */,
 				69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */,
 				6978544727C4DC3400128FC1 /* HorizontalCardsView.swift in Sources */,

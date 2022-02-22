@@ -26,27 +26,7 @@ struct Story : Decodable{
     var chapters:[Chapter] = []
     var length : Longevity
     var path: [String]
-    
-    //  VoiceRecognition stuff
-    
-    //Question: does the voice recognition stuff stay in the story or outside? maybe in the ModelView?
-    
-//    let storedAnswers : [(session: SwiftSpeech.Session, text: String)]   //Array that contains all the responses that the user give
-//    var currentAnswer : (session: SwiftSpeech.Session, text: String)?  {
-//
-//        if !storedAnswers.isEmpty{
-//
-//            return storedAnswers[storedAnswers.count - 1]
-//        }
-//
-//        return nil
-//
-//    }
-    
-    
-   
-    
-    
+    var description : String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
 }
 
 
@@ -77,5 +57,18 @@ enum Longevity: String ,Codable{
             
         }
     }
+    
+    
+    func associatedTime() -> Int{
+        
+        switch self {
+            
+        case .brief : return  30
+        case .medium : return 60
+        case .long : return 120
+            
+        }
+    }
+
 }
 
