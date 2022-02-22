@@ -14,11 +14,11 @@
 		6978544327C4DC1E00128FC1 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978544227C4DC1E00128FC1 /* StoriesView.swift */; };
 		6978544727C4DC3400128FC1 /* HorizontalCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978544627C4DC3400128FC1 /* HorizontalCardsView.swift */; };
 		6978544927C4DC5700128FC1 /* HighlightedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978544827C4DC5700128FC1 /* HighlightedCardView.swift */; };
-		6978545227C4DC8D00128FC1 /* TitleFive.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978544B27C4DC8D00128FC1 /* TitleFive.json */; };
 		6978545727C4DC8D00128FC1 /* thedetectivesdayoff.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */; };
 		6978545927C4DF2900128FC1 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978545827C4DF2900128FC1 /* SmallCardView.swift */; };
 		6978545B27C4DF2B00128FC1 /* SmallCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978545A27C4DF2B00128FC1 /* SmallCardImage.swift */; };
-		6978545E27C4E9E200128FC1 /* MortalPortrait.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978545D27C4E9E200128FC1 /* MortalPortrait.json */; };
+		6978546027C4EAE100128FC1 /* TitleFive.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978545F27C4EAE100128FC1 /* TitleFive.json */; };
+		6978546227C4EAF900128FC1 /* MortalPortrait.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978546127C4EAF900128FC1 /* MortalPortrait.json */; };
 		69CD2EC227B664EC00EACAC3 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 69CD2EC127B664EC00EACAC3 /* SwiftSpeech */; };
 		69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EC427BA65A700EACAC3 /* HomeView.swift */; };
 		69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */; };
@@ -48,11 +48,11 @@
 		6978544227C4DC1E00128FC1 /* StoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		6978544627C4DC3400128FC1 /* HorizontalCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCardsView.swift; sourceTree = "<group>"; };
 		6978544827C4DC5700128FC1 /* HighlightedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightedCardView.swift; sourceTree = "<group>"; };
-		6978544B27C4DC8D00128FC1 /* TitleFive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TitleFive.json; path = ../../../../Downloads/TitleFive.json; sourceTree = "<group>"; };
 		6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thedetectivesdayoff.json; sourceTree = "<group>"; };
 		6978545827C4DF2900128FC1 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
 		6978545A27C4DF2B00128FC1 /* SmallCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardImage.swift; sourceTree = "<group>"; };
-		6978545D27C4E9E200128FC1 /* MortalPortrait.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MortalPortrait.json; path = ../../../../Downloads/MortalPortrait.json; sourceTree = "<group>"; };
+		6978545F27C4EAE100128FC1 /* TitleFive.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TitleFive.json; path = Taletrip/Resources/TitleFive.json; sourceTree = "<group>"; };
+		6978546127C4EAF900128FC1 /* MortalPortrait.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MortalPortrait.json; sourceTree = "<group>"; };
 		69CD2EC327B6650A00EACAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		69CD2EC427BA65A700EACAC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		6976B13727B16A1500F08FEA = {
 			isa = PBXGroup;
 			children = (
+				6978545F27C4EAE100128FC1 /* TitleFive.json */,
 				6976B14227B16A1500F08FEA /* Taletrip */,
 				6976B14127B16A1500F08FEA /* Products */,
 			);
@@ -139,9 +140,8 @@
 		D772A1B327C1A723006EB1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6978545D27C4E9E200128FC1 /* MortalPortrait.json */,
 				6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */,
-				6978544B27C4DC8D00128FC1 /* TitleFive.json */,
+				6978546127C4EAF900128FC1 /* MortalPortrait.json */,
 				D943B33627C3FBF100871C0B /* TitleSix.json */,
 				D943B33427C3FBF100871C0B /* TitleThree.json */,
 				D943B33327C3FBF100871C0B /* TitleTwo.json */,
@@ -269,11 +269,11 @@
 				6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */,
 				D943B33127C3FB9B00871C0B /* TitleOne.json in Resources */,
 				D943B33927C3FBF100871C0B /* TitleThree.json in Resources */,
-				6978545E27C4E9E200128FC1 /* MortalPortrait.json in Resources */,
+				6978546227C4EAF900128FC1 /* MortalPortrait.json in Resources */,
 				6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */,
+				6978546027C4EAE100128FC1 /* TitleFive.json in Resources */,
 				D943B33827C3FBF100871C0B /* TitleTwo.json in Resources */,
 				D943B33B27C3FBF100871C0B /* TitleSix.json in Resources */,
-				6978545227C4DC8D00128FC1 /* TitleFive.json in Resources */,
 				6978545727C4DC8D00128FC1 /* thedetectivesdayoff.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
