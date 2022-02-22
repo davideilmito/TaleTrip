@@ -13,6 +13,7 @@ struct CapsuleView: View {
     let width: CGFloat
     let height: CGFloat
     let textSize: Int
+    var displayTime : Bool = false
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct CapsuleView: View {
                 .foregroundColor(longevity.associatedColor())
                 .frame(width: width, height: height)
                 .clipShape(Capsule())
-            TextView(title: longevity.rawValue.uppercased(),size: textSize,weight: .regular)
+            TextView(title: displayTime ? longevity.associatedTime().uppercased():longevity.rawValue.uppercased(),size: textSize,weight: .medium)
                 .foregroundColor(.white)
                 
             

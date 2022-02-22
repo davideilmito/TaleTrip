@@ -9,56 +9,71 @@ import SwiftUI
 
 struct StoriesView: View {
     
-    init() {
-        UITableView.appearance().separatorStyle = .singleLine
-       }
-
     @StateObject var storiesStore = StoriesStore()
     
+    
+    @State var showModal : Bool = false
+    
+    init() {
+        
+        UITableView.appearance().separatorStyle = .singleLine
+        
+    }
+    
+    
     var body: some View {
-
+        
         NavigationView{
+            
             ScrollView(showsIndicators: false){
                 
                 VStack(alignment: .leading, spacing: 35){
                     
-                    
-                    //    Story Of the  Month
                     TextView(title: "Stories",size: 37,weight: .bold)
                     
-                    if let storyOfTheMonth = storiesStore.storyOfTheMonth{
-                        
-                        HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
-                        
-                    }
-                    
-                
-                
-                    
-                    
-                    //    All Adventures
-       
-                    HorizontalCardsView(stories: storiesStore.adventureStories,title: "Adventure")
-                    
-                    
-                    
-                    
-                    //             Story You will Like
+                    //   Story You will Like
                     if let storyYouWillLike = storiesStore.storyYouWillLike{
                         
                         HighlightedCardView(storyToBeHighlighted: storyYouWillLike,title: "Story You'll Like")
+                            .onTapGesture {
+                                showModal.toggle()
+                                storiesStore.showStory(of: storyYouWillLike)
+                                
+                            }
                         
                     }
                     
-                
-            }.frame(maxWidth:.infinity,alignment: .leading)
+                    //    All Adventures
+                    
+                    HorizontalCardsView(stories: storiesStore.adventureStories,title: "Adventure",showModal: $showModal)
+                    
+                    //    Story Of the  Month
+                   
+                    if let storyOfTheMonth = storiesStore.storyOfTheMonth{
+                        
+                        HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
+                            .onTapGesture {
+                                showModal.toggle()
+                                storiesStore.showStory(of: storyOfTheMonth)
+                                
+                            }
+                        
+                    }
+                    
+                }.frame(maxWidth:.infinity,alignment: .leading)
                     .padding(.leading,40)
                     .navigationBarHidden(true)
-                   
+                
+            }.fullScreenCover(isPresented: $showModal){
+                
+                
+                DescriptionStoryView(story: storiesStore.tappedStory!,showModal: $showModal)
                 
                 
             }
-        }
+            
+            
+        }.environmentObject(storiesStore)
         
     }
 }
@@ -73,13 +88,13 @@ struct StoriesView_Previews: PreviewProvider {
 struct HiddenNavigationBar: ViewModifier {
     func body(content: Content) -> some View {
         content
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarHidden(true)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
     }
 }
 
 extension View {
     func hiddenNavigationBarStyle() -> some View {
-        modifier( HiddenNavigationBar() )
+        modifier(HiddenNavigationBar())
     }
 }

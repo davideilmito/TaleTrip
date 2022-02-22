@@ -12,16 +12,18 @@ struct TextView: View {
     let title: String
     let size: Int
     let weight : Font.Weight
+    var italic : Bool = false
     
     var body: some View {
-
         
+        if italic {
             Text(title)
                 .font(.system(size: CGFloat(size), weight: weight , design: .serif))
-                
-            
-        
-        
+                .italic()
+        }else{
+            Text(title)
+                .font(.system(size: CGFloat(size), weight: weight , design: .serif))
+        }
         
     }
 }

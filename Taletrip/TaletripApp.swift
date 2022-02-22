@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct TaletripApp: App {
-        
+    
     var body: some Scene {
-         
+        
         WindowGroup {
-           GameView()
+            
+            //GameView()
+            StoriesView()
+            
         }
     }
 }

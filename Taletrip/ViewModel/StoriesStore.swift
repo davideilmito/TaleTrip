@@ -18,22 +18,29 @@ class StoriesStore : ObservableObject{
     @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     
     
+    var tappedStory : Story? {
+        
+        stories.filter { $0.showDetails == true }.first 
+        
+    }
+    
+    
     var storyOfTheMonth : Story? {
         
         stories.filter { $0.isStoryOfTheMonth == true }.first
-            
+        
     }
-  
+    
     var storyYouWillLike : Story? {
         
         stories.filter { $0.isStoryYouWillLike == true }.first
-            
+        
     }
     
     var adventureStories:[Story] {
         
         stories.filter { $0.genre == .adventure && !($0.isStoryYouWillLike || $0.isStoryOfTheMonth) }
-          
+        
         
     }
     
@@ -47,11 +54,11 @@ class StoriesStore : ObservableObject{
         return nil
         
     }
-
+    
     init(){
         
         self.stories = []
-//        ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
+        //        ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
         self.stories.append(load("thedetectivesdayoff.json"))
         self.stories.append(load("MortalPortrait.json"))
         self.stories.append(load("TitleSix.json"))
@@ -84,5 +91,24 @@ class StoriesStore : ObservableObject{
             fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
         }
     }
+    
+    
+    
+    func showStory(of story : Story) {
+        
+        let IndexOfStoryToBeDisplayed = stories.indices.filter {stories[$0].title ==  story.title }.first
+        
+        stories[IndexOfStoryToBeDisplayed!].showDetails = true
+        
+    }
+    
+    func unshowStory(of story : Story) {
+        
+        let IndexOfStoryToBeUnshowed = stories.indices.filter {stories[$0].title ==  story.title }.first
+        
+        stories[IndexOfStoryToBeUnshowed!].showDetails = false
+        
+    }
+    
     
 }

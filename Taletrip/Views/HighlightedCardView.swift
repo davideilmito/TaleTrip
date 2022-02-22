@@ -10,8 +10,8 @@ import SwiftUI
 struct HighlightedCardView: View {
     
     let storyToBeHighlighted : Story   //CHECK: DO WE NEED THE WHOLE STORY?
-    let title: String
-
+    let title: String  //Story of the month or story you'll like
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 12){
@@ -20,14 +20,9 @@ struct HighlightedCardView: View {
             
             LargeCard(storyImageName: storyToBeHighlighted.imageName, storyType: storyToBeHighlighted.genre, length: storyToBeHighlighted.length, storyTitle: storyToBeHighlighted.title)
             
-            
-  
         }
         
-        
-        
     }
-    
     
 }
 
