@@ -61,6 +61,23 @@ struct GameView: View {
         return tempParagraph
     }
     
+    static func getCommands(button: String) -> ([String]) {
+        var text: [String] = []
+        if (button == "Omar") {
+            text.append("Inspect Omar")
+            text.append("Talk to Omar")
+            text.append("Use drink on Omar")
+            return text
+        } else {
+            text.append("Test 1")
+            text.append("Test 2")
+            text.append("Test 3")
+            return text
+        }
+    }
+    
+    static func doNothing() {}
+    
     var body: some View {
         ScrollView {
             ForEach(0..<storiesStore.stories[0].allStoryChunksDescription.count) { index in
@@ -70,15 +87,17 @@ struct GameView: View {
                         HStack(spacing: 3) {
                             ForEach(line.words) { word in
                                 if(word.isButton == true) {
-                                    Text("\(word.text)")
+                                    let commands = GameView.getCommands(button: word.text)
+                                    Menu("\(word.text)") {
+                                        Button("\(commands[0])", action: GameView.doNothing)
+                                        Button("\(commands[1])", action: GameView.doNothing)
+                                        Button("\(commands[2])", action: GameView.doNothing)
+                                    }
                                         .font(.system(size: 20, weight: .regular, design: .serif))
                                         .foregroundColor(.white)
                                         .padding(3)
                                         .background(Color(red: 0.226, green: 0.41, blue: 0.523))
                                         .cornerRadius(12)
-                                        .onTapGesture {
-                                            print("The word is \(word.text)")
-                                        }
                                 }
                                 else {
                                     Text("\(word.text)")
