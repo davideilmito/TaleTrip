@@ -10,7 +10,8 @@ import SwiftUI
 struct GameView: View {
     
     @StateObject var storiesStore = StoriesStore()
-    @State var storyindex = 0
+    @State var currentstoryIndex = 0
+    @State var storyIndexes = [0]
     
     struct CustomWords: Identifiable {
         let id = UUID()
@@ -62,7 +63,7 @@ struct GameView: View {
         return tempParagraph
     }
     
-    static func getCommands(button: String, currentIndex: Int) -> ([String], [Int]) {
+    static func getCommands(button: String) -> ([String], [Int]) {
         var text: [String] = []
         var indextogoto: [Int] = []
         if (button == "Puzzles") {
@@ -70,24 +71,24 @@ struct GameView: View {
             text.append("")
             text.append("")
             indextogoto.append(1)
-            indextogoto.append(currentIndex)
-            indextogoto.append(currentIndex)
+            indextogoto.append(-1)
+            indextogoto.append(-1)
             return (text, indextogoto)
         } else if(button == "Beergarden"){
             text.append("Go to Beergarden")
             text.append("")
             text.append("")
             indextogoto.append(1)
-            indextogoto.append(currentIndex)
-            indextogoto.append(currentIndex)
+            indextogoto.append(-1)
+            indextogoto.append(-1)
             return (text, indextogoto)
         } else {
             text.append("Test 1")
             text.append("Test 2")
             text.append("Test 3")
-            indextogoto.append(currentIndex)
-            indextogoto.append(currentIndex)
-            indextogoto.append(currentIndex)
+            indextogoto.append(-1)
+            indextogoto.append(-1)
+            indextogoto.append(-1)
             return (text, indextogoto)
         }
     }
@@ -96,27 +97,31 @@ struct GameView: View {
         ScrollView {
 //            ForEach(0..<storiesStore.stories[0].allStoryChunksDescription.count) { index in
 //                let paragraph: [GameView.CustomLine] =  GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
-            let paragraph: [GameView.CustomLine] = GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[storyindex].components(separatedBy: " "))
+            ForEach(storyIndexes, id: \.self) {index in
+            let paragraph: [GameView.CustomLine] = GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
                 LazyVStack(alignment: .leading, spacing: 3) {
                     ForEach(paragraph) { line in
                         HStack(spacing: 3) {
                             ForEach(line.words) { word in
                                 if(word.isButton == true) {
-                                    let commands = GameView.getCommands(button: word.text, currentIndex: storyindex)
+                                    let commands = GameView.getCommands(button: word.text)
                                     Menu("\(word.text)") {
                                         Button("\(commands.0[0])", action: {
-                                            if(storyindex != commands.1[0]) { //CHECKS IF IT'S A BLANK COMMAND
-                                                storyindex = commands.1[0]    //DOES THE ACTION
+                                            if(commands.1[0] != -1) {                   //CHECKS IF IT'S A BLANK COMMAND
+                                                storyIndexes.append(commands.1[0])      //DOES THE ACTION
+                                                currentstoryIndex = commands.1[0]
                                             }
                                         })
                                         Button("\(commands.0[1])", action: {
-                                            if(storyindex != commands.1[1]) {
-                                                storyindex = commands.1[1]
+                                            if(commands.1[1] != -1) {
+                                                storyIndexes.append(commands.1[1])
+                                                currentstoryIndex = commands.1[0]
                                             }
                                         })
                                         Button("\(commands.0[2])", action: {
-                                            if(storyindex != commands.1[2]) {
-                                                storyindex = commands.1[2]
+                                            if(commands.1[2] != -1) {
+                                                storyIndexes.append(commands.1[2])
+                                                currentstoryIndex = commands.1[0]
                                             }
                                         })
                                     }
@@ -137,6 +142,7 @@ struct GameView: View {
                 }
                 .padding([.bottom])
                 .frame(width: UIScreen.main.bounds.width - 64)
+            }
             //}
         }
     }
