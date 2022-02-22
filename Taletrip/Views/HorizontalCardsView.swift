@@ -20,20 +20,20 @@ struct HorizontalCardsView: View {
         VStack(alignment: .leading, spacing: 12){
             
             TextView(title:title,size: 21,weight: .semibold)
+                .padding(.leading, 40)
                
               
             ScrollView(.horizontal,showsIndicators: false){
-            HStack(spacing: 12){
+            HStack(spacing: 14){
                 
                 ForEach(stories,id: \.title){story in
-                    
-                    SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)
-                        
-                    
+                        SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)
+
                 }
                 
             }
-        }
+            .padding(40)
+            }.frame(width: UIScreen.main.bounds.width, height: 220)
         }
         
     }

@@ -25,10 +25,12 @@ struct StoriesView: View {
                     
                     //    Story Of the  Month
                     TextView(title: "Stories",size: 37,weight: .bold)
+                        .padding(.leading,40)
                     
                     if let storyOfTheMonth = storiesStore.storyOfTheMonth{
                         
                         HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
+                            .padding(.leading,40)
                         
                     }
                     
@@ -47,12 +49,12 @@ struct StoriesView: View {
                     if let storyYouWillLike = storiesStore.storyYouWillLike{
                         
                         HighlightedCardView(storyToBeHighlighted: storyYouWillLike,title: "Story You'll Like")
+                            .padding(.leading,40)
                         
                     }
                     
                 
             }.frame(maxWidth:.infinity,alignment: .leading)
-                    .padding(.leading,40)
                     .navigationBarHidden(true)
                    
                 
