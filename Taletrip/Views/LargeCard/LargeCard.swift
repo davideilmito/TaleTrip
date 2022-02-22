@@ -31,7 +31,7 @@ struct LargeCard: View {
                 
                 VStack(alignment:.leading, spacing: 208){
                     
-                    LargeCardLongevity(longevity: length)
+                    CapsuleView(longevity: length, width: 82, height: 24, textSize: 13)
                         .padding(.leading,15)
                         
                     LargeCardText(storyTitle: storyTitle, storyType: storyType)

@@ -27,7 +27,7 @@ struct HorizontalCardsView: View {
                 
                 ForEach(stories,id: \.title){story in
                     
-                    SmallCardView(storyImageName: story.imageName, storyTitle: story.title)
+                    SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)
                         
                     
                 }
