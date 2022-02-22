@@ -54,7 +54,6 @@ struct StoriesView: View {
             }.frame(maxWidth:.infinity,alignment: .leading)
                     .padding(.leading,40)
                     .navigationBarHidden(true)
-                    
                    
                 
                 
