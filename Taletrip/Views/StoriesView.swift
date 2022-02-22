@@ -23,7 +23,7 @@ struct StoriesView: View {
                 VStack(alignment: .leading, spacing: 35){
                     
                     
-                    //             Story Of the  Month
+                    //    Story Of the  Month
                     TextView(title: "Stories",size: 37,weight: .bold)
                     
                     if let storyOfTheMonth = storiesStore.storyOfTheMonth{

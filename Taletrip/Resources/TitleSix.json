@@ -1,7 +1,7 @@
 {
         "imageName": "title3",
         "genre": "Adventure",
-        "title": "The Title Five",
+        "title": "The Title",
         "author": "Anonymous",
         "completionRate": 0,
         "inventory": [],
@@ -16,7 +16,6 @@
         "allStoryChunksDescription" : [],
         "chapters": [],
         "description" : ""
-
 
 }
 
