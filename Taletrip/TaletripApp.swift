@@ -13,10 +13,7 @@ struct TaletripApp: App {
     var body: some Scene {
         
         WindowGroup {
-            
-            //GameView()
-            StoriesView()
-            
+           StoriesView()
         }
     }
 }
