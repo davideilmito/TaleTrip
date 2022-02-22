@@ -1,0 +1,20 @@
+{
+        "imageName": "title2",
+        "genre": "Adventure",
+        "title": "The Title Five",
+        "author": "Anonymous",
+        "completionRate": 0,
+        "inventory": [],
+        "isStoryOfTheMonth": false,
+        "isStoryYouWillLike": false,
+        "hints": [
+        ],
+        "isPaused": false,
+        "completed": false,
+        "length": "Medium",
+        "path" : [],
+        "allStoryChunksDescription" : [],
+        "chapters": []
+
+}
+
