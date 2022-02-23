@@ -95,9 +95,7 @@ struct GameView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                //            ForEach(0..<storiesStore.stories[0].allStoryChunksDescription.count) { index in
-                //                let paragraph: [GameView.CustomLine] =  GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
+            ScrollView(showsIndicators: true) {
                 ForEach(storyIndexes, id: \.self) {index in
                     let paragraph: [GameView.CustomLine] = GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
                     LazyVStack(alignment: .leading, spacing: 3) {
@@ -144,22 +142,21 @@ struct GameView: View {
                     .padding([.bottom])
                     .frame(width: UIScreen.main.bounds.width - 64)
                 }
-                //}
             }
-        }
-        .navigationTitle("The Detective's day off")
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
-                Button("First") {
-                    print("Pressed 1")
-                }
-                Spacer()
-                Button("Second") {
-                    print("Pressed 2")
-                }
-                Spacer()
-                Button("Third") {
-                    print("Pressed 3")
+            .navigationTitle("The Detective's day off")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button("First") {
+                        print("Pressed 1")
+                    }
+                    Spacer()
+                    Button("Second") {
+                        print("Pressed 2")
+                    }
+                    Spacer()
+                    Button("Third") {
+                        print("Pressed 3")
+                    }
                 }
             }
         }
