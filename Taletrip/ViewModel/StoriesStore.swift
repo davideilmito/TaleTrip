@@ -20,7 +20,7 @@ class StoriesStore : ObservableObject{
     
     var tappedStory : Story? {
         
-        stories.filter { $0.showDetails == true }.first 
+        stories.filter { $0.showDetails == true }.first
         
     }
     
@@ -110,5 +110,14 @@ class StoriesStore : ObservableObject{
         
     }
     
+    func getListOfButtons(_ story: Story, _ name: String) -> [Command]?{
+        
+        story.dictionaryOfButtons[name]?.listOfCommands
+        
+        
+    }
+    
+    
     
 }
+

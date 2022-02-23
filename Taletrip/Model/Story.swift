@@ -23,10 +23,14 @@ struct Story : Decodable{
     var hints: [String]
     var isPaused: Bool
     var completed: Bool
+    var dictionaryOfButtons: [String : InteractiveButton] = ["bar":InteractiveButton(name: "bar", listOfCommands: [Command(sfSymbol: "play.fill", name: "talk to", arrayIndexOfTheStory: [30], hasToBeDisplayed: true, isFaded: false)], isTappable: true)]
+        
     var chapters:[Chapter] = []
     var length : Longevity
-    var path: [String]
+    var path: [StoryChunk] = []
+    
     var allStoryChunksDescription: [String]
+    
     var description : String
     var showDetails : Bool = false
     
@@ -45,7 +49,7 @@ struct Story : Decodable{
         case completed
         case chapters
         case length
-        case path
+//        case path
         case allStoryChunksDescription
         case description
         
@@ -95,4 +99,5 @@ enum Longevity: String ,Codable{
     }
 
 }
+
 

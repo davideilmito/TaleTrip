@@ -10,11 +10,25 @@ import Foundation
 
 struct Command : Decodable{
     
+    
+    var howManyTimes : Int = 0
     let sfSymbol : String
     let name: String
     let arrayIndexOfTheStory: [Int]
     var hasToBeDisplayed: Bool
-    var isFaded: Bool     
+    var isFaded: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case sfSymbol
+        case name
+        case arrayIndexOfTheStory
+        case hasToBeDisplayed
+        case isFaded
+    
+    }
+    
+    
     
 }
 

@@ -14,7 +14,7 @@ struct TaletripApp: App {
         
         WindowGroup {
             StoriesView()
-            //GameView()
+//            GameView()
         }
     }
 }
