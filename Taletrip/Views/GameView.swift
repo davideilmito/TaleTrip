@@ -94,56 +94,71 @@ struct GameView: View {
     }
     
     var body: some View {
-        ScrollView {
-//            ForEach(0..<storiesStore.stories[0].allStoryChunksDescription.count) { index in
-//                let paragraph: [GameView.CustomLine] =  GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
-            ForEach(storyIndexes, id: \.self) {index in
-            let paragraph: [GameView.CustomLine] = GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
-                LazyVStack(alignment: .leading, spacing: 3) {
-                    ForEach(paragraph) { line in
-                        HStack(spacing: 3) {
-                            ForEach(line.words) { word in
-                                if(word.isButton == true) {
-                                    let commands = GameView.getCommands(button: word.text)
-                                    Menu("\(word.text)") {
-                                        Button("\(commands.0[0])", action: {
-                                            if(commands.1[0] != -1) {                   //CHECKS IF IT'S A BLANK COMMAND
-                                                storyIndexes.append(commands.1[0])      //DOES THE ACTION
-                                                currentstoryIndex = commands.1[0]
-                                            }
-                                        })
-                                        Button("\(commands.0[1])", action: {
-                                            if(commands.1[1] != -1) {
-                                                storyIndexes.append(commands.1[1])
-                                                currentstoryIndex = commands.1[0]
-                                            }
-                                        })
-                                        Button("\(commands.0[2])", action: {
-                                            if(commands.1[2] != -1) {
-                                                storyIndexes.append(commands.1[2])
-                                                currentstoryIndex = commands.1[0]
-                                            }
-                                        })
-                                    }
+        NavigationView {
+            ScrollView(showsIndicators: true) {
+                ForEach(storyIndexes, id: \.self) {index in
+                    let paragraph: [GameView.CustomLine] = GameView.stringtoParagraph(words: storiesStore.stories[0].allStoryChunksDescription[index].components(separatedBy: " "))
+                    LazyVStack(alignment: .leading, spacing: 3) {
+                        ForEach(paragraph) { line in
+                            HStack(spacing: 3) {
+                                ForEach(line.words) { word in
+                                    if(word.isButton == true) {
+                                        let commands = GameView.getCommands(button: word.text)
+                                        Menu("\(word.text)") {
+                                            Button("\(commands.0[0])", action: {
+                                                if(commands.1[0] != -1) {                   //CHECKS IF IT'S A BLANK COMMAND
+                                                    storyIndexes.append(commands.1[0])      //DOES THE ACTION
+                                                    currentstoryIndex = commands.1[0]
+                                                }
+                                            })
+                                            Button("\(commands.0[1])", action: {
+                                                if(commands.1[1] != -1) {
+                                                    storyIndexes.append(commands.1[1])
+                                                    currentstoryIndex = commands.1[0]
+                                                }
+                                            })
+                                            Button("\(commands.0[2])", action: {
+                                                if(commands.1[2] != -1) {
+                                                    storyIndexes.append(commands.1[2])
+                                                    currentstoryIndex = commands.1[0]
+                                                }
+                                            })
+                                        }
                                         .font(.system(size: 20, weight: .regular, design: .serif))
                                         .foregroundColor(.white)
                                         .padding(3)
                                         .background(Color.briefGreen)
                                         .cornerRadius(12)
-                                }
-                                else {
-                                    Text("\(word.text)")
-                                        .font(.system(size: 20, weight: .regular, design: .serif))
-                                        .foregroundColor(.black)
+                                    }
+                                    else {
+                                        Text("\(word.text)")
+                                            .font(.system(size: 20, weight: .regular, design: .serif))
+                                            .foregroundColor(.black)
+                                    }
                                 }
                             }
                         }
                     }
+                    .padding([.bottom])
+                    .frame(width: UIScreen.main.bounds.width - 64)
                 }
-                .padding([.bottom])
-                .frame(width: UIScreen.main.bounds.width - 64)
             }
-            //}
+            .navigationTitle("The Detective's day off")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button("First") {
+                        print("Pressed 1")
+                    }
+                    Spacer()
+                    Button("Second") {
+                        print("Pressed 2")
+                    }
+                    Spacer()
+                    Button("Third") {
+                        print("Pressed 3")
+                    }
+                }
+            }
         }
     }
 }

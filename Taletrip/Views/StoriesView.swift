@@ -30,6 +30,7 @@ struct StoriesView: View {
                 VStack(alignment: .leading, spacing: 35){
                     
                     TextView(title: "Stories",size: 37,weight: .bold)
+                        .padding(.leading,40)
                     
                     //   Story You will Like
                     if let storyYouWillLike = storiesStore.storyYouWillLike{
@@ -87,8 +88,8 @@ struct StoriesView_Previews: PreviewProvider {
 struct HiddenNavigationBar: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarHidden(true)
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 
