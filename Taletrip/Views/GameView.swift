@@ -166,6 +166,7 @@ struct GameView: View {
                 }
             }
         }
+        .accentColor(Color.briefGreen)
     }
 }
 
