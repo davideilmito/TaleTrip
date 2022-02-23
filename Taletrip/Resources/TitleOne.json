@@ -10,6 +10,8 @@
         "hints": [
         ],
         "isPaused": false,
+        "titleCard": "Toby the fox",
+        
         "completed": false,
         "length": "Long",
         "path" : [],

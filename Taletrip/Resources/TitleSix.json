@@ -2,6 +2,8 @@
         "imageName": "title3",
         "genre": "Adventure",
         "title": "Toby the fox",
+        "titleCard": "Toby the fox",
+        
         "author": "Anonymous",
         "completionRate": 0,
         "inventory": [],

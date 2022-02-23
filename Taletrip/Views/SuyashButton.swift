@@ -20,16 +20,12 @@ struct SuyashButton: View {
             .frame(width: 360, height: 54)
             .overlay {
                
-                Button{
-                    
-                    
-                    
-                }label: {
+                
                     
                     Label(textOfTheButton ,systemImage: sfSymbol).foregroundColor(.white)
                         .font(.system(size: 24, weight: .medium, design: .serif))
                     
-                }
+                
                
             }
         

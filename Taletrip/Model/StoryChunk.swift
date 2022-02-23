@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct StoryChunk : Decodable {
+struct StoryChunk : Decodable , Identifiable{
     
+    
+    let id = UUID()
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]
     let interactiveButtons : [InteractiveButton]

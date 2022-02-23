@@ -117,6 +117,14 @@ class StoriesStore : ObservableObject{
         
     }
     
+    func appendStoryChunkToPath(storyChunk: StoryChunk, story : Story){
+        
+    
+        stories[stories.indices.filter { stories[$0].title == story.title}.first!].path.append(storyChunk)
+        
+    }
+    
+    
     
     
 }

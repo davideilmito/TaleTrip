@@ -15,6 +15,7 @@ struct Story : Decodable{
     let imageName: String
     let genre: Genre
     let title: String
+    let titleCard : String
     let author: String
     var completionRate : Int
     var inventory: [String]
@@ -23,7 +24,7 @@ struct Story : Decodable{
     var hints: [String]
     var isPaused: Bool
     var completed: Bool
-    var dictionaryOfButtons: [String : InteractiveButton] = ["bar":InteractiveButton(name: "bar", listOfCommands: [Command(sfSymbol: "play.fill", name: "talk to", arrayIndexOfTheStory: [30], hasToBeDisplayed: true, isFaded: false)], isTappable: true)]
+    var dictionaryOfButtons: [String : InteractiveButton] = [:]
         
     var chapters:[Chapter] = []
     var length : Longevity
@@ -38,6 +39,7 @@ struct Story : Decodable{
         
         case imageName
         case genre
+        case titleCard
         case title
         case author
         case completionRate

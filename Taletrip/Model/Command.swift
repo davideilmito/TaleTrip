@@ -14,7 +14,7 @@ struct Command : Decodable{
     var howManyTimes : Int = 0
     let sfSymbol : String
     let name: String
-    let arrayIndexOfTheStory: [Int]
+    var  possibleStoryChunk: [StoryChunk] = []
     var hasToBeDisplayed: Bool
     var isFaded: Bool
     
@@ -22,7 +22,7 @@ struct Command : Decodable{
         
         case sfSymbol
         case name
-        case arrayIndexOfTheStory
+//        case possibleStoryChunk
         case hasToBeDisplayed
         case isFaded
     

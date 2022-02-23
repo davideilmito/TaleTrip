@@ -1,7 +1,8 @@
 {
     "imageName": "thedetectivesdayoff",
     "genre": "Mystery",
-    "title": "The\nDetective's\nDay Off",
+    "title": "The Detective's Day Off",
+    "titleCard" : "The\nDetective's\nDay Off",
     "author": "Eugenio Raja",
     "completionRate": 0,
     "inventory": [],

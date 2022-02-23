@@ -14,6 +14,9 @@ struct DescriptionStoryView: View {
     
     var body: some View {
         
+        
+        NavigationView{
+        
         ZStack{
             
             VStack(spacing: 10){
@@ -23,20 +26,40 @@ struct DescriptionStoryView: View {
                 
             }
             
+          
+            
+            VStack{
+                
             StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
-                .frame(maxHeight:.infinity,alignment: .top)
+                    
+                    
+            NavigationLink(destination: Text("Hello world")) {
+                 
+                SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
+                    .frame(maxHeight:.infinity,alignment: .bottom)
+                    .padding(.bottom,22)
+               
+                
+            }.navigationTitle("")
+                
+                
+          
+                
+                
+                
+            } .frame(maxHeight:.infinity,alignment: .top)
                 .padding(.top,5)
             
             
-            SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
-                .frame(maxHeight:.infinity,alignment: .bottom)
-                .padding(.bottom,22)
-           
             
-            
-        }.ignoresSafeArea().statusBar(hidden: true)
+        }.ignoresSafeArea()
             .background(Color.backgroundBeige)
-    }
+    }.statusBar(hidden: true)
+    
+    
+}
+    
+    
 }
 
 
