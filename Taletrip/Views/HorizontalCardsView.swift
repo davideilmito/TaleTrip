@@ -29,7 +29,11 @@ struct HorizontalCardsView: View {
             HStack(spacing: 14){
                 
                 ForEach(stories,id: \.title){story in
-                        SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)
+                        SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)  .onTapGesture {
+                            showModal.toggle()
+                            storiesStore.showStory(of: story)
+                            
+                        }
 
                 }
                 

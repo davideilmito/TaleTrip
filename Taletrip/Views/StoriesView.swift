@@ -36,6 +36,7 @@ struct StoriesView: View {
                     if let storyYouWillLike = storiesStore.storyYouWillLike{
                         
                         HighlightedCardView(storyToBeHighlighted: storyYouWillLike,title: "Story You'll Like")
+                            .padding(.leading,40)
                             .onTapGesture {
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyYouWillLike)
@@ -53,6 +54,7 @@ struct StoriesView: View {
                     if let storyOfTheMonth = storiesStore.storyOfTheMonth{
                         
                         HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
+                            .padding(.leading,40)
                             .onTapGesture {
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyOfTheMonth)
@@ -62,7 +64,7 @@ struct StoriesView: View {
                     }
                     
                 }.frame(maxWidth:.infinity,alignment: .leading)
-                    .padding(.leading,40)
+                    
                     .navigationBarHidden(true)
                 
             }.fullScreenCover(isPresented: $showModal){
