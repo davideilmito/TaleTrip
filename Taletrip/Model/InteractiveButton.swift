@@ -7,10 +7,30 @@
 
 import Foundation
 
-struct InteractiveButton : Decodable {
+struct InteractiveButton : Decodable,Identifiable {
     
+    let id = UUID()
     let name: String
     let listOfCommands : [Command]
-    var isTappable: Bool
+    var isTappable: Bool {
+        
+        if (listOfCommands.allSatisfy({ $0.isFaded == true })){
+            
+            return false
+            
+        }else {
+            
+            return true
+            
+        }
+        
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case name
+        case listOfCommands
+    
+    }
     
 }

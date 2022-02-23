@@ -11,6 +11,8 @@ struct DescriptionStoryView: View {
     
     let story: Story
     @Binding var showModal : Bool
+    @EnvironmentObject var storiesStore : StoriesStore
+    
     
     var body: some View {
         
@@ -18,8 +20,7 @@ struct DescriptionStoryView: View {
             ZStack{
             ScrollView(.vertical,showsIndicators: false){
             
-               
-                
+ 
                 VStack(spacing: 10){
                     
                     DescriptionImageView(imageName: story.imageName)
@@ -28,11 +29,17 @@ struct DescriptionStoryView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: Text(story.title)) {
+                    NavigationLink(destination:  DavideView(story: story)) {
                         
                         SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
+                            
+                              
                             .padding(.bottom,22)
-                    }
+                    }.simultaneousGesture(TapGesture().onEnded({ _ in
+                        storiesStore.firstChunkInPath(of: story)
+                        print(storiesStore.stories[0].path)
+                    
+                    }))
                     
                         
                     }

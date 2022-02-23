@@ -25,13 +25,10 @@ struct Story : Decodable{
     var isPaused: Bool
     var completed: Bool
     var dictionaryOfButtons: [String : InteractiveButton] = [:]
-        
     var chapters:[Chapter] = []
     var length : Longevity
     var path: [StoryChunk] = []
-    
     var allStoryChunksDescription: [String]
-    
     var description : String
     var showDetails : Bool = false
     

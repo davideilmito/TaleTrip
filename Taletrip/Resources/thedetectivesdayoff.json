@@ -1,4 +1,4 @@
-{
+{  
     "imageName": "thedetectivesdayoff",
     "genre": "Mystery",
     "title": "The Detective's Day Off",
@@ -43,7 +43,7 @@
             }]
         },
      {
-        "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map. Try using it.",
+        "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
         "possibleVocalResponses": [{
                 "description": "Use map",
                 "descriptionToBeDisplayed": "You opened the map",
@@ -236,7 +236,7 @@
                     "isFaded": false
                 }, 
                 {
-                    "sfSymbol": "person.wave.",
+                    "sfSymbol": "person.wave",
                     "name": "Talk to",
                     "arrayIndexOfTheStory": [10],
                     "hasToBeDisplayed": true,
@@ -301,7 +301,7 @@
         "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
         "You get lost a couple of times, but in the end you arrive at your destination.",
         "With the help of the map you easily arrive at your destination.",
-        "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar . The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two men playing. At the back of the room there are the toilets .",
+        "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar . The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two players. At the back of the room there are the toilets .",
         "An intimidating bartender in his fifties, maybe even more. He is really tall and has broad shoulders. Behind him, on the wall, there is a medal of courage that he got during an obscure war in the east. He has a limp, probably a memory of his life as a soldier.",
         "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink? Since you are new, the first one is on the house.",
         "Have you seen the medal ? Yeah, I was a soldier. Actually I am a soldier, in a way I feel like I never left the war… But let’s not talk about that now, shall we?",

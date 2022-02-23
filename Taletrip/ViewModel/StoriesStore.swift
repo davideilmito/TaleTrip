@@ -18,11 +18,21 @@ class StoriesStore : ObservableObject{
     @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     
     
-    var tappedStory : Story? {
+    var tappedStory : Story {
         
-        stories.filter { $0.showDetails == true }.first
+        stories.filter { $0.showDetails == true }.first!
         
     }
+    
+    var IndexOfTheTappedStory : Int? {
+        
+        let index = stories.indices.filter { stories[$0].showDetails == true }.first
+        return index
+        
+    }
+    
+    
+    
     
     
     var storyOfTheMonth : Story? {
@@ -92,7 +102,63 @@ class StoriesStore : ObservableObject{
         }
     }
     
+    private func getTheIndex(of story: Story)-> Int?{
+        
+        
+        let index = stories.indices.filter { stories[$0].title == story.title }.first
+        return index
+        
+        
+    }
     
+    
+    func firstChunkInPath(of story: Story){
+        
+       let index = getTheIndex(of: story)
+     stories[index!].path.append(story.chapters[0].storyChunks[0])
+        
+        
+        
+    }
+    
+    private func getStoryChunk(_ index: Int,_ story : Story) -> StoryChunk? {
+        
+        
+       let indexOfTheStory = getTheIndex(of: story)
+       let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
+       
+        for chapter in stories[indexOfTheStory!].chapters.indices{
+            
+            if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter { $0.description == chunkDescriptionToBeMatched }.first{
+                
+                return storyChunkFounded
+                
+            }
+            
+        }
+        
+        return nil
+        
+    }
+    
+    
+    func nextChunk(_ index: Int,_ story : Story){
+        
+      let storyChunk =  getStoryChunk(index, story)
+        
+      let indexOfTheStory = getTheIndex(of: story)
+        
+        if storyChunk == nil {
+            
+            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK con index \(index)")
+            
+        }else {
+        
+        stories[indexOfTheStory!].path.append(storyChunk!)
+      
+        }
+        
+    }
     
     func showStory(of story : Story) {
         
@@ -119,7 +185,7 @@ class StoriesStore : ObservableObject{
     
     func appendStoryChunkToPath(storyChunk: StoryChunk, story : Story){
         
-    
+        
         stories[stories.indices.filter { stories[$0].title == story.title}.first!].path.append(storyChunk)
         
     }

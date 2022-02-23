@@ -70,7 +70,7 @@ struct StoriesView: View {
             }.fullScreenCover(isPresented: $showModal){
                 
                 
-                DescriptionStoryView(story: storiesStore.tappedStory!,showModal: $showModal)
+                DescriptionStoryView(story: storiesStore.tappedStory,showModal: $showModal)
                 
                 
             }

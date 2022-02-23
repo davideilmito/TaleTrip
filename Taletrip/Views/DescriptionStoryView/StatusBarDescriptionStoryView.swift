@@ -29,7 +29,7 @@ struct StatusBarDescriptionStoryView: View {
             Button {
                 
                 showModal.toggle()
-                storiesStore.unshowStory(of: storiesStore.tappedStory!)
+                storiesStore.unshowStory(of: storiesStore.tappedStory)
                 
             } label: {
                 

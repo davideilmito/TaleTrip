@@ -8,23 +8,28 @@
 import Foundation
 
 
-struct Command : Decodable{
+struct Command : Decodable,Identifiable{
     
-    
+    var id = UUID()
     var howManyTimes : Int = 0
     let sfSymbol : String
     let name: String
-    var  possibleStoryChunk: [StoryChunk] = []
+    var possibleStoryChunk: [StoryChunk] = []
+    var arrayIndexOfTheStory : [Int]      ///CHANGED
     var hasToBeDisplayed: Bool
-    var isFaded: Bool
+    var isFaded: Bool {
+        
+        howManyTimes == arrayIndexOfTheStory.count
+        
+    }
     
     enum CodingKeys: String, CodingKey {
         
         case sfSymbol
         case name
-//        case possibleStoryChunk
+        case arrayIndexOfTheStory
         case hasToBeDisplayed
-        case isFaded
+        
     
     }
     
