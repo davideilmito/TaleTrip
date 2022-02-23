@@ -146,16 +146,22 @@ struct GameView: View {
             .navigationTitle("The Detective's day off")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("First") {
+                    Button(action: {
                         print("Pressed 1")
+                    }) {
+                        Image(systemName: "lightbulb")
                     }
                     Spacer()
-                    Button("Second") {
+                    Button(action: {
                         print("Pressed 2")
+                    }) {
+                        Image(systemName: "mic")
                     }
                     Spacer()
-                    Button("Third") {
+                    Button(action: {
                         print("Pressed 3")
+                    }) {
+                        Image(systemName: "archivebox")
                     }
                 }
             }
