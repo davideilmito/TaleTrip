@@ -72,6 +72,7 @@ struct StoriesView: View {
                 
             }
         }.padding(.top, 1)
+            .environmentObject(storiesStore)
         
     }
 }

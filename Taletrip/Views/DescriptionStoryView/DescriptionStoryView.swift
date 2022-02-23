@@ -12,6 +12,7 @@ struct DescriptionStoryView: View {
     let story: Story
     @Binding var showModal : Bool
     
+    
     var body: some View {
         
         ZStack{

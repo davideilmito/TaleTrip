@@ -29,9 +29,9 @@ struct CapsuleView: View {
                 .clipShape(Capsule())
                 .rotation3DEffect(self.flipped ? Angle(degrees: 180): Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
                
-            TextView(title: self.flippedT ? "30MIN" : longevity.rawValue.uppercased(),size: textSize,weight: .regular)
+            TextView(title: self.flippedT || displayTime ? longevity.associatedTime() : longevity.rawValue.uppercased(),size: textSize,weight: .medium)
                 .foregroundColor(.white)
-                .rotation3DEffect(self.flipped ? Angle(degrees: 360): Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
+                .rotation3DEffect(self.flipped || displayTime ? Angle(degrees: 360): Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
                 
             
         }
@@ -54,6 +54,6 @@ struct CapsuleView: View {
 
 struct CapsuleView_Previews: PreviewProvider {
     static var previews: some View {
-        CapsuleView(longevity: .medium, width: 42, height: 14, textSize: 7)
+        CapsuleView(longevity: .brief, width: 40, height: 14, textSize: 7)
     }
 }

@@ -27,11 +27,13 @@ struct DescriptionTextView: View {
                 VStack(alignment: .leading, spacing: 10){
                     
                     TextView(title: titleOfTheStory.uppercased(), size: 37 , weight: .bold)
+                        .foregroundColor(.black)
                     
                     TextView(title: descriptionOfTheStory, size: 18, weight: .regular)
+                        .foregroundColor(.descriptionColor)
                     
                     TextView(title: "By " + author, size: 13, weight: .bold)
-                    
+                        .foregroundColor(.authorColor)
                     
                 }
                 

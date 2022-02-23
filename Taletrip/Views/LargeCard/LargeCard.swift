@@ -9,17 +9,12 @@ import SwiftUI
 
 struct LargeCard: View {
     
-    
     let storyImageName : String
     let storyType : Genre
     let length : Longevity
     let storyTitle : String
     
-    
     var body: some View {
-        
-        
-        
         
         Image(storyImageName)
             .resizable()

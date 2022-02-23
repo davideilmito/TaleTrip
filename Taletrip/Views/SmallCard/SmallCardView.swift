@@ -18,7 +18,7 @@ struct SmallCardView: View {
         VStack(alignment: .leading,spacing: 5){
             
             SmallCardImage(storyImageName: storyImageName).overlay {
-                CapsuleView(longevity: length, width:40, height: 14, textSize: 7)
+                CapsuleView(longevity: length, width:42, height: 14, textSize: 7)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .padding(.leading, 10)
                     .padding(.top, 10)
@@ -36,6 +36,6 @@ struct SmallCardView: View {
 
 struct SmallCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SmallCardView(storyImageName: "themortalportrait", storyTitle: "Title 1",length: .long)
+        SmallCardView(storyImageName: "themortalportrait", storyTitle: "Title 1",length: .medium)
     }
 }
