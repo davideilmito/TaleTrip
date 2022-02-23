@@ -14,50 +14,46 @@ struct DescriptionStoryView: View {
     
     var body: some View {
         
-        
         NavigationView{
-        
-        ZStack{
+            ZStack{
+            ScrollView(.vertical,showsIndicators: false){
             
-            VStack(spacing: 10){
-                DescriptionImageView(imageName: story.imageName)
-                
-                DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.title, genre: story.genre.rawValue,author:story.author)
-                
-            }
-            
-          
-            
-            VStack{
-                
-            StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
-                    
-                    
-            NavigationLink(destination: Text("Hello world")) {
-                 
-                SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
-                    .frame(maxHeight:.infinity,alignment: .bottom)
-                    .padding(.bottom,22)
                
                 
-            }.navigationTitle("")
-                
-                
-          
-                
-                
-                
-            } .frame(maxHeight:.infinity,alignment: .top)
-                .padding(.top,5)
+                VStack(spacing: 10){
+                    
+                    DescriptionImageView(imageName: story.imageName)
             
-            
-            
-        }.ignoresSafeArea()
-            .background(Color.backgroundBeige)
-    }.statusBar(hidden: true)
-    
-    
-}
+                    DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.title, genre: story.genre.rawValue,author:story.author)
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: Text(story.title)) {
+                        
+                        SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
+                            .padding(.bottom,22)
+                    }
+                    
+                        
+                    }
+                    
+                
+                    
+   
+                }
+                StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
+                    
+                
+                
+                
+            }.ignoresSafeArea()
+                .background(Color.backgroundBeige)
+                .navigationTitle("")
+                .navigationBarHidden(true)
+        }.statusBar(hidden: true)
+        
+        
+    }
     
     
 }
@@ -71,7 +67,7 @@ struct DescriptionStoryView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        DescriptionStoryView(story: viewModel.stories[0],showModal: .constant(true))
+        DescriptionStoryView(story: viewModel.stories[1],showModal: .constant(true))
         
     }
 }

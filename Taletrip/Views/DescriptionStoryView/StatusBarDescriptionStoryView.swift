@@ -16,6 +16,9 @@ struct StatusBarDescriptionStoryView: View {
     
     var body: some View {
         
+        
+        VStack{
+        
         HStack(alignment: .center){
             
             CapsuleView(longevity: lengthOfTheStory, width: 66, height: 24, textSize: 13,displayTime: true)
@@ -38,6 +41,12 @@ struct StatusBarDescriptionStoryView: View {
             }
             
         }
+        
+            Spacer()
+        
+        }
+        .padding(.top,10)
+        .ignoresSafeArea()
     }
 }
 

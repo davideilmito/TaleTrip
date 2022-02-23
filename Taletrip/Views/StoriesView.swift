@@ -58,7 +58,7 @@ struct StoriesView: View {
                             .onTapGesture {
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyOfTheMonth)
-                                
+                                 
                             }
                         
                     }

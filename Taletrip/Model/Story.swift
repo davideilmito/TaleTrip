@@ -51,7 +51,6 @@ struct Story : Decodable{
         case completed
         case chapters
         case length
-//        case path
         case allStoryChunksDescription
         case description
         

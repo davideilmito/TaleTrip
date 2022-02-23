@@ -13,11 +13,13 @@ struct DescriptionImageView: View {
     
     var body: some View {
     
+    
         Image(imageName)
             .resizable()
             .scaledToFill()
             .frame(maxWidth: .infinity,maxHeight: 357)
             .clipShape(Rectangle())
+        
 
     }
 }

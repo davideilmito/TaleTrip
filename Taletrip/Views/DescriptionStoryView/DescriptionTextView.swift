@@ -16,7 +16,7 @@ struct DescriptionTextView: View {
     
     var body: some View {
         
-        ScrollView{
+       
             
             VStack (alignment: .leading, spacing: 15){
                 
@@ -39,7 +39,7 @@ struct DescriptionTextView: View {
                 
             }.padding([.leading,.trailing],15)
             
-        } 
+         
         
         
     }

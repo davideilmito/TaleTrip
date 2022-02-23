@@ -18,7 +18,7 @@ struct HighlightedCardView: View {
             
             TextView(title:title,size: 21,weight: .semibold)
             
-            LargeCard(storyImageName: storyToBeHighlighted.imageName, storyType: storyToBeHighlighted.genre, length: storyToBeHighlighted.length, storyTitle: storyToBeHighlighted.title)
+            LargeCard(storyImageName: storyToBeHighlighted.imageName, storyType: storyToBeHighlighted.genre, length: storyToBeHighlighted.length, storyTitle: storyToBeHighlighted.titleCard)
             
         }
         
