@@ -13,7 +13,7 @@ import AVFoundation
 
 class StoriesStore : ObservableObject{
     
-    @Published var  stories : [Story]
+    @Published var stories : [Story]
     
     @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     

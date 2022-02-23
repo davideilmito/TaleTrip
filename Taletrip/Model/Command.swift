@@ -10,11 +10,10 @@ import Foundation
 
 struct Command : Decodable{
     
-    
     var howManyTimes : Int = 0
     let sfSymbol : String
     let name: String
-    var  possibleStoryChunk: [StoryChunk] = []
+    var possibleStoryChunk: [StoryChunk] = []
     var hasToBeDisplayed: Bool
     var isFaded: Bool
     
@@ -27,9 +26,4 @@ struct Command : Decodable{
         case isFaded
     
     }
-    
-    
-    
 }
-
-

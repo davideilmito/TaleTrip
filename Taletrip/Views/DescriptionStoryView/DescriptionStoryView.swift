@@ -33,7 +33,7 @@ struct DescriptionStoryView: View {
             StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
                     
                     
-            NavigationLink(destination: Text("Hello world")) {
+            NavigationLink(destination: Text("Hello")) {
                  
                 SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
                     .frame(maxHeight:.infinity,alignment: .bottom)

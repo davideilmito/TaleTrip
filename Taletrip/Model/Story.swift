@@ -39,8 +39,8 @@ struct Story : Decodable{
         
         case imageName
         case genre
-        case titleCard
         case title
+        case titleCard
         case author
         case completionRate
         case inventory
