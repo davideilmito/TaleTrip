@@ -68,10 +68,6 @@ struct BookView: View {
 
         var body: some View {
 
-            //add the first story chunk to path here
-            
-
-            NavigationView{
                 ScrollView{
                     ForEach(storiesStore.tappedStory.path) {storyChunk in
                         let paragraph = stringtoParagraph(chunk: storyChunk)
@@ -85,12 +81,15 @@ struct BookView: View {
                                                 Menu("\(button.name)") {
                                                     ForEach(button.listOfCommands){ command in
                                                         Button {
-                                                            storiesStore.nextChunk(command.arrayIndexOfTheStory[command.howManyTimes],storiesStore.tappedStory)
+//
+                                                            
+                                                            storiesStore.nextPieceOfStory(from: storyChunk, command, button)
+                                                            
                                                             //UPDATE NUM OF TIMES
                                                         } label: {
                                                             Label(command.name,systemImage:command.sfSymbol)
                                                                 .font(.system(size: CGFloat(20), weight: .regular , design: .serif))
-                                                                .opacity(command.isFaded ? 40: 100)
+                                                                
                                                         }
                                                     }
                                                 }
@@ -101,13 +100,14 @@ struct BookView: View {
                                                 .cornerRadius(12)
                                             }
                                             else {
+                                                
                                                 Text("\(word.text)")
                                                     .font(.system(size: 20, weight: .regular, design: .serif))
                                                     .foregroundColor(.white)
                                                     .padding(3)
                                                     .background(Color.suyashBlue)
                                                     .cornerRadius(12)
-                                                    .opacity(40)
+                                                    
                                             }
                                         }
                                         else {
@@ -123,7 +123,7 @@ struct BookView: View {
                         .frame(width: UIScreen.main.bounds.width - 64)
                     }
                 }
-            }
+            
             .navigationTitle(storiesStore.tappedStory.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -152,11 +152,11 @@ struct BookView: View {
     }
 
 
-struct BookView_Previews: PreviewProvider {
-
-    static var viewModel : StoriesStore = StoriesStore()
-    
-    static var previews: some View {
-        BookView(story: viewModel.stories[0])
-    }
-}
+//struct BookView_Previews: PreviewProvider {
+//
+//    static var viewModel : StoriesStore = StoriesStore()
+//
+//    static var previews: some View {
+//        BookView(story: viewModel.stories[0])
+//    }
+//}

@@ -15,7 +15,7 @@ struct Command : Decodable,Identifiable{
     let sfSymbol : String
     let name: String
     var possibleStoryChunk: [StoryChunk] = []
-    var arrayIndexOfTheStory : [Int]      ///CHANGED
+    var arrayIndexOfTheStory : [Int]     
     var hasToBeDisplayed: Bool
     var isFaded: Bool {
         

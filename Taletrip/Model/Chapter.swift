@@ -11,7 +11,7 @@ import Foundation
 struct Chapter : Decodable {
     
     let name: String
-    let storyChunks: [StoryChunk]
+    var storyChunks: [StoryChunk]
     
 }
 

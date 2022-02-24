@@ -7,12 +7,23 @@
 
 import Foundation
 
-struct StoryChunk : Decodable , Identifiable{
+struct StoryChunk : Decodable , Identifiable,Hashable{
+    static func == (lhs: StoryChunk, rhs: StoryChunk) -> Bool {
+        
+        lhs.description  == rhs.description
+        
+    }
+    
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(description)
+    }
     
     let id = UUID()
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]
-    let interactiveButtons : [InteractiveButton]
+    var interactiveButtons : [InteractiveButton]
     let doesAdvanceHint : Bool = false
     let givesObject : String = " "
     
