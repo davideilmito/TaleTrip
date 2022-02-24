@@ -9,7 +9,6 @@ import Foundation
 
 struct StoryChunk : Decodable , Identifiable{
     
-    
     let id = UUID()
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]
