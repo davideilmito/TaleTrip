@@ -2,7 +2,7 @@
     "imageName": "thedetectivesdayoff",
     "genre": "Mystery",
     "title": "The Detective's Day Off",
-    "titleCard" : "The\nDetective's\nDay Off",
+    "titleCard": "The\nDetective's\nDay Off",
     "author": "Eugenio Raja",
     "completionRate": 0,
     "inventory": [],
@@ -20,48 +20,40 @@
             "name": "Prelude",
             "storyChunks": [
                 {
-                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar, but living in such a small city, there are very few options when it comes to it.\n\nLet’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to “Puzzles” or “Beergarden”?\n",
+                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar, but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
                     "possibleVocalResponses": [
                         {
-                            "description": "Beergarden",
-                            "descriptionToBeDisplayed": "You decided to go to beer garden",
-                            "arrayIndexOfTheStory": [
-                                1
-                            ]
+                            "description": " Beergarden",
+                            "descriptionToBeDisplayed": "You decided to go to Beergarden",
+                            "arrayIndexOfTheStory": [1]
                         },
                         {
-                            "description": "Puzzles",
+                            "description": " Puzzles",
                             "descriptionToBeDisplayed": "You decided to go to Puzzles",
-                            "arrayIndexOfTheStory": [
-                                1
-                            ]
+                            "arrayIndexOfTheStory": [1]
                         }
                     ],
                     "interactiveButtons": [
                         {
-                            "name": " Beergarden",
-                            "listOfCommands": [
-                                {
-                                    "sfSymbol": "figure.walk",
-                                    "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        1
-                                    ],
-                                    "hasToBeDisplayed": true,
-                                    "isFaded": false
-                                }
-                            ],
-                            "isTappable": true
+                            "name": "Beergarden",
+                                "listOfCommands": [
+                                    {
+                                "sfSymbol": "figure.walk",
+                                "name": "Go to",
+                                "arrayIndexOfTheStory": [1],
+                                "hasToBeDisplayed": true,
+                                "isFaded": false
+                                   }
+                                ],
+                                "isTappable": true
                         },
                         {
-                            "name": "puzzles",
+                            "name": "Puzzles",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "figure.walk",
                                     "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        1
-                                    ],
+                                    "arrayIndexOfTheStory": [1],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -76,9 +68,7 @@
                         {
                             "description": "Use map",
                             "descriptionToBeDisplayed": "You opened the map",
-                            "arrayIndexOfTheStory": [
-                                2
-                            ]
+                            "arrayIndexOfTheStory": [2]
                         }
                     ],
                     "interactiveButtons": [
@@ -88,9 +78,7 @@
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use",
-                                    "arrayIndexOfTheStory": [
-                                        2
-                                    ],
+                                    "arrayIndexOfTheStory": [2],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -247,9 +235,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        22
-                                    ],
+                                    "arrayIndexOfTheStory": [22],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -262,20 +248,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        16
-                                    ],
+                                    "arrayIndexOfTheStory": [16],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        17,
-                                        18,
-                                        19
-                                    ],
+                                    "arrayIndexOfTheStory": [17,18,19],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -288,20 +268,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        5
-                                    ],
+                                    "arrayIndexOfTheStory": [5],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        6,
-                                        7,
-                                        8
-                                    ],
+                                    "arrayIndexOfTheStory": [6,7,8],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -314,19 +288,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        5
-                                    ],
+                                    "arrayIndexOfTheStory": [5],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        7,
-                                        8
-                                    ],
+                                    "arrayIndexOfTheStory": [7,8],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -339,9 +308,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        56
-                                    ],
+                                    "arrayIndexOfTheStory": [56],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -354,18 +321,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        13
-                                    ],
+                                    "arrayIndexOfTheStory": [13],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        14
-                                    ],
+                                    "arrayIndexOfTheStory": [14],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -378,19 +341,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        10,
-                                        12
-                                    ],
+                                    "arrayIndexOfTheStory": [10,12],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        9
-                                    ],
+                                    "arrayIndexOfTheStory": [9],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -403,18 +361,14 @@
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use on players",
-                                    "arrayIndexOfTheStory": [
-                                        11
-                                    ],
+                                    "arrayIndexOfTheStory": [11],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use",
-                                    "arrayIndexOfTheStory": [
-                                        23
-                                    ],
+                                    "arrayIndexOfTheStory": [23],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -427,9 +381,7 @@
                                 {
                                     "sfSymbol": "figure.walk",
                                     "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        20
-                                    ],
+                                    "arrayIndexOfTheStory": [20],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -442,9 +394,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        21
-                                    ],
+                                    "arrayIndexOfTheStory": [21],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -457,18 +407,14 @@
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use",
-                                    "arrayIndexOfTheStory": [
-                                        23
-                                    ],
+                                    "arrayIndexOfTheStory": [23],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use on guy",
-                                    "arrayIndexOfTheStory": [
-                                        15
-                                    ],
+                                    "arrayIndexOfTheStory": [15],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -704,9 +650,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        51
-                                    ],
+                                    "arrayIndexOfTheStory": [51],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -719,9 +663,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        56
-                                    ],
+                                    "arrayIndexOfTheStory": [56],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -734,9 +676,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        21
-                                    ],
+                                    "arrayIndexOfTheStory": [21],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -749,9 +689,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        49
-                                    ],
+                                    "arrayIndexOfTheStory": [49],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -764,10 +702,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        44,
-                                        45
-                                    ],
+                                    "arrayIndexOfTheStory": [44,45],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -780,9 +715,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        50
-                                    ],
+                                    "arrayIndexOfTheStory": [50],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -795,9 +728,7 @@
                                 {
                                     "sfSymbol": "figure.walk",
                                     "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        46
-                                    ],
+                                    "arrayIndexOfTheStory": [46],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -810,9 +741,7 @@
                                 {
                                     "sfSymbol": "figure.walk",
                                     "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        47
-                                    ],
+                                    "arrayIndexOfTheStory": [47],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -825,9 +754,7 @@
                                 {
                                     "sfSymbol": "figure.walk",
                                     "name": "Go to",
-                                    "arrayIndexOfTheStory": [
-                                        48
-                                    ],
+                                    "arrayIndexOfTheStory": [48],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -840,22 +767,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        26,
-                                        27,
-                                        28,
-                                        29,
-                                        30
-                                    ],
+                                    "arrayIndexOfTheStory": [26,27,28,29,30],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        25
-                                    ],
+                                    "arrayIndexOfTheStory": [25],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -868,21 +787,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        40,
-                                        41,
-                                        42,
-                                        43
-                                    ],
+                                    "arrayIndexOfTheStory": [40,41,42,43],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        39
-                                    ],
+                                    "arrayIndexOfTheStory": [39],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -895,21 +807,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        40,
-                                        41,
-                                        42,
-                                        43
-                                    ],
+                                    "arrayIndexOfTheStory": [40,41,42,43],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        39
-                                    ],
+                                    "arrayIndexOfTheStory": [39],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -922,21 +827,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        39
-                                    ],
+                                    "arrayIndexOfTheStory": [39],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        40,
-                                        41,
-                                        42,
-                                        43
-                                    ],
+                                    "arrayIndexOfTheStory": [40,41,42,43],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -949,21 +847,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        32,
-                                        33,
-                                        34,
-                                        35
-                                    ],
+                                    "arrayIndexOfTheStory": [32,33,34,35],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        31
-                                    ],
+                                    "arrayIndexOfTheStory": [31],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -976,21 +867,14 @@
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        32,
-                                        33,
-                                        34,
-                                        35
-                                    ],
+                                    "arrayIndexOfTheStory": [32,33,34,35],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        31
-                                    ],
+                                    "arrayIndexOfTheStory": [31],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -1003,19 +887,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        36
-                                    ],
+                                    "arrayIndexOfTheStory": [36],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        37,
-                                        38
-                                    ],
+                                    "arrayIndexOfTheStory": [37,38],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -1028,19 +907,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        36
-                                    ],
+                                    "arrayIndexOfTheStory": [36],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        37,
-                                        38
-                                    ],
+                                    "arrayIndexOfTheStory": [37,38],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -1053,19 +927,14 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "arrayIndexOfTheStory": [
-                                        36
-                                    ],
+                                    "arrayIndexOfTheStory": [36],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 },
                                 {
                                     "sfSymbol": "person.wave.2",
                                     "name": "Talk to",
-                                    "arrayIndexOfTheStory": [
-                                        37,
-                                        38
-                                    ],
+                                    "arrayIndexOfTheStory": [37,38],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -1081,62 +950,61 @@
     "path": [],
     "description": "You, private investigators in Cramwood, wanted to take some days off work after you got paid for a very difficult case solved. You decide to go to a bar, but soon things turn out for the worst... \nInspect the whole bar, talk to the bartender and the customers and solve this crazy mystery in an otherwise peaceful night.",
     "allStoryChunksDescription": [
-        "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
-        "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
-        "You get lost a couple of times, but in the end you arrive at your destination.",
-        "With the help of the map you easily arrive at your destination.",
-        "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar . The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two men playing. At the back of the room there are the toilets .",
-        "An intimidating bartender in his fifties, maybe even more. He is really tall and has broad shoulders. Behind him, on the wall, there is a medal of courage that he got during an obscure war in the east. He has a limp, probably a memory of his life as a soldier.",
-        "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink? Since you are new, the first one is on the house.",
-        "Have you seen the medal ? Yeah, I was a soldier. Actually I am a soldier, in a way I feel like I never left the war… But let’s not talk about that now, shall we?",
-        "Hope you like the drink .",
-        "Two rough men are playing a game of pool table. They are not talking a lot, so it’s difficult to say if they know each other at all. Both players are about even in skill.",
-        "We are having a serious game, if you want to talk, offer us a drink first at least.",
-        "Ah, now we are talking… We are CJ and Rob . You seem cool, maybe later we could play together. We like to have really big stakes in our games, so maybe don’t interrupt us again.",
-        "You don’t think it’s a good idea.",
-        "A dude of eastern origin in his thirties. He is so nervous that he is trembling. Even his fixation with the jukebox tells you that something is wrong with him.",
-        "I really hate this stupid song. Why won’t this jukebox just shut up? I have an important meeting here in a bit. Yeah, I know, I know… It’s not the best place to do so, but I needed an inconspicuous place. Ok, I’m talking too much maybe… I need a cigarette .",
-        "Oh… that’s nice of you. I’m Omar . As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
-        "Two ladies are talking while sipping really colorful drinks with straws. They seem to be old friends catching up on their lives. They are talking friendly, but they are somewhat stiff.",
-        "Hi, we are Veronica and Jessica . Maybe join us for a smoke after we finish this conversation.",
-        "A cigarette for that guy over there? Yeah sure, if he’d help him calm down, he’s been really annoying… and I wanted to quit smoking anyway…",
-        "I finished my cigarettes, sorry!",
-        "You don’t feel the need right now. Maybe later?",
-        "The medal of courage was awarded to John Carter almost 30 years ago. It’s still shiny, he probably cleans it with pride regularly.",
-        "The pavement is a gray moquette mostly clean, the big exception is a big wine stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
-        "You don’t feel like drinking right now.",
-        "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police . They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
-        "Various policemen and policewomen are in front of the entrance. Amongst them there is the police chief: Belker. You have already collaborated with him in the past, he is a good and honest man, even if sometimes can seem a bit cold due to his job.",
-        "I see you are here too. Well, of course we are going to investigate what happened, but help us, will you? I have information that you don’t have, but you were here during the murder, so also the opposite is true.",
-        "I’m sorry, I know that you want to help but I can’t share with you that information.",
-        "I’m sorry but I really can’t reveal much. Let’s just say that I am here because I had to meet Omar for work related stuff.",
-        "Yeah, I get it. If we want your help, you’ll need the whole picture. Omar had a meeting with me, he was a key witness in an incoming case.",
-        "Are you ready to tell me who the culprit is? Yes or no?",
-        "The intimidating bartender is the only one that has access to lots of knives. He was also the one that switched up the lights again and he seemed to despise Omar . But you need more than this to incriminate him.",
-        "Yeah, I know… I made a real scene, but  I was busy fixing the lights. Someone has killed that man, and that someone is not me.",
-        "Ok… You got me. I stabbed Omar , but I didn’t kill him. I was a soldier, ok? You have to believe me, when I got to him in the dark he was already dead. His face was on his table and he didn’t move or started screaming even when I stabbed him. If I wanted to kill him fast, I wouldn’t have stabbed him behind his neck. Inspect the corpse, I assure you I am right.",
-        "I told you. I don’t know what killed him, but I believe that it was something that doesn’t leave many traces. Maybe try to inspect the corpse again?",
-        "That could be it, yeah. Inspect the whole bar , toilets included for more clues.",
-        "The two rough men are completely silent. They don’t seem bothered by the police , even if they are suspects, it wouldn’t be surprising if this wasn’t the first time that they got in a situation like this. They also despised Omar , but a ruined game is not enough to incriminate them, even if they are avid players .",
-        "You wanna know about the stakes of our game? We like to bet a lot of money, but if you think that we killed Omar , you are completely wrong. We didn’t lose any money, we just have to restart the game, it’s not a problem to kill for. We would investigate John , all that war stuff was weird. Inspect the counter and see if there are any missing knives.",
-        "Inspect the counter and see if there are any missing knives.",
-        "The ladies are still talking with each other, even if they are just whispering right now. They also seemed off from the start in a way. Even if they are the least suspicious, their behavior is still very weird.",
-        "That was pretty crazy, right? We believe that Omar was killed by the players at the pool table. Have you seen how they shouted and pushed him before?",
-        "That is not ours, but it seems like it contained perfume maybe? We don’t know who left it there, sorry.",
-        "Ah, yeah. That was ours, it used to contain perfume, we left it in the toilet accidentally.",
-        "So you actually caught us. Congratulations. Yeah, the cigarette we gave him was poisoned. Omar was a key witness in the trial of Jessica’s son. We had to kill him to save her son from prison, not that matters now. Now go, tell the police .",
-        "The knife wound is deep and on the back of the neck. If someone wanted to kill this man this way is really slow and painful, but you didn’t hear any screams and the body was already dead when the lights were switched on… So what happened here?",
-        "Focusing on everything but the knife, you see some strange traces on his mouth. Did someone poison him? He didn’t drink anything though.",
-        "Do you want to go to the gentlemen’s or gentlewomen’s toilet?",
-        "The toilet is not as clean as you’d hoped. Aside from that, there is nothing strange here.",
-        "You find a small empty glass vial in one of the stalls.",
-        "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?",
-        "There is one knife missing. They are really similar to the one that is in Omar’s neck.",
-        "The pavement is a gray moquette mostly clean, the big exception is a big blood stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
-        "So, who do you think is the murderer? “John” , “CJ and Rob” or “Veronica and Jessica”?",
-        "The police take John away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free. Do you want to try again?",
-        "The police take CJ and Rob away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free. Do you want to try again?",
-        "The police take Veronica and Jessica away. They killed Omar in a futile attempt of saving Jessica’s son from prison, since Omar was the only witness that could incriminate him. The police department is grateful again for your help, even if it was supposed to be your day off.",
-        "The old jukebox is stuck on a loop. The same song is repeating over and over again."
-    ]
+                 "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
+                 "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
+                 "You get lost a couple of times, but in the end you arrive at your destination.",
+                 "With the help of the map you easily arrive at your destination.",
+                 "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar . The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two men playing. At the back of the room there are the toilets .",
+                 "An intimidating bartender in his fifties, maybe even more. He is really tall and has broad shoulders. Behind him, on the wall, there is a medal of courage that he got during an obscure war in the east. He has a limp, probably a memory of his life as a soldier.",
+                 "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink? Since you are new, the first one is on the house.",
+                 "Have you seen the medal ? Yeah, I was a soldier. Actually I am a soldier, in a way I feel like I never left the war… But let’s not talk about that now, shall we?",
+                 "Hope you like the drink .",
+                 "Two rough men are playing a game of pool table. They are not talking a lot, so it’s difficult to say if they know each other at all. Both players are about even in skill.",
+                 "We are having a serious game, if you want to talk, offer us a drink first at least.",
+                 "Ah, now we are talking… We are CJ and Rob . You seem cool, maybe later we could play together. We like to have really big stakes in our games, so maybe don’t interrupt us again.",
+                 "You don’t think it’s a good idea.",
+                 "A dude of eastern origin in his thirties. He is so nervous that he is trembling. Even his fixation with the jukebox tells you that something is wrong with him.",
+                 "I really hate this stupid song. Why won’t this jukebox just shut up? I have an important meeting here in a bit. Yeah, I know, I know… It’s not the best place to do so, but I needed an inconspicuous place. Ok, I’m talking too much maybe… I need a cigarette .",
+                 "Oh… that’s nice of you. I’m Omar . As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
+                 "Two ladies are talking while sipping really colorful drinks with straws. They seem to be old friends catching up on their lives. They are talking friendly, but they are somewhat stiff.",
+                 "Hi, we are Veronica and Jessica . Maybe join us for a smoke after we finish this conversation.",
+                 "A cigarette for that guy over there? Yeah sure, if he’d help him calm down, he’s been really annoying… and I wanted to quit smoking anyway…",
+                 "I finished my cigarettes, sorry!",
+                 "You don’t feel the need right now. Maybe later?",
+                  "The medal of courage was awarded to John Carter almost 30 years ago. It’s still shiny, he probably cleans it with pride regularly.",
+                 "The pavement is a gray moquette mostly clean, the big exception is a big wine stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
+                 "You don’t feel like drinking right now.",
+                 "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police . They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
+                 "Various policemen and policewomen are in front of the entrance. Amongst them there is the police chief: Belker. You have already collaborated with him in the past, he is a good and honest man, even if sometimes can seem a bit cold due to his job.",
+                 "I see you are here too. Well, of course we are going to investigate what happened, but help us, will you? I have information that you don’t have, but you were here during the murder, so also the opposite is true.",
+                 "I’m sorry, I know that you want to help but I can’t share with you that information.",
+                 "I’m sorry but I really can’t reveal much. Let’s just say that I am here because I had to meet Omar for work related stuff.",
+                 "Yeah, I get it. If we want your help, you’ll need the whole picture. Omar had a meeting with me, he was a key witness in an incoming case.",
+                 "Are you ready to tell me who the culprit is? Yes or no?",
+                 "The intimidating bartender is the only one that has access to lots of knives. He was also the one that switched up the lights again and he seemed to despise Omar . But you need more than this to incriminate him.",
+                 "Yeah, I know… I made a real scene, but  I was busy fixing the lights. Someone has killed that man, and that someone is not me.",
+                 "Ok… You got me. I stabbed Omar , but I didn’t kill him. I was a soldier, ok? You have to believe me, when I got to him in the dark he was already dead. His face was on his table and he didn’t move or started screaming even when I stabbed him. If I wanted to kill him fast, I wouldn’t have stabbed him behind his neck. Inspect the corpse, I assure you I am right.",
+                 "I told you. I don’t know what killed him, but I believe that it was something that doesn’t leave many traces. Maybe try to inspect the corpse again?",
+                 "That could be it, yeah. Inspect the whole bar , toilets included for more clues.",
+                 "The two rough men are completely silent. They don’t seem bothered by the police , even if they are suspects, it wouldn’t be surprising if this wasn’t the first time that they got in a situation like this. They also despised Omar , but a ruined game is not enough to incriminate them, even if they are avid players .",
+                 "You wanna know about the stakes of our game? We like to bet a lot of money, but if you think that we killed Omar , you are completely wrong. We didn’t lose any money, we just have to restart the game, it’s not a problem to kill for. We would investigate John , all that war stuff was weird. Inspect the counter and see if there are any missing knives.",
+                 "Inspect the counter and see if there are any missing knives.",
+                 "The ladies are still talking with each other, even if they are just whispering right now. They also seemed off from the start in a way. Even if they are the least suspicious, their behavior is still very weird.",
+                 "That was pretty crazy, right? We believe that Omar was killed by the players at the pool table. Have you seen how they shouted and pushed him before?",
+                 "That is not ours, but it seems like it contained perfume maybe? We don’t know who left it there, sorry.",
+                 "Ah, yeah. That was ours, it used to contain perfume, we left it in the toilet accidentally.",
+                 "So you actually caught us. Congratulations. Yeah, the cigarette we gave him was poisoned. Omar was a key witness in the trial of Jessica’s son. We had to kill him to save her son from prison, not that matters now. Now go, tell the police .",
+                 "The knife wound is deep and on the back of the neck. If someone wanted to kill this man this way is really slow and painful, but you didn’t hear any screams and the body was already dead when the lights were switched on… So what happened here?",
+                 "Focusing on everything but the knife, you see some strange traces on his mouth. Did someone poison him? He didn’t drink anything though.",
+                 "Do you want to go to the gentlemen’s or ladies’ toilet?",
+                 "The toilet is not as clean as you’d hoped. Aside from that, there is nothing strange here.",
+                 "You find a small empty glass vial in one of the stalls.",
+                 "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?",
+                 "There is one knife missing. They are really similar to the one that is in Omar’s neck.",
+                 "The pavement is a gray moquette mostly clean, the big exception is a big blood stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
+                 "So, who do you think is the murderer? “John” , “CJ and Rob” or “Veronica and Jessica”?",
+                 "The police take John away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free. Do you want to try again?",
+                 "The police take CJ and Rob away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free. Do you want to try again?",
+                 "The police take Veronica and Jessica away. They killed Omar in a futile attempt of saving Jessica’s son from prison, since Omar was the only witness that could incriminate him. The police department is grateful again for your help, even if it was supposed to be your day off.",
+                 "The old jukebox is stuck on a loop. The same song is repeating over and over again."]
 }

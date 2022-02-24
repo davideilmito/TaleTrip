@@ -126,10 +126,10 @@ class StoriesStore : ObservableObject{
         
         let indexOfTheStory = getTheIndex(of: story)
         let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
-        
+        print(stories[indexOfTheStory!].allStoryChunksDescription[1])
         for chapter in stories[indexOfTheStory!].chapters.indices{
             
-            if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter { $0.description == chunkDescriptionToBeMatched }.first
+            if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter({ $0.description == chunkDescriptionToBeMatched }).first
             {
                 
                 return storyChunkFounded
