@@ -20,15 +20,15 @@
             "name": "Prelude",
             "storyChunks": [
                 {
-                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar, but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
+                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
                     "possibleVocalResponses": [
                         {
-                            "description": " Beergarden",
+                            "description": "Beergarden",
                             "descriptionToBeDisplayed": "You decided to go to Beergarden",
                             "arrayIndexOfTheStory": [1]
                         },
                         {
-                            "description": " Puzzles",
+                            "description": "Puzzles",
                             "descriptionToBeDisplayed": "You decided to go to Puzzles",
                             "arrayIndexOfTheStory": [1]
                         }
@@ -63,12 +63,12 @@
                     ]
                 },
                 {
-                    "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar, but fortunately you have a map. Try using it.",
+                    "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
                     "possibleVocalResponses": [
                         {
                             "description": "Use map",
                             "descriptionToBeDisplayed": "You opened the map",
-                            "arrayIndexOfTheStory": [2]
+                            "arrayIndexOfTheStory": [4]
                         }
                     ],
                     "interactiveButtons": [
@@ -78,7 +78,7 @@
                                 {
                                     "sfSymbol": "hand.raised",
                                     "name": "Use",
-                                    "arrayIndexOfTheStory": [2],
+                                    "arrayIndexOfTheStory": [4],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
                                 }
@@ -93,7 +93,7 @@
             "name": "Chapter 1",
             "storyChunks": [
                 {
-                    "description": "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar. The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two players. At the back of the room there are the toilets.",
+                    "description": "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the bar . The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a guy desperately trying to make it stop playing and a pool table with two men playing. At the back of the room there are the toilets .",
                     "possibleVocalResponses": [
                         {
                             "description": "Inspect bar",
@@ -429,7 +429,7 @@
             "name": "Chapter 2",
             "storyChunks": [
                 {
-                    "description": "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette. In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.\n The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox. After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette. If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.\nSadly, the atmosphere didn’t really change, with CJ, Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police. They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
+                    "description": "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police . They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
                     "possibleVocalResponses": [
                         {
                             "description": "Inspect jukebox",
@@ -946,7 +946,7 @@
             ]
         }
     ],
-    "length": "Medium",
+    "length": "Brief",
     "path": [],
     "description": "You, private investigators in Cramwood, wanted to take some days off work after you got paid for a very difficult case solved. You decide to go to a bar, but soon things turn out for the worst... \nInspect the whole bar, talk to the bartender and the customers and solve this crazy mystery in an otherwise peaceful night.",
     "allStoryChunksDescription": [
