@@ -9,9 +9,21 @@ import SwiftUI
 
 struct BookView: View {
 
-    let story: Story
+    
     @EnvironmentObject var storiesStore : StoriesStore
 
+    
+    init() {
+        
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.suyashBlue)]
+        UINavigationBar.appearance().barTintColor = UIColor(Color.backgroundBeige)
+        UINavigationBar.appearance().backgroundColor = UIColor(Color.backgroundBeige)
+        UIToolbar.appearance().barTintColor = UIColor(Color.backgroundBeige)
+    
+    }
+    
+    
+    
     struct CustomWords: Identifiable {
         let id = UUID()
         var text: String
@@ -81,11 +93,9 @@ struct BookView: View {
                                                 Menu("\(button.name)") {
                                                     ForEach(button.listOfCommands){ command in
                                                         Button {
-//
-                                                            
+
                                                             storiesStore.nextPieceOfStory(from: storyChunk, command, button)
-                                                            
-                                                            //UPDATE NUM OF TIMES
+                                                        
                                                         } label: {
                                                             Label(command.name,systemImage:command.sfSymbol)
                                                                 .font(.system(size: CGFloat(20), weight: .regular , design: .serif))
@@ -119,11 +129,12 @@ struct BookView: View {
                                 }
                             }
                         }
-                        .padding([.bottom])
-                        .frame(width: UIScreen.main.bounds.width - 64)
+                        .padding([.leading,.trailing],22)
+                        //.frame(width: UIScreen.main.bounds.width - 64)
                     }
                 }
-            
+                .background(Color.backgroundBeige)
+                
             .navigationTitle(storiesStore.tappedStory.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -149,7 +160,16 @@ struct BookView: View {
             }
             .accentColor(Color.suyashBlue)
         }
-    }
+    
+
+
+    
+
+
+
+
+
+}
 
 
 //struct BookView_Previews: PreviewProvider {
