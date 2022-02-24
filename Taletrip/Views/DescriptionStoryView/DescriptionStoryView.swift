@@ -29,7 +29,7 @@ struct DescriptionStoryView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination:  DavideView(story: story)) {
+                    NavigationLink(destination:  AAA(story: story)) {
                         
                         SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
                             

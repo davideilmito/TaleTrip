@@ -1,88 +1,84 @@
+////
+////  DavideView.swift
+////  Taletrip
+////
+////  Created by Davide Biancardi on 23/02/22.
+////
 //
-//  DavideView.swift
-//  Taletrip
+//import SwiftUI
 //
-//  Created by Davide Biancardi on 23/02/22.
+//struct DavideView: View {
 //
-
-import SwiftUI
-
-
-
-
-struct DavideView: View {
-    
-    @EnvironmentObject var storiesStore : StoriesStore
-    
-    var story : Story
-    
-    var body: some View {
-        
-        
-        ForEach(storiesStore.tappedStory.path){ storyChunk in
-            
-            VStack{
-                
-                Text(storyChunk.description)
-                
-                ForEach(storyChunk.interactiveButtons){ button in
-                    
-                    HStack {
-                        
-                        
-                        if(button.isTappable){
-                            
-                            Menu(button.name){
-                                
-                                ForEach(button.listOfCommands){ command in
-                                    
-                                    Button {
-                                        
-                                        storiesStore.nextChunk(command.arrayIndexOfTheStory[command.howManyTimes],story)
-                                        
-                                    } label: {
-                                        
-                                        Text(command.name)
-                                            .font(.system(size: CGFloat(20), weight: .regular , design: .serif))
-                                            .opacity(command.isFaded ? 40: 100)
-                                        
-                                    }
-                                    
-                                    
-                                }
-                                
-                            }
-                            
-                        }
-                    }
-                }
-                
-                
-                
-            }
-            
-            
-            
-        }
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-}
-
-
-
-
-//struct DavideView_Previews: PreviewProvider {
+//    @EnvironmentObject var storiesStore : StoriesStore
+//    let story: Story
 //
-//    static var viewModel = StoriesStore()
+//    var body: some View {
 //
-//    static var previews: some View {
-//        DavideView(story: viewModel.stories[0])
+//        ScrollView{
+//
+//            VStack(alignment: .leading,
+//                   spacing: 15){
+//
+//        ForEach(storiesStore.tappedStory.path){ storyChunk in
+//
+//                Text(storyChunk.description) .font(.system(size: CGFloat(20), weight: .regular , design: .serif))
+//
+//                ForEach(storyChunk.interactiveButtons){ button in
+//
+//                    HStack {
+//
+//                        if(button.isTappable){
+//
+//                            Menu(button.name){
+//
+//                                ForEach(button.listOfCommands){ command in
+//
+//                                    Button {
+//
+//                                        storiesStore.nextChunk(command.arrayIndexOfTheStory[command.howManyTimes],storiesStore.tappedStory)
+//
+//
+//
+//                                    } label: {
+//
+//                                        Label(command.name,systemImage:command.sfSymbol)
+//                                            .font(.system(size: CGFloat(20), weight: .regular , design: .serif))
+//                                            .opacity(command.isFaded ? 40: 100)
+//
+//                                    }
+//
+//
+//                                }
+//
+//                            }
+//
+//                        }
+//                    }
+//
+//
+//
+//                }
+//
+//
+//            }
+//            }
+//
+//        }
+//
+//
 //    }
 //}
+//
+//
+//
+////
+////struct DavideView_Previews: PreviewProvider {
+////
+////    static var viewModel = StoriesStore()
+////
+////
+////
+////    static var previews: some View {
+////        DavideView(story: viewModel.stories[0])
+////    }
+////}

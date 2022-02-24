@@ -31,7 +31,7 @@
                 }
             ],
             "interactiveButtons": [{
-                "name": " Beergarden",
+                "name": "Beergarden",
                 "listOfCommands": [{
                     "sfSymbol": "figure.walk",
                     "name": "Go to",
@@ -47,7 +47,7 @@
         "possibleVocalResponses": [{
                 "description": "Use map",
                 "descriptionToBeDisplayed": "You opened the map",
-                "arrayIndexOfTheStory": [2]
+                "arrayIndexOfTheStory": [4]
             }
         ],
         "interactiveButtons": [{
@@ -55,7 +55,7 @@
             "listOfCommands": [{
                 "sfSymbol": "figure.walk",
                 "name": "Use",
-                "arrayIndexOfTheStory": [2],
+                "arrayIndexOfTheStory": [4],
                 "hasToBeDisplayed": true,
                 "isFaded": false
             }],

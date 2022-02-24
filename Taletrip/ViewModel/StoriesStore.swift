@@ -114,8 +114,8 @@ class StoriesStore : ObservableObject{
     
     func firstChunkInPath(of story: Story){
         
-       let index = getTheIndex(of: story)
-     stories[index!].path.append(story.chapters[0].storyChunks[0])
+        let index = getTheIndex(of: story)
+        stories[index!].path.append(story.chapters[0].storyChunks[0])
         
         
         
@@ -124,12 +124,13 @@ class StoriesStore : ObservableObject{
     private func getStoryChunk(_ index: Int,_ story : Story) -> StoryChunk? {
         
         
-       let indexOfTheStory = getTheIndex(of: story)
-       let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
-       
+        let indexOfTheStory = getTheIndex(of: story)
+        let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
+        
         for chapter in stories[indexOfTheStory!].chapters.indices{
             
-            if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter { $0.description == chunkDescriptionToBeMatched }.first{
+            if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter { $0.description == chunkDescriptionToBeMatched }.first
+            {
                 
                 return storyChunkFounded
                 
@@ -144,18 +145,19 @@ class StoriesStore : ObservableObject{
     
     func nextChunk(_ index: Int,_ story : Story){
         
-      let storyChunk =  getStoryChunk(index, story)
         
-      let indexOfTheStory = getTheIndex(of: story)
+        let storyChunk =  getStoryChunk(index, story)
+        
+        let indexOfTheStory = getTheIndex(of: story)
         
         if storyChunk == nil {
             
-            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK con index \(index)")
+            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with index \(index)")
             
         }else {
-        
-        stories[indexOfTheStory!].path.append(storyChunk!)
-      
+            
+            stories[indexOfTheStory!].path.append(storyChunk!)
+            
         }
         
     }
