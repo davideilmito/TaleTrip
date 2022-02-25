@@ -133,7 +133,7 @@ struct BookView: View {
                                 else {
                                     Text("\(word.text)")
                                         .font(.system(size: 20, weight: .regular, design: .serif))
-                                        .foregroundColor(.black)
+                                        //.foregroundColor(.black) breaks dark mode
                                 }
                             }
                         }
