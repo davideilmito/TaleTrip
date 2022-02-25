@@ -20,7 +20,7 @@
             "name": "Prelude\nThe needed vacation",
             "storyChunks": [
                 {
-                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
+                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a pub , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
                     "possibleVocalResponses": [
                         {
                             "description": "Beergarden",
@@ -39,26 +39,20 @@
                     ],
                     "interactiveButtons": [
                         {
-                            "name": "Beergarden",
+                            "name": "pub",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "figure.walk",
-                                    "name": "Go to",
+                                    "name": "Go to Beergarden",
                                     "arrayIndexOfTheStory": [
                                         1
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
-                                }
-                            ],
-                            "isTappable": true
-                        },
-                        {
-                            "name": "Puzzles",
-                            "listOfCommands": [
+                                },
                                 {
                                     "sfSymbol": "figure.walk",
-                                    "name": "Go to",
+                                    "name": "Go to Puzzles",
                                     "arrayIndexOfTheStory": [
                                         1
                                     ],
@@ -7458,7 +7452,7 @@
             "name": "Chapter 3\nThe end",
             "storyChunks": [
                 {
-                    "description": "So, who do you think is the murderer? The “ bartender ”, the “ players ” or the “ ladies ”?",
+                    "description": "So, who do you think is the murderer? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
                     "possibleVocalResponses": [
                         {
                             "description": "bartender",
@@ -7484,41 +7478,29 @@
                     ],
                     "interactiveButtons": [
                         {
-                            "name": "bartender",
+                            "name": "murderer",
                             "listOfCommands": [
                                 {
-                                    "sfSymbol": "magnifyingglass",
-                                    "name": "Inspect",
+                                    "sfSymbol": "person.wave.2",
+                                    "name": "John",
                                     "arrayIndexOfTheStory": [
                                         53
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
-                                }
-                            ],
-                            "isTappable": true
-                        },
-                        {
-                            "name": "players",
-                            "listOfCommands": [
+                                },
                                 {
                                     "sfSymbol": "person.wave.2",
-                                    "name": "Inspect",
+                                    "name": "CJ and Rob",
                                     "arrayIndexOfTheStory": [
                                         54
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
-                                }
-                            ],
-                            "isTappable": true
-                        },
-                        {
-                            "name": "ladies",
-                            "listOfCommands": [
+                                },
                                 {
                                     "sfSymbol": "person.wave.2",
-                                    "name": "Inspect",
+                                    "name": "Veronica and Jessica",
                                     "arrayIndexOfTheStory": [
                                         55
                                     ],
@@ -7611,7 +7593,7 @@
         "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?",
         "There is one knife missing. They are really similar to the one that is in Omar ’s neck.",
         "The pavement is a gray moquette mostly clean, the big exception is a big blood stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
-        "So, who do you think is the murderer? The “ bartender ”, the “ players ” or the “ ladies ”?",
+        "So, who do you think is the murderer? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
         "The police take John away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.",
         "The police take CJ and Rob away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.",
         "The police take Veronica and Jessica away. They killed Omar in a futile attempt of saving Jessica’s son from prison, since Omar was the only witness that could incriminate him. The police department is grateful again for your help, even if it was supposed to be your day off.",
