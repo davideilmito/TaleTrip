@@ -318,7 +318,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "John",
+                            "name": "John!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "magnifyingglass",
@@ -562,7 +562,7 @@
                     ],
                     "interactiveButtons": [
                         {
-                            "name": "Veronica",
+                            "name": "Veronica!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -587,7 +587,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "Jessica",
+                            "name": "Jessica!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -731,7 +731,7 @@
                     ],
                     "interactiveButtons": [
                         {
-                            "name": "John",
+                            "name": "John!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "magnifyingglass",
@@ -1081,7 +1081,7 @@
                     "possibleVocalResponses":[],
                     "interactiveButtons":[
                         {
-                            "name": "CJ",
+                            "name": "CJ!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -1106,7 +1106,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "Rob",
+                            "name": "Rob!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -1521,7 +1521,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "Jessica",
+                            "name": "Jessica!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -1548,7 +1548,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "Veronica",
+                            "name": "Veronica!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "magnifyingglass",
@@ -1602,7 +1602,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "John",
+                            "name": "John!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -1629,7 +1629,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "CJ",
+                            "name": "CJ!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "magnifyingglass",
@@ -1654,7 +1654,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "Rob",
+                            "name": "Rob!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "magnifyingglass",
@@ -4425,7 +4425,7 @@
                             "isTappable": true
                         },
                         {
-                            "name": "John",
+                            "name": "John!",
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
@@ -7537,7 +7537,7 @@
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "person.wave.2",
-                                    "name": "John",
+                                    "name": "John!",
                                     "arrayIndexOfTheStory": [
                                         53
                                     ],
