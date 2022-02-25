@@ -80,6 +80,9 @@ struct BookView: View {
     
     var body: some View {
         
+        
+        ScrollViewReader value in
+        
         ScrollView{
             ForEach(storiesStore.tappedStory.path) {storyChunk in
                 let paragraph = stringtoParagraph(chunk: storyChunk)
