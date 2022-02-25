@@ -166,6 +166,12 @@ class StoriesStore : ObservableObject{
         
     }
     
+    func giveMeId()-> UUID{
+            
+            
+            stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1].id
+            
+        }
     
     
     func nextPieceOfStory(from storyChunk: StoryChunk, _ command :Command,_ button: InteractiveButton){
@@ -205,11 +211,11 @@ class StoriesStore : ObservableObject{
         
 //      Button that share the same name should have the same HowManyTimes
 //
-//        stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].howManyTimes += 1
+        stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].howManyTimes += 1
+
+        
 //
-        
-        
-            let commandNameToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].name
+//            let commandNameToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].name
 
 //      FOREACHNAME commands in story you have to increment the howmanytimes
        
@@ -219,21 +225,21 @@ class StoriesStore : ObservableObject{
 //      FOREACHNAME commands in story you have to increment the howmanytimes in the path that matches
         
         
-        for chunkIndex in stories[indexOfStory!].path.indices{
-            
-            for intercativeButtonIndex in stories[indexOfStory!].path[chunkIndex].interactiveButtons.indices{
-                
-                stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands.indices.filter({
-                    
-                    
-                    stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands[$0].name == commandNameToSearchFor
-                    
-                })
-                
-                
-            }
-     
-        }
+//        for chunkIndex in stories[indexOfStory!].path.indices{
+//
+//            for intercativeButtonIndex in stories[indexOfStory!].path[chunkIndex].interactiveButtons.indices{
+//
+//                stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands.indices.filter({
+//
+//
+//                    stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands[$0].name == commandNameToSearchFor
+//
+//                })
+//
+//
+//            }
+//
+//        }
 
         }
         

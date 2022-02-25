@@ -81,8 +81,7 @@ struct BookView: View {
     var body: some View {
         
         
-        ScrollViewReader value in
-        
+        ScrollViewReader{ value in 
         ScrollView{
             ForEach(storiesStore.tappedStory.path) {storyChunk in
                 let paragraph = stringtoParagraph(chunk: storyChunk)
@@ -100,7 +99,7 @@ struct BookView: View {
                                                 if !command.isFaded{
                                                     
                                                     Button {
-                                                        
+                                                        value.scrollTo(storiesStore.giveMeId())
                                                         storiesStore.nextPieceOfStory(from: storyChunk, command, button)
                                                         
                                                     } label: {
@@ -191,3 +190,4 @@ struct BookView: View {
 //        BookView(story: viewModel.stories[0])
 //    }
 //}
+}
