@@ -616,6 +616,36 @@
                 {
                     "description": "A cigarette for that weirdo over there? Yeah sure, if he’d help him calm down, he’s been really annoying… and I wanted to quit smoking anyway…",
                     "possibleVocalResponses": [],
+                    "interactiveButtons": [
+                        {
+                            "name": "cigarette",
+                            "listOfCommands": [
+                                {
+                                    "sfSymbol": "hand.raised",
+                                    "name": "Use",
+                                    "arrayIndexOfTheStory": [
+                                        23
+                                    ],
+                                    "hasToBeDisplayed": true,
+                                    "isFaded": false
+                                },
+                                {
+                                    "sfSymbol": "hand.raised",
+                                    "name": "Use on weirdo",
+                                    "arrayIndexOfTheStory": [
+                                        15
+                                    ],
+                                    "hasToBeDisplayed": true,
+                                    "isFaded": false
+                                }
+                            ],
+                            "isTappable": true
+                        }
+                    ]
+                },
+                {
+                    "description": "I finished my cigarettes, sorry!",
+                    "possibleVocalResponses": [],
                     "interactiveButtons": []
                 },
                 {
@@ -806,9 +836,34 @@
                     ]
                 },
                 {
-                    "description": "Hope you like the drink.",
+                    "description": "Hope you like the drink .",
                     "possibleVocalResponses": [],
-                    "interactiveButtons": []
+                    "interactiveButtons": [
+                        {
+                            "name": "drink",
+                            "listOfCommands": [
+                                {
+                                    "sfSymbol": "hand.raised",
+                                    "name": "Use on players",
+                                    "arrayIndexOfTheStory": [
+                                        11
+                                    ],
+                                    "hasToBeDisplayed": true,
+                                    "isFaded": false
+                                },
+                                {
+                                    "sfSymbol": "hand.raised",
+                                    "name": "Use",
+                                    "arrayIndexOfTheStory": [
+                                        23
+                                    ],
+                                    "hasToBeDisplayed": true,
+                                    "isFaded": false
+                                }
+                            ],
+                            "isTappable": true
+                        }
+                    ]
                 },
                 {
                     "description": "The old jukebox is stuck on a loop. The same song is repeating over and over again.",
