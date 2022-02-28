@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct BookView: View {
     
@@ -114,12 +115,12 @@ struct BookView: View {
                                                     if !command.isFaded{
                                                         
                                                         Button {
-                                                            descpath.append(command.descriptionToBeDisplayed)
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                                                withAnimation(.linear(duration: 0.4)){
-                                                            value.scrollTo(storiesStore.giveMeIdOfLastStoryChunk() , anchor: .bottom)
+                                                                withAnimation(.linear(duration: 0.8)){
+                                                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1])
                                                                 }
                                                             }
+                                                            descpath.append(command.descriptionToBeDisplayed)
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
                                                         } label: {
@@ -161,10 +162,14 @@ struct BookView: View {
                         if (descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1) {
                             Text("\(descpath[storyChunkindex])")
                                 .font(.system(size: 20, weight: .regular, design: .serif))
+                                .frame(maxWidth: 346, minHeight: 71)
+                                .padding(.horizontal, 10)
                                 .foregroundColor(.white)
-                                .padding(30)
+                                
                                 .background(Color.suyashBlue)
                                 .cornerRadius(12)
+                                .padding(.top,20)
+                                .padding(.bottom,10)
                         }
                         else {
                             
