@@ -95,11 +95,12 @@ struct BookView: View {
     
     var body: some View {
         
-        
-        ScrollViewReader{value in
+        ScrollView{
             
-            ScrollView{
+            ScrollViewReader{ value in
+                
                 ForEach(storiesStore.tappedStory.path.indices, id: \.self) { storyChunkindex in
+                    
                     let paragraph = stringtoParagraph(chunk: storiesStore.tappedStory.path[storyChunkindex])
                     
                     LazyVStack(alignment: .leading, spacing: 3) {
@@ -115,17 +116,23 @@ struct BookView: View {
                                                     if !command.isFaded{
                                                         
                                                         Button {
-                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                                                withAnimation(.linear(duration: 0.8)){
-                                                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1])
-                                                                }
-                                                            }
-                                                            descpath.append(command.descriptionToBeDisplayed)
+                                                            
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
-                                                        } label: {
-                                                            Label(command.name,systemImage:command.sfSymbol)
+                                                            descpath.append(command.descriptionToBeDisplayed)
                                                             
+                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                                                withAnimation(.easeIn(duration: 3.0)){
+                                                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
+                                                                           
+                                                                }
+                                                                
+                                                            }
+                                                            
+                                                            
+                                                        } label: {
+                                                            
+                                                            Label(command.name,systemImage:command.sfSymbol)
                                                             
                                                         }
                                                         
@@ -154,18 +161,19 @@ struct BookView: View {
                                     else {
                                         Text("\(word.text)")
                                             .font(.system(size: 20, weight: .regular, design: .serif))
-                                            //.foregroundColor(.black) breaks dark theme
+                                        
                                     }
                                 }
                             }
                         }
                         if (descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1) {
+                            
                             Text("\(descpath[storyChunkindex])")
-                                .font(.system(size: 20, weight: .regular, design: .serif))
+                                .font(.system(size: 20, weight: .light))
                                 .frame(maxWidth: 346, minHeight: 71)
                                 .padding(.horizontal, 10)
                                 .foregroundColor(.white)
-                                
+                            
                                 .background(Color.suyashBlue)
                                 .cornerRadius(12)
                                 .padding(.top,20)
@@ -175,12 +183,12 @@ struct BookView: View {
                             
                         }
                     }
+                    
                     .padding([.leading,.trailing],22)
-            
+                    
                 }
             }
-            .frame(width: UIScreen.main.bounds.size.width)
-            .background(Color.backgroundBeige)
+            
             .navigationTitle(storiesStore.tappedStory.title)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
@@ -209,13 +217,9 @@ struct BookView: View {
             }
             
             .accentColor(Color.suyashBlue)
-        }
-        
-        
-        
-        
-        
-        
+            
+        }.frame(width: UIScreen.main.bounds.size.width)
+            .background(Color.backgroundBeige)
         
         
         
@@ -223,13 +227,3 @@ struct BookView: View {
     
 }
 
-
-//struct BookView_Previews: PreviewProvider {
-//
-//    static var viewModel : StoriesStore = StoriesStore()
-//
-//    static var previews: some View {
-//        BookView(story: viewModel.stories[0])
-//    }
-//}
-//}

@@ -35,8 +35,6 @@ struct Command : Decodable,Identifiable{
     
     }
     
-    
-    
 }
 
 

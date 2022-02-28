@@ -23,6 +23,8 @@ class StoriesStore : ObservableObject{
         
     }
     
+    private var currentChapter = 0
+    
     var IndexOfTheTappedStory : Int? {
         
         let index = stories.indices.filter { stories[$0].showDetails == true }.first
@@ -109,6 +111,7 @@ class StoriesStore : ObservableObject{
         
         stories[0] = load("thedetectivesdayoff.json")
         stories[0].showDetails = true
+        self.currentChapter = 0
         
     }
     
@@ -124,7 +127,7 @@ class StoriesStore : ObservableObject{
         
         let indexOfTheStory = getTheIndex(of: story)
         let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
-        print(stories[indexOfTheStory!].allStoryChunksDescription[1])
+        
         for chapter in stories[indexOfTheStory!].chapters.indices{
             
             if let storyChunkFounded = stories[indexOfTheStory!].chapters[chapter].storyChunks.filter({ $0.description == chunkDescriptionToBeMatched }).first
@@ -147,6 +150,7 @@ class StoriesStore : ObservableObject{
         stories[indexOfStory!].path.removeAll()
         
     }
+    
     
     
     
@@ -176,7 +180,6 @@ class StoriesStore : ObservableObject{
         
         incrementHowManyTimesInStory(of: buttonToSearchFor, and: commandToSearchFor)
         
-        
         incrementHowManyTimesInPath(of: buttonToSearchFor, and: commandToSearchFor)
         
         if !appendStoryChunkToPath(storyChunk){
@@ -184,6 +187,34 @@ class StoriesStore : ObservableObject{
             fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with description -> \(stories[getTheIndex(of: tappedStory)!].allStoryChunksDescription[commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes]])")
             
         }
+        
+        if checkChapterCondition(){
+            
+            let indexOfTheStoryToAddInPath = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger.indexOfTheStory
+            
+            appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))
+            
+            currentChapter += 1
+            
+        }
+        
+    }
+    
+    
+    private func checkChapterCondition() -> Bool{
+        
+        let triggerOfCurrentChapter = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger
+        
+        for indexStoryChunk in triggerOfCurrentChapter.indicesDescriptionInPath {
+            
+            if   !stories[getTheIndex(of: tappedStory)!].path.contains(getStoryChunk(indexStoryChunk, tappedStory)!){
+                
+                return false
+            
+            }
+        }
+        
+        return true
         
     }
     
@@ -290,12 +321,7 @@ class StoriesStore : ObservableObject{
     }
     
     
-    func giveMeIdOfLastStoryChunk() -> UUID{
-        
-        stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1].id
-        
-        
-    }
+   
     
 }
 

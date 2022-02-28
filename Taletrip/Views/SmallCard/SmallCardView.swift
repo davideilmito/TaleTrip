@@ -12,7 +12,7 @@ struct SmallCardView: View {
     let storyImageName: String
     let storyTitle : String
     let length: Longevity
-    var width : CGFloat = UIScreen.main.bounds.size.width - 240
+    var width : CGFloat = UIScreen.main.bounds.size.width - 245
    
     var body: some View {
     
