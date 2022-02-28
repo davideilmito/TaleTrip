@@ -90,14 +90,16 @@ struct BookView: View {
         return tempParagraph
     }
     
+    @State var descpath : [String] = []
+    
     var body: some View {
         
         
         ScrollViewReader{value in
             
             ScrollView{
-                ForEach(storiesStore.tappedStory.path) {storyChunk in
-                    let paragraph = stringtoParagraph(chunk: storyChunk)
+                ForEach(storiesStore.tappedStory.path.indices, id: \.self) { storyChunkindex in
+                    let paragraph = stringtoParagraph(chunk: storiesStore.tappedStory.path[storyChunkindex])
                     
                     LazyVStack(alignment: .leading, spacing: 3) {
                         ForEach(paragraph) { line in
@@ -112,10 +114,11 @@ struct BookView: View {
                                                     if !command.isFaded{
                                                         
                                                         Button {
+                                                            descpath.append(command.descriptionToBeDisplayed)
                                                             
                                                             value.scrollTo(storiesStore.giveMeIdOfLastStoryChunk() , anchor: .bottom)
                                                             
-                                                            storiesStore.nextPieceOfStory(from: storyChunk, command, button)
+                                                            storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
                                                         } label: {
                                                             Label(command.name,systemImage:command.sfSymbol)
@@ -148,10 +151,21 @@ struct BookView: View {
                                     else {
                                         Text("\(word.text)")
                                             .font(.system(size: 20, weight: .regular, design: .serif))
-                                            .foregroundColor(.black)
+                                            //.foregroundColor(.black) breaks dark theme
                                     }
                                 }
                             }
+                        }
+                        if (descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1) {
+                            Text("\(descpath[storyChunkindex])")
+                                .font(.system(size: 20, weight: .regular, design: .serif))
+                                .foregroundColor(.white)
+                                .padding(30)
+                                .background(Color.suyashBlue)
+                                .cornerRadius(12)
+                        }
+                        else {
+                            
                         }
                     }
                     .padding([.leading,.trailing],22)
@@ -210,4 +224,4 @@ struct BookView: View {
 //        BookView(story: viewModel.stories[0])
 //    }
 //}
-}
+//}
