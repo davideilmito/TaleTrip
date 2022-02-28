@@ -210,3 +210,4 @@ struct BookView: View {
 //        BookView(story: viewModel.stories[0])
 //    }
 //}
+}

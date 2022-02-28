@@ -27,7 +27,7 @@ struct DescriptionTextView: View {
                 VStack(alignment: .leading, spacing: 10){
                     
                     TextView(title: titleOfTheStory.uppercased(), size: 37 , weight: .bold)
-                        .foregroundColor(.black)
+                        //.foregroundColor(.black) breaks dark mode
                     
                     TextView(title: descriptionOfTheStory, size: 18, weight: .regular)
                         .foregroundColor(.descriptionColor)
