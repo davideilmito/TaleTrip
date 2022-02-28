@@ -115,9 +115,11 @@ struct BookView: View {
                                                         
                                                         Button {
                                                             descpath.append(command.descriptionToBeDisplayed)
-                                                            
+                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                                                withAnimation(.linear(duration: 0.4)){
                                                             value.scrollTo(storiesStore.giveMeIdOfLastStoryChunk() , anchor: .bottom)
-                                                            
+                                                                }
+                                                            }
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
                                                         } label: {
