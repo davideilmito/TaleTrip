@@ -179,6 +179,7 @@ struct BookView: View {
             
                 }
             }
+            .frame(width: UIScreen.main.bounds.size.width)
             .background(Color.backgroundBeige)
             .navigationTitle(storiesStore.tappedStory.title)
             .navigationBarTitleDisplayMode(.inline)
