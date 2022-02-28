@@ -53,6 +53,9 @@ struct CapsuleView: View {
 }
 
 struct CapsuleView_Previews: PreviewProvider {
+    
+    
+    
     static var previews: some View {
         CapsuleView(longevity: .brief, width: 40, height: 14, textSize: 7)
     }

@@ -17,7 +17,6 @@ class StoriesStore : ObservableObject{
     
     @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     
-    
     var tappedStory : Story {
         
         stories.filter { $0.showDetails == true }.first!
@@ -30,10 +29,6 @@ class StoriesStore : ObservableObject{
         return index
         
     }
-    
-    
-    
-    
     
     var storyOfTheMonth : Story? {
         
@@ -64,6 +59,7 @@ class StoriesStore : ObservableObject{
         return nil
         
     }
+    
     
     init(){
         
@@ -104,20 +100,22 @@ class StoriesStore : ObservableObject{
     
     private func getTheIndex(of story: Story)-> Int?{
         
-        
         let index = stories.indices.filter { stories[$0].title == story.title }.first
         return index
         
-        
     }
     
+    func reLoad(){
+        
+        stories[0] = load("thedetectivesdayoff.json")
+        stories[0].showDetails = true
+        
+    }
     
     func firstChunkInPath(of story: Story){
         
         let index = getTheIndex(of: story)
         stories[index!].path.append(story.chapters[0].storyChunks[0])
-        
-        
         
     }
     
@@ -143,26 +141,10 @@ class StoriesStore : ObservableObject{
     }
     
     
-    func nextChunk(_ index: Int,_ story : Story, _ command : Command){
+    func emptyPathArray(){
         
-        
-        let storyChunk =  getStoryChunk(index, story)
-        
-        let indexOfTheStory = getTheIndex(of: story)
-        
-        if storyChunk == nil {
-            
-            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with index \(index)")
-            
-        }else {
-            
-            stories[indexOfTheStory!].path.append(storyChunk!)
-            
-        }
-        
-        increaseHowManyTimes(of: command, in: story)
-        
-        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        stories[indexOfStory!].path.removeAll()
         
     }
     
@@ -171,12 +153,12 @@ class StoriesStore : ObservableObject{
     func nextPieceOfStory(from storyChunk: StoryChunk, _ command :Command,_ button: InteractiveButton){
         
         let indexOfStory = getTheIndex(of: tappedStory)
+        
         let IndexOfStoryChunkInPath = stories[getTheIndex(of: tappedStory)!].path.indices.filter { stories[getTheIndex(of: tappedStory)!].path[$0] == storyChunk}.first
         
         let indexOfButton = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons.firstIndex {
             $0.name == button.name
         }
-    
         
         let indexOfCommand = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands.indices.filter {
             
@@ -184,99 +166,94 @@ class StoriesStore : ObservableObject{
             
         }.first
         
-        
-        let effectiveCommand = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!]
-        
+        let commandToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!]
         
         
-        let storyChunk =  getStoryChunk(effectiveCommand.arrayIndexOfTheStory[effectiveCommand.howManyTimes], tappedStory)
+        let buttonToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!]
+        
+        let storyChunk =  getStoryChunk(commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes], tappedStory)
         
         
-        if storyChunk == nil {
+        incrementHowManyTimesInStory(of: buttonToSearchFor, and: commandToSearchFor)
+        
+        
+        incrementHowManyTimesInPath(of: buttonToSearchFor, and: commandToSearchFor)
+        
+        if !appendStoryChunkToPath(storyChunk){
             
-            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with index \(index)")
-            
-        }else {
-            
-            stories[indexOfStory!].path.append(storyChunk!)
+            fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with description -> \(stories[getTheIndex(of: tappedStory)!].allStoryChunksDescription[commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes]])")
             
         }
-        
-        
-//      Button that share the same name should have the same HowManyTimes
-//
-//        stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].howManyTimes += 1
-//
-        
-        
-            let commandNameToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!].listOfCommands[indexOfCommand!].name
-
-//      FOREACHNAME commands in story you have to increment the howmanytimes
-       
-        
-        
-        
-//      FOREACHNAME commands in story you have to increment the howmanytimes in the path that matches
-        
-        
-        for chunkIndex in stories[indexOfStory!].path.indices{
-            
-            for intercativeButtonIndex in stories[indexOfStory!].path[chunkIndex].interactiveButtons.indices{
-                
-                stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands.indices.filter({
-                    
-                    
-                    stories[indexOfStory!].path[chunkIndex].interactiveButtons[intercativeButtonIndex].listOfCommands[$0].name == commandNameToSearchFor
-                    
-                })
-                
-                
-            }
-     
-        }
-
-        }
-        
-        
-    
-    
-
-    
-    func prova(_ story : Story, _ command : Command){
-        
-        let indecesToAccessCommand = GetCommandIndeces(of: command, in: story)
-        let indexOfTheStory = getTheIndex(of: story)
-        
-        if let indices = indecesToAccessCommand{
-            
-            let effectiveCommand = stories[indexOfTheStory!].chapters[indices[0]].storyChunks[indices[1]].interactiveButtons[indices[2]].listOfCommands[indices[3]]
-            
-            
-            
-            let storyChunk =  getStoryChunk(effectiveCommand.arrayIndexOfTheStory[effectiveCommand.howManyTimes], story)
-            
-            
-            
-            if storyChunk == nil {
-                
-                fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with description \(storyChunk?.description)")
-                
-            }else {
-                
-                stories[indexOfTheStory!].path.append(storyChunk!)
-                stories[indexOfTheStory!].chapters[indices[0]].storyChunks[indices[1]].interactiveButtons[indices[2]].listOfCommands[indices[3]].howManyTimes += 1
-            
-                
-            }
-            
-            
-        
-        }
-        
-   
         
     }
     
+    
+    
+    private func incrementHowManyTimesInStory(of button : InteractiveButton, and command : Command){
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        for chapterIndex in stories[indexOfStory!].chapters.indices{
+            
+            for chunkIndex in stories[indexOfStory!].chapters[chapterIndex].storyChunks.indices{
+                
+                let bottonIndices = stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex]  .interactiveButtons.indices.filter {
+                    
+                    stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[$0].name == button.name
+                    
+                }
+                
+                for i in bottonIndices {
+                    
+                    let commandIndexToIncrement =  stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands.indices.filter
+                    {
+                        
+                        stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[$0].name == command.name
+                        
+                    }.first
+                    
+                    if commandIndexToIncrement != nil {
+                        
+                        stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[commandIndexToIncrement!].howManyTimes += 1
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    private func incrementHowManyTimesInPath(of button : InteractiveButton, and command : Command){
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        for chunkIndex in stories[indexOfStory!].path.indices{
+            
+            let bottonIndices = stories[indexOfStory!].path[chunkIndex].interactiveButtons.indices.filter {
+                
+                stories[indexOfStory!].path[chunkIndex].interactiveButtons[$0].name == button.name
+                
+            }
+            
+            for i in bottonIndices {
+                
+                let commandIndexToIncrement =  stories[indexOfStory!].path[chunkIndex].interactiveButtons[i].listOfCommands.indices.filter
+                {
+                    
+                    stories[indexOfStory!].path[chunkIndex].interactiveButtons[i].listOfCommands[$0].name == command.name
+                    
+                }.first
+                
+                if commandIndexToIncrement != nil {
+                    
+                    
+                    stories[indexOfStory!].path[chunkIndex].interactiveButtons[i].listOfCommands[commandIndexToIncrement!].howManyTimes += 1
+                    
+                }
+            }
+        }
+        
+    }
     
     
     func showStory(of story : Story) {
@@ -295,106 +272,30 @@ class StoriesStore : ObservableObject{
         
     }
     
-    func getListOfButtons(_ story: Story, _ name: String) -> [Command]?{
+    private  func appendStoryChunkToPath(_ storyChunk: StoryChunk?) -> Bool{
         
-        story.dictionaryOfButtons[name]?.listOfCommands
+        let indexOfStory = getTheIndex(of: tappedStory)
         
-        
-    }
-    
-    func appendStoryChunkToPath(storyChunk: StoryChunk, story : Story){
-        
-        
-        stories[stories.indices.filter { stories[$0].title == story.title}.first!].path.append(storyChunk)
-        
-    }
-    
-    
-    
-    func GetCommandIndeces(of command : Command, in story : Story )-> [Int]?{
-        
-        
-        let IndexOfStory = getTheIndex(of: story)!
-        
-        for chapterIndex in stories[IndexOfStory].chapters.indices{
+        if storyChunk == nil {
             
-            for storyChunkIndex in stories[IndexOfStory].chapters[chapterIndex].storyChunks.indices{
-                
-                for buttonIndex in stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons.indices{
-                    
-                    let indexOfCommand =  stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons[buttonIndex].listOfCommands.indices.filter {
-                        
-                        stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons[buttonIndex].listOfCommands[$0].id == command.id
-                        
-                        
-                    }.first
-                    
-                   
-                    if  let index = indexOfCommand{
-                        
-                        return [chapterIndex,storyChunkIndex,buttonIndex,index]
-                        
-                    }
-                    
-                    
-                    
-                }
-                
-                
-            }
+            return false
             
+        }else {
+            
+            stories[indexOfStory!].path.append(storyChunk!)
+            return true
             
         }
         
-        return nil
-        
-    }
-    
-    func increaseHowManyTimes(of command : Command, in story : Story ){
-        
-        
-        let IndexOfStory = getTheIndex(of: story)!
-        
-        for chapterIndex in stories[IndexOfStory].chapters.indices{
-            
-            for storyChunkIndex in stories[IndexOfStory].chapters[chapterIndex].storyChunks.indices{
-                
-                for buttonIndex in stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons.indices{
-                    
-                    let indexOfCommand =  stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons[buttonIndex].listOfCommands.indices.filter {
-                        
-                        stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons[buttonIndex].listOfCommands[$0].id == command.id
-                        
-                        
-                    }.first
-                    
-                   
-                    if  let index = indexOfCommand{
-                        
-                        stories[IndexOfStory].chapters[chapterIndex].storyChunks[storyChunkIndex].interactiveButtons[buttonIndex].listOfCommands[index].howManyTimes += 1
-                        
-                        
-                       
-                        
-                        return
-                        
-                    }
-                    
-                    
-                    
-                }
-                
-                
-            }
-            
-            
-        }
-        
-        
     }
     
     
-    
+    func giveMeIdOfLastStoryChunk() -> UUID{
+        
+        stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1].id
+        
+        
+    }
     
 }
 

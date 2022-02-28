@@ -508,6 +508,13 @@
                     ]
                 },
                 {
+                    "description":"You don’t think it’s a good idea.",
+                    "possibleVocalResponses": [
+                    ],
+                    "interactiveButtons": [
+                    ]
+                },
+                {
                     "description": "The pavement is a gray moquette mostly clean, the big exception is a big wine stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
                     "possibleVocalResponses": [
                         {
@@ -7704,6 +7711,9 @@
                     "interactiveButtons": [
                     ]
                 }
+                
+                
+                
             ]
         }
         

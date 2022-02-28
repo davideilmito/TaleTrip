@@ -12,20 +12,21 @@ struct SmallCardView: View {
     let storyImageName: String
     let storyTitle : String
     let length: Longevity
-    
+    var width : CGFloat = UIScreen.main.bounds.size.width - 240
+   
     var body: some View {
     
         VStack(alignment: .leading,spacing: 5){
             
             SmallCardImage(storyImageName: storyImageName).overlay {
-                CapsuleView(longevity: length, width:42, height: 14, textSize: 7)
+                CapsuleView(longevity: length, width: 42, height: 14, textSize: 7)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .padding(.leading, 10)
                     .padding(.top, 10)
             }
             
             TextView(title: storyTitle, size: 14, weight: .regular)
-                .foregroundColor(Color.smallCardTitleColor).frame(maxWidth: 149,maxHeight:18,alignment: .leading)
+                .foregroundColor(Color.smallCardTitleColor).frame(maxWidth: width,maxHeight:18,alignment: .leading)
             
         }
     

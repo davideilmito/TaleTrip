@@ -34,7 +34,7 @@ struct DescriptionStoryView: View {
                         SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
                             
                               
-                            .padding(.bottom,22)
+//                            .padding(.bottom,22)
                     }.simultaneousGesture(TapGesture().onEnded({ _ in
                         storiesStore.firstChunkInPath(of: story)
                         print(storiesStore.stories[0].path)

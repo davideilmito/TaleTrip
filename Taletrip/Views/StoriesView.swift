@@ -27,16 +27,17 @@ struct StoriesView: View {
             
             ScrollView(showsIndicators: false){
                 
-                VStack(alignment: .leading, spacing: 35){
+                VStack(alignment: .center, spacing: 35){
                     
                     TextView(title: "Stories",size: 37,weight: .bold)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding(.leading,40)
                     
                     //   Story You will Like
                     if let storyYouWillLike = storiesStore.storyYouWillLike{
                         
                         HighlightedCardView(storyToBeHighlighted: storyYouWillLike,title: "Story You'll Like")
-                            .padding(.leading,40)
+                            
                             .onTapGesture {
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyYouWillLike)
@@ -54,7 +55,7 @@ struct StoriesView: View {
                     if let storyOfTheMonth = storiesStore.storyOfTheMonth{
                         
                         HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
-                            .padding(.leading,40)
+                            
                             .onTapGesture {
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyOfTheMonth)

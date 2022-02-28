@@ -9,9 +9,8 @@ import SwiftUI
 
 struct BookView: View {
     
-    
     @EnvironmentObject var storiesStore : StoriesStore
-    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     init() {
         
@@ -22,7 +21,20 @@ struct BookView: View {
         
     }
     
-    
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        
+        storiesStore.emptyPathArray()
+        
+        storiesStore.reLoad()
+        
+    }) {
+        
+        Label("",systemImage: "chevron.backward")
+        
+        
+    }
+    }
     
     struct CustomWords: Identifiable {
         let id = UUID()
@@ -81,104 +93,111 @@ struct BookView: View {
     var body: some View {
         
         
-        ScrollViewReader value in
-        
-        ScrollView{
-            ForEach(storiesStore.tappedStory.path) {storyChunk in
-                let paragraph = stringtoParagraph(chunk: storyChunk)
-                
-                LazyVStack(alignment: .leading, spacing: 3) {
-                    ForEach(paragraph) { line in
-                        HStack(spacing: 3) {
-                            ForEach(line.words) { word in
-                                if let button = word.isButton {
-                                    if (button.isTappable) {
-                                        Menu("\(button.name)") {
-                                            ForEach(button.listOfCommands){ command in
-                                                
-                                                
-                                                if !command.isFaded{
+        ScrollViewReader{value in
+            
+            ScrollView{
+                ForEach(storiesStore.tappedStory.path) {storyChunk in
+                    let paragraph = stringtoParagraph(chunk: storyChunk)
+                    
+                    LazyVStack(alignment: .leading, spacing: 3) {
+                        ForEach(paragraph) { line in
+                            HStack(spacing: 3) {
+                                ForEach(line.words) { word in
+                                    if let button = word.isButton {
+                                        if (button.isTappable) {
+                                            Menu("\(button.name)") {
+                                                ForEach(button.listOfCommands){ command in
                                                     
-                                                    Button {
+                                                    
+                                                    if !command.isFaded{
                                                         
-                                                        storiesStore.nextPieceOfStory(from: storyChunk, command, button)
-                                                        
-                                                    } label: {
-                                                        Label(command.name,systemImage:command.sfSymbol)
-                                                        
+                                                        Button {
+                                                            
+                                                            value.scrollTo(storiesStore.giveMeIdOfLastStoryChunk() , anchor: .bottom)
+                                                            
+                                                            storiesStore.nextPieceOfStory(from: storyChunk, command, button)
+                                                            
+                                                        } label: {
+                                                            Label(command.name,systemImage:command.sfSymbol)
+                                                            
+                                                            
+                                                        }
                                                         
                                                     }
                                                     
+                                                    
                                                 }
-                                                
-                                                
                                             }
-                                        }
-                                        .font(.system(size: 20, weight: .regular, design: .serif))
-                                        .foregroundColor(.white)
-                                        .padding(3)
-                                        .background(Color.suyashBlue)
-                                        .cornerRadius(12)
-                                    }
-                                    else {
-                                        
-                                        Text("\(word.text)")
                                             .font(.system(size: 20, weight: .regular, design: .serif))
                                             .foregroundColor(.white)
                                             .padding(3)
-                                            .background(Color.gray)
+                                            .background(Color.suyashBlue)
                                             .cornerRadius(12)
-                                        
+                                        }
+                                        else {
+                                            
+                                            Text("\(word.text)")
+                                                .font(.system(size: 20, weight: .regular, design: .serif))
+                                                .foregroundColor(.white)
+                                                .padding(3)
+                                                .background(Color.gray)
+                                                .cornerRadius(12)
+                                            
+                                        }
                                     }
-                                }
-                                else {
-                                    Text("\(word.text)")
-                                        .font(.system(size: 20, weight: .regular, design: .serif))
-                                        .foregroundColor(.black)
+                                    else {
+                                        Text("\(word.text)")
+                                            .font(.system(size: 20, weight: .regular, design: .serif))
+                                            .foregroundColor(.black)
+                                    }
                                 }
                             }
                         }
                     }
+                    .padding([.leading,.trailing],22)
+            
                 }
-                .padding([.leading,.trailing],22)
-                //.frame(width: UIScreen.main.bounds.width - 64)
             }
+            .background(Color.backgroundBeige)
+            .navigationTitle(storiesStore.tappedStory.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack)
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {
+                        print("Pressed 1")
+                    }) {
+                        Image(systemName: "lightbulb")
+                    }
+                    Spacer()
+                    Button(action: {
+                        print("Pressed 2")
+                    }) {
+                        Image(systemName: "mic")
+                    }
+                    Spacer()
+                    Button(action: {
+                        print("Pressed 3")
+                    }) {
+                        Image(systemName: "archivebox")
+                    }
+                }
+                
+            }
+            
+            .accentColor(Color.suyashBlue)
         }
-        .background(Color.backgroundBeige)
         
-        .navigationTitle(storiesStore.tappedStory.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItemGroup(placement: .bottomBar) {
-                Button(action: {
-                    print("Pressed 1")
-                }) {
-                    Image(systemName: "lightbulb")
-                }
-                Spacer()
-                Button(action: {
-                    print("Pressed 2")
-                }) {
-                    Image(systemName: "mic")
-                }
-                Spacer()
-                Button(action: {
-                    print("Pressed 3")
-                }) {
-                    Image(systemName: "archivebox")
-                }
-            }
-        }
-        .accentColor(Color.suyashBlue)
+        
+        
+        
+        
+        
+        
+        
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
 

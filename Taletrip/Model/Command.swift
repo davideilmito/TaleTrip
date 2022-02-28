@@ -20,7 +20,7 @@ struct Command : Decodable,Identifiable{
     var hasToBeDisplayed: Bool
     var isFaded: Bool {
         
-        howManyTimes == arrayIndexOfTheStory.count
+        howManyTimes >= arrayIndexOfTheStory.count
         
     }
     

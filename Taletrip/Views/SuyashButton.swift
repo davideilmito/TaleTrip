@@ -27,7 +27,7 @@ struct SuyashButton: View {
                     
                 
                
-            }
+            }.frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottom)
         
     }
 }

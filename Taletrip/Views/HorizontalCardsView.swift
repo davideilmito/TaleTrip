@@ -13,8 +13,8 @@ struct HorizontalCardsView: View {
     let title: String
     @Binding var showModal : Bool
     @EnvironmentObject var storiesStore : StoriesStore
-    
-    
+    var height : CGFloat = ((UIScreen.main.bounds.size.width - 240) * 200) / 149
+
     var body: some View {
         
         //  PLEASE NOTE :  WE CANNOT HAVE STORIES WITH THE SAME TITLE
@@ -26,7 +26,8 @@ struct HorizontalCardsView: View {
                
               
             ScrollView(.horizontal,showsIndicators: false){
-            HStack(spacing: 14){
+                
+            HStack(spacing: 12){
                 
                 ForEach(stories,id: \.title){story in
                         SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)  .onTapGesture {
@@ -39,7 +40,7 @@ struct HorizontalCardsView: View {
                 
             }
             .padding(40)
-            }.frame(width: UIScreen.main.bounds.width, height: 220)
+            }.frame(width: UIScreen.main.bounds.width, height: height + 20 )
         }
         
     }
