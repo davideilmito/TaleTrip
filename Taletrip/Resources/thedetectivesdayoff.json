@@ -118,7 +118,7 @@
             "name": "Chapter 1\nCurious people in a curious place",
             "trigger":{
                 
-                "indicesDescriptionInPath" : [15],
+                "indicesDescriptionInPath" : [11, 15],
                 
                 "indexOfTheStory" : 24
       
@@ -381,7 +381,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "descriptionToBeDisplayed": "You try unsing the jukebox.",
+                                    "descriptionToBeDisplayed": "You try using the jukebox.",
                                     "arrayIndexOfTheStory": [
                                         56
                                     ],
@@ -961,7 +961,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "descriptionToBeDisplayed": "You try unsing the jukebox.",
+                                    "descriptionToBeDisplayed": "You try using the jukebox.",
                                     "arrayIndexOfTheStory": [
                                         56
                                     ],
@@ -991,7 +991,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "descriptionToBeDisplayed": "You try unsing the jukebox.",
+                                    "descriptionToBeDisplayed": "You try using the jukebox.",
                                     "arrayIndexOfTheStory": [
                                         56
                                     ],
@@ -1035,7 +1035,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "descriptionToBeDisplayed": "You try unsing the jukebox.",
+                                    "descriptionToBeDisplayed": "You try using the jukebox.",
                                     "arrayIndexOfTheStory": [
                                         56
                                     ],
@@ -1235,7 +1235,7 @@
             },
             "storyChunks": [
                 {
-                    "description": "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police . They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
+                    "description": "Omar finally lets go of his fixation and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police. They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
                     "possibleVocalResponses": [
                         {
                             "description": "Inspect jukebox",
@@ -1478,7 +1478,7 @@
                                 {
                                     "sfSymbol": "magnifyingglass",
                                     "name": "Inspect",
-                                    "descriptionToBeDisplayed": "You try unsing the jukebox.",
+                                    "descriptionToBeDisplayed": "You try using the jukebox.",
                                     "arrayIndexOfTheStory": [
                                         56
                                     ],
@@ -7783,7 +7783,7 @@
         "The medal of courage was awarded to John Carter almost 30 years ago. It’s still shiny, he probably cleans it with pride regularly.",
         "The pavement is a gray moquette mostly clean, the big exception is a big wine stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
         "You don't want right now.",
-        "Omar finally lets go of his fixation with the jukebox and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere in the bar is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police . They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
+        "Omar finally lets go of his fixation and starts to go outside to smoke his cigarette . In doing so though, probably because he is still thinking about his meeting, he bumps into CJ and he falls on the table, moving all the cue balls. CJ and Rob get really angry, shouting at the poor guy and even pushing it from time to time while doing so. At that point John intervenes to calm them down, but to your surprise, when he sees Omar he sides with the two men. “We won the war, you know that right?”. You heard enough nonsense, you stop them from arguing and you let Omar go outside to smoke. The two ladies remain silent during the whole ordeal, exchanging strange looks with each other.  The atmosphere is really tense. The only thing breaking the silence is the repetitive jukebox . After five minutes, Omar enters the bar again and approaches you. “Thank you so much for what you did before… and the cigarette . If this meeting wasn’t a life or death thing, I would have left.” After telling you this, he goes sitting on a table at the end of the room, far away enough from everyone.  Sadly, the atmosphere didn’t really change, with CJ , Rob and John checking on Omar periodically and even Veronica and Jessica looking at him from time to time, exchanging just a few whispered words after each look. Then out of nowhere, the lights go off, it’s a blackout. You hear some movement in the room and then a big thump. After that, complete silence. “Don’t worry dear customers, I’m going to switch on the lights in a second.”. As soon as the lights are back on, there is a collective gasp. Omar is covered in blood and has a knife sticking out of his neck. The limp body rests on his table with the eyes still open. After a brief moment to realize what happened, you call the police. They arrive in five minutes. The chief of police is there too. “Ok, none will leave until we understand what happened here”.",
         "Various policemen and policewomen are in front of the entrance. Amongst them there is the police chief: Belker. You have already collaborated with him in the past, he is a good and honest man, even if sometimes can seem a bit cold due to his job.",
         "I see you are here too. Well, of course we are going to investigate what happened, but help us, will you? I have information that you don’t have, but you were here during the murder, so also the opposite is true.",
         "I’m sorry, I know that you want to help but I can’t share with you that information.",
