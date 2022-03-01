@@ -865,6 +865,16 @@
                             "listOfCommands": [
                                 {
                                     "sfSymbol": "hand.raised",
+                                    "name": "Use on players",
+                                    "descriptionToBeDisplayed": "You offer the drink to the men playing.",
+                                    "arrayIndexOfTheStory": [
+                                        11
+                                    ],
+                                    "hasToBeDisplayed": true,
+                                    "isFaded": false
+                                },
+                                {
+                                    "sfSymbol": "hand.raised",
                                     "name": "Use",
                                     "descriptionToBeDisplayed": "You put the drink near your mouth.",
                                     "arrayIndexOfTheStory": [

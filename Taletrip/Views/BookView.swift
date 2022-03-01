@@ -226,7 +226,12 @@ struct BookView: View {
                     }
                     Spacer()
                     Button(action: {
-                        print("Pressed 3")
+                        
+                        print(storiesStore.tappedStory.inventory)
+                        
+                        let sound = Bundle.main.path(forResource: "zip_1", ofType: "wav")
+                        self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                        self.audioPlayer.play()
                     }) {
                         Image(systemName: "archivebox")
                     }
