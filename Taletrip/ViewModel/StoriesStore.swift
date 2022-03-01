@@ -109,8 +109,10 @@ class StoriesStore : ObservableObject{
     
     func reLoad(){
         
-        stories[0] = load("thedetectivesdayoff.json")
-        stories[0].showDetails = true
+        let index = getTheIndex(of: tappedStory)!
+        
+        stories[index] = load(stories[index].jsonTitle)
+        stories[index].showDetails = true
         self.currentChapter = 0
         
     }
