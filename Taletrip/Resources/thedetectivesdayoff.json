@@ -2903,6 +2903,7 @@
                             "description": "No",
                             "descriptionToBeDisplayed": "You think you need more time",
                             "arrayIndexOfTheStory": [
+                                23
                             ]
                         }
                     ],
@@ -2915,7 +2916,7 @@
                                     "name": "Yes",
                                     "descriptionToBeDisplayed": "You are sure.",
                                     "arrayIndexOfTheStory": [
-                                        56
+                                        52
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
@@ -2925,7 +2926,7 @@
                                     "name": "No",
                                     "descriptionToBeDisplayed": "You think you need more time.",
                                     "arrayIndexOfTheStory": [
-                                        
+                                        23
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
@@ -7664,7 +7665,7 @@
             },
             "storyChunks": [
                 {
-                    "description": "So, who do you think is the murderer? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
+                    "description": "So, who do you think is the murderer ? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
                     "possibleVocalResponses": [
                         {
                             "description": "bartender",
@@ -7811,7 +7812,7 @@
         "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?",
         "There is one knife missing. They are really similar to the one that is in Omar ’s neck.",
         "The pavement is a gray moquette mostly clean, the big exception is a big blood stain near one of the tables. There is a cobweb in one corner of the ceiling. Behind the counter there are a bunch of shelves full of colorful bottles of liquor.",
-        "So, who do you think is the murderer? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
+        "So, who do you think is the murderer ? The “John“, “CJ and Rob“ or “Veronica and Jessica“?",
         "The police take John away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.",
         "The police take CJ and Rob away. You don’t think about it too much for the next few days, but it soon turns out that you incriminated the wrong person. The real murderer fled the country and is free.",
         "The police take Veronica and Jessica away. They killed Omar in a futile attempt of saving Jessica’s son from prison, since Omar was the only witness that could incriminate him. The police department is grateful again for your help, even if it was supposed to be your day off.",
