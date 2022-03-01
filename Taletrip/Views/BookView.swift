@@ -46,7 +46,7 @@ struct BookView: View {
             self.text = text
             for chunkButton in chunkButtons {
                 if (text == chunkButton.name) {
-                    self.isButton = InteractiveButton(name: chunkButton.name, listOfCommands: chunkButton.listOfCommands)
+                    self.isButton = InteractiveButton(name: chunkButton.name, listOfCommands: chunkButton.listOfCommands, isObject: chunkButton.isObject)
                     break //IT'S MANDATORY TO HAVE THIS
                 }
                 else {
@@ -91,7 +91,6 @@ struct BookView: View {
         return tempParagraph
     }
     
-    //@State var descpath : [String] = []
     @State var audioPlayer : AVAudioPlayer!
     
     var body: some View {
@@ -109,7 +108,7 @@ struct BookView: View {
                             HStack(spacing: 3) {
                                 ForEach(line.words) { word in
                                     if let button = word.isButton {
-                                        if (button.isTappable) {
+                                        if (button.isTappable && ( (button.isObject && storiesStore.isIteminInventory(item: button.name, in: storiesStore.tappedStory)) || !button.isObject)) {
                                             Menu("\(button.name)") {
                                                 ForEach(button.listOfCommands){ command in
                                 
@@ -119,8 +118,6 @@ struct BookView: View {
                                                             
                                                             storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
-                                                            
-                                                            print(storiesStore.tappedStory.descpath)
                                                             
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                                                 withAnimation(.easeIn(duration: 3.0)){

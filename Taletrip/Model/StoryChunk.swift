@@ -25,26 +25,16 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let possibleVocalResponses : [PossibleVocalResponse]
     var interactiveButtons : [InteractiveButton]
     let doesAdvanceHint : Bool = false
-    let givesObject : String = " "
+    let objectGiven : String?
+    let objectTaken : String?
     
-    var objectGiven: String?{ //REMEMBER THAT THIS IS THE VARIABLE  TO ASK FOR THE OBJECT
-        
-        if (self.givesObject == ""){
-            
-            return nil
-            
-        }else{
-            
-            return self.givesObject
-            
-        }
-        
-    }
     enum CodingKeys: String, CodingKey {
         
         case description
         case possibleVocalResponses
         case interactiveButtons
+        case objectGiven
+        case objectTaken
     
     }
     

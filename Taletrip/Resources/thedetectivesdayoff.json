@@ -69,7 +69,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -99,9 +100,11 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
-                    ]
+                    ],
+                    "objectGiven": "map"
                 },
                 {
                     "description": "You get lost a couple of times, but in the end you arrive at your destination." ,
@@ -109,9 +112,19 @@
                     ],
                     "interactiveButtons": [
                         
-   
-                    ]
+                    ],
+                    "objectTaken": "map"
+                },
+                {
+                    "description": "With the help of the map you easily arrive at your destination." ,
+                    "possibleVocalResponses": [
+                    ],
+                    "interactiveButtons": [
+                        
+                    ],
+                    "objectTaken": "map"
                 }
+
             ]
         },
         {
@@ -290,7 +303,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "ladies",
@@ -318,7 +332,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "bartender",
@@ -346,7 +361,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "John!",
@@ -373,7 +389,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "jukebox",
@@ -389,7 +406,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "weirdo",
@@ -415,7 +433,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "players",
@@ -442,7 +461,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "drink",
@@ -468,7 +488,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         },
                         {
                             "name": "toilets",
@@ -484,7 +505,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "medal",
@@ -500,7 +522,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "cigarette",
@@ -526,7 +549,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
                     ]
                 },
@@ -589,7 +613,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -639,7 +664,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Jessica!",
@@ -666,7 +692,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -698,9 +725,11 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
-                    ]
+                    ],
+                    "objectGiven": "cigarette"
                 },
                 {
                     "description": "I finished my cigarettes, sorry!",
@@ -754,7 +783,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "medal",
@@ -770,12 +800,13 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
                 {
-                    "description": "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink? Since you are new, the first one is on the house.",
+                    "description": "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink ? Since you are new, the first one is on the house.",
                     "possibleVocalResponses": [
                         {
                             "description": "Talk to John",
@@ -826,7 +857,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "drink",
@@ -842,9 +874,11 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
-                    ]
+                    ],
+                    "objectGiven": "drink"
                 },
                 {
                     "description": "You don't want right now.",
@@ -877,7 +911,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -907,7 +942,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -939,7 +975,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
                     ]
                 },
@@ -969,7 +1006,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -999,7 +1037,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -1043,7 +1082,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "cigarette",
@@ -1069,7 +1109,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
                     ]
                 },
@@ -1081,7 +1122,8 @@
                 {
                     "description": "Oh… that’s nice of you. I’m Omar . As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
                     "possibleVocalResponses": [],
-                    "interactiveButtons": []
+                    "interactiveButtons": [],
+                    "objectTaken" : "cigarette"
                 },
                 {
                     "description": "Two rough men are playing a game of pool table. They are not talking a lot, so it’s difficult to say if they know each other at all. Both players are about even in skill.",
@@ -1111,7 +1153,8 @@
                         
                         }
                     ],
-                    "isTappable": true
+                    "isTappable": true,
+                    "isObject": false
                 }
                  ]
                 },
@@ -1158,7 +1201,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
                     ]
                 },
@@ -1191,7 +1235,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Rob!",
@@ -1218,9 +1263,11 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
-                    ]
+                    ],
+                    "objectTaken" : "drink"
                 }
             ]
         },
@@ -1454,7 +1501,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         },
                         {
                             "name": "bar",
@@ -1470,7 +1518,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "jukebox",
@@ -1486,7 +1535,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "medal",
@@ -1502,7 +1552,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "vial",
@@ -1518,7 +1569,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         },
                         {
                             "name": "corpse",
@@ -1535,7 +1587,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "counter",
@@ -1551,7 +1604,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "toilets",
@@ -1567,7 +1621,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "police",
@@ -1597,7 +1652,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "ladies",
@@ -1626,7 +1682,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Jessica!",
@@ -1655,7 +1712,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Veronica!",
@@ -1684,7 +1742,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "bartender",
@@ -1713,7 +1772,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "John!",
@@ -1742,7 +1802,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "CJ!",
@@ -1769,7 +1830,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Rob!",
@@ -1796,7 +1858,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "players",
@@ -1823,7 +1886,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -2057,7 +2121,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -2675,7 +2740,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -2885,7 +2951,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -2922,7 +2989,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -3146,7 +3214,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         },
                         {
                             "name": "bartender",
@@ -3175,7 +3244,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -3589,7 +3659,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         },
                         {
                             "name": "corpse",
@@ -3606,7 +3677,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -3827,7 +3899,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -4047,7 +4120,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "toilets",
@@ -4063,7 +4137,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                     ]
                 },
@@ -4297,7 +4372,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "players",
@@ -4324,13 +4400,15 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -4550,7 +4628,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "John!",
@@ -4579,13 +4658,15 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -4805,7 +4886,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -5038,13 +5120,15 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -5275,13 +5359,15 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -5899,7 +5985,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         },
                         {
                             "name": "police",
@@ -5929,13 +6016,15 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "cigarette",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": true
                         }
                     ]
                 },
@@ -6563,7 +6652,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         },
                         {
                             "name": "women",
@@ -6579,7 +6669,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -7004,9 +7095,11 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": true
                         }
-                    ]
+                    ],
+                    "objectGiven": "vial"
                 },
                 {
                     "description": "It’s empty. It seemed to contain some kind of liquid. It doesn’t smell at all. Did it contain poison?",
@@ -7418,7 +7511,8 @@
                             "name": "Omar",
                             "listOfCommands": [
                             ],
-                            "isTappable": false
+                            "isTappable": false,
+                            "isObject": false
                         }
                     ]
                 },
@@ -7638,7 +7732,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 }
@@ -7714,7 +7809,8 @@
                                     "isFaded": false
                                 }
                             ],
-                            "isTappable": true
+                            "isTappable": true,
+                            "isObject": false
                         }
                     ]
                 },
@@ -7756,7 +7852,7 @@
         "With the help of the map you easily arrive at your destination.",
         "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the establishment. The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a weirdo desperately trying to make it stop playing and a pool table with two players . At the back of the room there are the toilets .",
         "An intimidating bartender in his fifties, maybe even more. He is really tall and has broad shoulders. Behind him, on the wall, there is a medal of courage that he got during an obscure war in the east. He has a limp, probably a memory of his life as a soldier.",
-        "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink? Since you are new, the first one is on the house.",
+        "New faces, huh? We don’t see new faces here often. My name is John , do you want a drink ? Since you are new, the first one is on the house.",
         "Have you seen the medal ? Yeah, I was a soldier. Actually I am a soldier, in a way I feel like I never left the war… But let’s not talk about that now, shall we?",
         "Hope you like the drink .",
         "Two rough men are playing a game of pool table. They are not talking a lot, so it’s difficult to say if they know each other at all. Both players are about even in skill.",
