@@ -25,9 +25,9 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let possibleVocalResponses : [PossibleVocalResponse]
     var interactiveButtons : [InteractiveButton]
     let doesAdvanceHint : Bool = false
-    let givesObject : String = " "
+    let givesObject : String = ""
     
-    var objectGiven: String?{ //REMEMBER THAT THIS IS THE VARIABLE  TO ASK FOR THE OBJECT
+    var objectGiven: String?{              //REMEMBER THAT THIS IS THE VARIABLE  TO ASK FOR THE OBJECT
         
         if (self.givesObject == ""){
             

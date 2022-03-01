@@ -11,11 +11,9 @@ struct StatusBarDescriptionStoryView: View {
     
     var lengthOfTheStory : Longevity
     @Binding var showModal : Bool
-    
     @EnvironmentObject var storiesStore : StoriesStore
     
     var body: some View {
-        
         
         VStack{
         

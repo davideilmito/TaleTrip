@@ -1,13 +1,13 @@
 {       "jsonTitle": "TitleFive.json",
         "imageName": "title4",
         "genre": "Adventure",
-        "title": "The Title Five",
+        "title": "The\nTitle Five",
         "author": "Anonymous",
         "completionRate": 0,
         "inventory": [],
         "isStoryOfTheMonth": false,
         "isStoryYouWillLike": false,
-        "titleCard": "Toby the fox",
+        "titleCard": "The title five",
         
         "hints": [
         ],

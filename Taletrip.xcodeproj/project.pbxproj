@@ -37,6 +37,8 @@
 		D78009F427BF9CC200885612 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009F327BF9CC200885612 /* Color.swift */; };
 		D78009F827BFB12E00885612 /* LargeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009F727BFB12E00885612 /* LargeCard.swift */; };
 		D78009FB27BFB2C600885612 /* LargeCardText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78009FA27BFB2C600885612 /* LargeCardText.swift */; };
+		D7A7486527CE837400F6A5BD /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7486427CE837400F6A5BD /* CustomText.swift */; };
+		D7A7486727CE88F300F6A5BD /* NewYorkMedium-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */; };
 		D7E6B1F127C53EE8008EE890 /* DescriptionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E6B1F027C53EE8008EE890 /* DescriptionImageView.swift */; };
 		D7E6B1F327C5408D008EE890 /* DescriptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E6B1F227C5408D008EE890 /* DescriptionTextView.swift */; };
 		D7E6B1F527C5505E008EE890 /* StatusBarDescriptionStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E6B1F427C5505E008EE890 /* StatusBarDescriptionStoryView.swift */; };
@@ -85,6 +87,8 @@
 		D78009F327BF9CC200885612 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D78009F727BFB12E00885612 /* LargeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCard.swift; sourceTree = "<group>"; };
 		D78009FA27BFB2C600885612 /* LargeCardText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardText.swift; sourceTree = "<group>"; };
+		D7A7486427CE837400F6A5BD /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
+		D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Bold.otf"; sourceTree = "<group>"; };
 		D7E6B1F027C53EE8008EE890 /* DescriptionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionImageView.swift; sourceTree = "<group>"; };
 		D7E6B1F227C5408D008EE890 /* DescriptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextView.swift; sourceTree = "<group>"; };
 		D7E6B1F427C5505E008EE890 /* StatusBarDescriptionStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarDescriptionStoryView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		D772A1B327C1A723006EB1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */,
 				69B35AB527CE24C50072D8E0 /* footsteps_outside.wav */,
 				69B35AB327CE23380072D8E0 /* bar.wav */,
 				69B35AB127CE23170072D8E0 /* pouring_liquor.wav */,
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				D772A27027C4F6D2006EB1CE /* DescriptionStoryView.swift */,
+				D7A7486427CE837400F6A5BD /* CustomText.swift */,
 				D7E6B1F427C5505E008EE890 /* StatusBarDescriptionStoryView.swift */,
 				D7E6B1F227C5408D008EE890 /* DescriptionTextView.swift */,
 				D7E6B1F027C53EE8008EE890 /* DescriptionImageView.swift */,
@@ -321,6 +327,7 @@
 				69B35AB227CE23170072D8E0 /* pouring_liquor.wav in Resources */,
 				D943B33127C3FB9B00871C0B /* TitleOne.json in Resources */,
 				D943B33927C3FBF100871C0B /* TitleThree.json in Resources */,
+				D7A7486727CE88F300F6A5BD /* NewYorkMedium-Bold.otf in Resources */,
 				69B35AAE27CE22FB0072D8E0 /* cigarette.wav in Resources */,
 				6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */,
 				D943B33827C3FBF100871C0B /* TitleTwo.json in Resources */,
@@ -369,6 +376,7 @@
 				D7E6B1F327C5408D008EE890 /* DescriptionTextView.swift in Sources */,
 				D9DAE69627BE6526008EB88D /* Story.swift in Sources */,
 				D7E6B1F527C5505E008EE890 /* StatusBarDescriptionStoryView.swift in Sources */,
+				D7A7486527CE837400F6A5BD /* CustomText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V7K684LPH;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
@@ -532,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V7K684LPH;
+				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;

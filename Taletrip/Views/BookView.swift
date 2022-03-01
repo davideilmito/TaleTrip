@@ -112,7 +112,7 @@ struct BookView: View {
                                         if (button.isTappable) {
                                             Menu("\(button.name)") {
                                                 ForEach(button.listOfCommands){ command in
-                                
+                                                    
                                                     if !command.isFaded{
                                                         
                                                         Button {
@@ -129,31 +129,31 @@ struct BookView: View {
                                                                 }
                                                                 
                                                             }
-                                                           
-                                                                if(button.name == "drink" && command.name == "Use"){
-                                                                    let sound = Bundle.main.path(forResource: "pouring_liquor", ofType: "wav")
-                                                                    self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                                                                    self.audioPlayer.play()
-                                                                } else if(button.name == "cigarette" && command.name == "Use") {
-                                                                    let sound = Bundle.main.path(forResource: "cigarette", ofType: "wav")
-                                                                    self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                                                                    self.audioPlayer.play()
-                                                                } else if(button.name == "pub" && command.name == "Go to") {
-                                                                    let sound = Bundle.main.path(forResource: "footsteps_outside", ofType: "wav")
-                                                                    self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                                                                    self.audioPlayer.play()
-                                                                } else if(button.name == "map" && command.name == "use") {
-                                                                    let sound = Bundle.main.path(forResource: "Map", ofType: "wav")
-                                                                    self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                                                                    self.audioPlayer.play()
-                                                                }
+                                                            
+                                                            if(button.name == "drink" && command.name == "Use"){
+                                                                let sound = Bundle.main.path(forResource: "pouring_liquor", ofType: "wav")
+                                                                self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                                                                self.audioPlayer.play()
+                                                            } else if(button.name == "cigarette" && command.name == "Use") {
+                                                                let sound = Bundle.main.path(forResource: "cigarette", ofType: "wav")
+                                                                self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                                                                self.audioPlayer.play()
+                                                            } else if(button.name == "pub" && command.name == "Go to") {
+                                                                let sound = Bundle.main.path(forResource: "footsteps_outside", ofType: "wav")
+                                                                self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                                                                self.audioPlayer.play()
+                                                            } else if(button.name == "map" && command.name == "use") {
+                                                                let sound = Bundle.main.path(forResource: "Map", ofType: "wav")
+                                                                self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                                                                self.audioPlayer.play()
+                                                            }
                                                             
                                                         } label: {
                                                             
                                                             Label(command.name,systemImage:command.sfSymbol)
                                                             
                                                         }
-                                                       
+                                                        
                                                         
                                                     }
                                                     
@@ -244,7 +244,7 @@ struct BookView: View {
             storiesStore.reLoad()
         })
         .frame(width: UIScreen.main.bounds.size.width)
-            .background(Color.backgroundBeige)
+        .background(Color.backgroundBeige)
         
         
         

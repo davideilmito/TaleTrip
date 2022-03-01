@@ -16,8 +16,6 @@ struct DescriptionTextView: View {
     
     var body: some View {
         
-       
-            
             VStack (alignment: .leading, spacing: 15){
                 
                 TextView(title: genre, size: 21, weight: .regular, italic: true)
@@ -26,9 +24,10 @@ struct DescriptionTextView: View {
                 
                 VStack(alignment: .leading, spacing: 10){
                     
-                    TextView(title: titleOfTheStory.uppercased(), size: 37 , weight: .bold)
-                        //.foregroundColor(.black) breaks dark mode
-                    
+                    CustomText(text: titleOfTheStory.uppercased(), font: UIFont.init(name: "NewYorkMedium-Bold", size: 37)!)
+                        .fixedSize()
+                        
+                        
                     TextView(title: descriptionOfTheStory, size: 18, weight: .regular)
                         .foregroundColor(.descriptionColor)
                     
@@ -47,6 +46,6 @@ struct DescriptionTextView: View {
 
 struct DescriptionTextView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionTextView(descriptionOfTheStory: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", titleOfTheStory: "The\nmortal\nportrait", genre: "Crime",author: "Pinco Pallino")
+        DescriptionTextView(descriptionOfTheStory: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", titleOfTheStory: "Toby\nTHE FOx", genre: "Crime",author: "Pinco Pallino")
     }
 }

@@ -24,8 +24,8 @@ struct DescriptionStoryView: View {
                     
                     DescriptionImageView(imageName: story.imageName)
             
-                    DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.title, genre: story.genre.rawValue,author:story.author)
-                    
+                    DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.titleCard, genre: story.genre.rawValue,author:story.author)
+                        
                     Spacer()
                     
                     NavigationLink(destination: BookView()) {
@@ -33,10 +33,11 @@ struct DescriptionStoryView: View {
                         if story.title == "The Detective's Day Off"{
                         
                         SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
-                        }else
+                        }
+                        else
                         {
                             
-                            TextView(title: "Coming Soon".uppercased(), size: 20, weight: .bold)
+                            TextView(title: "Coming Soon".uppercased(), size: 18, weight: .bold)
                                 .foregroundColor(Color.longRed)
                             
                         }
@@ -58,9 +59,7 @@ struct DescriptionStoryView: View {
                 .padding(.bottom,22)
                 }
                 StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
-                    
-                
-                
+        
                 
             }
             
@@ -68,7 +67,8 @@ struct DescriptionStoryView: View {
                 .background(Color.backgroundBeige)
                 .navigationTitle("")
                 .navigationBarHidden(true)
-        }.statusBar(hidden: true)
+        }
+        .statusBar(hidden: true)
         
         
     }
@@ -85,7 +85,7 @@ struct DescriptionStoryView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        DescriptionStoryView(story: viewModel.stories[1],showModal: .constant(true))
+        DescriptionStoryView(story: viewModel.stories[2],showModal: .constant(true))
         
     }
 }
