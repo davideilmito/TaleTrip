@@ -194,9 +194,9 @@ class StoriesStore : ObservableObject{
             
             let indexOfTheStoryToAddInPath = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger.indexOfTheStory
             
-            appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))
-            
-            appendIndexToDescPath(nil)
+            if(appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))) {
+                appendIndexToDescPath(nil)
+            }
             
             currentChapter += 1
             

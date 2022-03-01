@@ -91,8 +91,6 @@ struct BookView: View {
         return tempParagraph
     }
     
-    //@State var descpath : [String] = []
-    
     var body: some View {
         
         ScrollView{
@@ -117,9 +115,10 @@ struct BookView: View {
                                                         
                                                         Button {
                                                             
+                                                            storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
-                                                            storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
+                                                            print(storiesStore.tappedStory.descpath)
                                                             
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                                                 withAnimation(.easeIn(duration: 3.0)){
