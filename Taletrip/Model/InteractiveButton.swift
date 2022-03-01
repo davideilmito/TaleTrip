@@ -12,6 +12,7 @@ struct InteractiveButton : Decodable,Identifiable {
     let id = UUID()
     let name: String
     var listOfCommands : [Command]
+    let isObject: Bool
     var isTappable: Bool {
         
         if (listOfCommands.allSatisfy({ $0.isFaded == true })){
@@ -30,6 +31,7 @@ struct InteractiveButton : Decodable,Identifiable {
         
         case name
         case listOfCommands
+        case isObject
     
     }
     

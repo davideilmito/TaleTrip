@@ -18,14 +18,14 @@ struct Story : Decodable{
     let titleCard : String
     let author: String
     var completionRate : Int
-    var inventory: [String]
+    var inventory: [String] = []
     var isStoryOfTheMonth : Bool
     var isStoryYouWillLike: Bool
     var hints: [String]
     var isPaused: Bool
     var completed: Bool
     var dictionaryOfButtons: [String : InteractiveButton] = [:]
-    var chapters:[Chapter] = []
+    var chapters: [Chapter] = []
     var length : Longevity
     var path: [StoryChunk] = []
     var descpath: [String] = []
@@ -41,7 +41,6 @@ struct Story : Decodable{
         case titleCard
         case author
         case completionRate
-        case inventory
         case isStoryOfTheMonth
         case isStoryYouWillLike
         case hints

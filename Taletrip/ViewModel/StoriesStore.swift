@@ -184,6 +184,10 @@ class StoriesStore : ObservableObject{
         
         incrementHowManyTimesInPath(of: buttonToSearchFor, and: commandToSearchFor)
         
+        addItemtoInventory(storyChunk!)
+        
+        removeItemfromInventory(storyChunk!)
+        
         if !appendStoryChunkToPath(storyChunk){
             
             fatalError("WILLY WHERE THE FUCK IS THE CHUNKK with description -> \(stories[getTheIndex(of: tappedStory)!].allStoryChunksDescription[commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes]])")
@@ -300,6 +304,56 @@ class StoriesStore : ObservableObject{
         
     }
     
+    private func addItemtoInventory(_ storyChunk: StoryChunk) -> Bool {
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        if storyChunk.objectGiven == nil {
+            
+            return false
+            
+        }else {
+            
+            stories[indexOfStory!].inventory.append(storyChunk.objectGiven!)
+            return true
+            
+        }
+        
+    }
+    
+    private func removeItemfromInventory(_ storyChunk: StoryChunk) -> Bool {
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        if storyChunk.objectTaken == nil {
+            
+            return false
+            
+        }else {
+            
+            if let index = stories[indexOfStory!].inventory.firstIndex(of: storyChunk.objectTaken!) {
+                stories[indexOfStory!].inventory.remove(at: index)
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        
+    }
+    
+    func isIteminInventory(item: String, in story : Story) -> Bool {
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        if !stories[indexOfStory!].inventory.contains(item) {
+            return false
+        }
+        else {
+            return true
+        }
+        
+    }
     
     func showStory(of story : Story) {
         
