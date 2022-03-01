@@ -2920,16 +2920,6 @@
                                     ],
                                     "hasToBeDisplayed": true,
                                     "isFaded": false
-                                },
-                                {
-                                    "sfSymbol": "person.wave.2",
-                                    "name": "No",
-                                    "descriptionToBeDisplayed": "You think you need more time.",
-                                    "arrayIndexOfTheStory": [
-                                        23
-                                    ],
-                                    "hasToBeDisplayed": true,
-                                    "isFaded": false
                                 }
                             ],
                             "isTappable": true
