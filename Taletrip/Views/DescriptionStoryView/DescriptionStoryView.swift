@@ -13,7 +13,6 @@ struct DescriptionStoryView: View {
     @Binding var showModal : Bool
     @EnvironmentObject var storiesStore : StoriesStore
     
-    
     var body: some View {
         
         NavigationView{
@@ -31,13 +30,23 @@ struct DescriptionStoryView: View {
                     
                     NavigationLink(destination: BookView()) {
                         
+                        if story.title == "The Detective's Day Off"{
+                        
                         SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
+                        }else
+                        {
                             
+                            TextView(title: "Coming Soon".uppercased(), size: 20, weight: .bold)
+                                .foregroundColor(Color.longRed)
+                            
+                        }
                               
-//                            .padding(.bottom,22)
+                
                     }.simultaneousGesture(TapGesture().onEnded({ _ in
+                        
                         storiesStore.firstChunkInPath(of: story)
-                        print(storiesStore.stories[0].path)
+                       
+                        
                     
                     }))
                     
@@ -46,7 +55,7 @@ struct DescriptionStoryView: View {
                     
                 
                     
-   
+                .padding(.bottom,22)
                 }
                 StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
                     
