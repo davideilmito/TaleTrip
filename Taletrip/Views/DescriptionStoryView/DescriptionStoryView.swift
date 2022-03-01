@@ -53,7 +53,9 @@ struct DescriptionStoryView: View {
                 
                 
                 
-            }.ignoresSafeArea()
+            }
+            
+            .ignoresSafeArea()
                 .background(Color.backgroundBeige)
                 .navigationTitle("")
                 .navigationBarHidden(true)

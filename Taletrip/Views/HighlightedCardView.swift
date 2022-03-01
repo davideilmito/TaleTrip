@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HighlightedCardView: View {
     
-    let storyToBeHighlighted : Story   //CHECK: DO WE NEED THE WHOLE STORY?
+    let storyToBeHighlighted : Story
+    
     let title: String  //Story of the month or story you'll like
     
     var body: some View {

@@ -11,7 +11,7 @@ import SwiftSpeech
 import AVFoundation
 
 struct Story : Decodable{
-    
+    let jsonTitle : String
     let imageName: String
     let genre: Genre
     let title: String
@@ -50,6 +50,7 @@ struct Story : Decodable{
         case length
         case allStoryChunksDescription
         case description
+        case jsonTitle
         
     }
     

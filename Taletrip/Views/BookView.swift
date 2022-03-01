@@ -103,7 +103,7 @@ struct BookView: View {
                     
                     let paragraph = stringtoParagraph(chunk: storiesStore.tappedStory.path[storyChunkindex])
                     
-                    LazyVStack(alignment: .leading, spacing: 3) {
+                    VStack(alignment: .leading, spacing: 3) {
                         ForEach(paragraph) { line in
                             HStack(spacing: 3) {
                                 ForEach(line.words) { word in
@@ -124,7 +124,7 @@ struct BookView: View {
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                                                 withAnimation(.easeIn(duration: 3.0)){
                                                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
-                                                                           
+                                                                    
                                                                 }
                                                                 
                                                             }
@@ -164,6 +164,7 @@ struct BookView: View {
                                         
                                     }
                                 }
+                                Spacer()
                             }
                         }
                         if (descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1) {
@@ -218,7 +219,11 @@ struct BookView: View {
             
             .accentColor(Color.suyashBlue)
             
-        }.frame(width: UIScreen.main.bounds.size.width)
+        }
+        .onDisappear(perform: {
+            storiesStore.reLoad()
+        })
+        .frame(width: UIScreen.main.bounds.size.width)
             .background(Color.backgroundBeige)
         
         
