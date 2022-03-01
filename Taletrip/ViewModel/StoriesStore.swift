@@ -208,17 +208,27 @@ class StoriesStore : ObservableObject{
     private func checkChapterCondition() -> Bool{
         
         let triggerOfCurrentChapter = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger
-        
-        for indexStoryChunk in triggerOfCurrentChapter.indicesDescriptionInPath {
+           
+        if !triggerOfCurrentChapter.indicesDescriptionInPath.isEmpty{
             
-            if   !stories[getTheIndex(of: tappedStory)!].path.contains(getStoryChunk(indexStoryChunk, tappedStory)!){
+            for indexStoryChunk in triggerOfCurrentChapter.indicesDescriptionInPath {
                 
-                return false
-            
+                if   !stories[getTheIndex(of: tappedStory)!].path.contains(getStoryChunk(indexStoryChunk, tappedStory)!){
+                    
+                    return false
+                    
+                }
             }
+            
+            return true
+            
+        } else {
+            
+            return false
+            
         }
         
-        return true
+        
         
     }
     
