@@ -28,6 +28,7 @@ struct Story : Decodable{
     var chapters:[Chapter] = []
     var length : Longevity
     var path: [StoryChunk] = []
+    var descpath: [String] = []
     var allStoryChunksDescription: [String]
     var description : String
     var showDetails : Bool = false

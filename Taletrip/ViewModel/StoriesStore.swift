@@ -194,6 +194,8 @@ class StoriesStore : ObservableObject{
             
             appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))
             
+            appendIndexToDescPath(nil)
+            
             currentChapter += 1
             
         }
@@ -303,6 +305,24 @@ class StoriesStore : ObservableObject{
         
     }
     
+    func appendIndexToDescPath(_ description: String?) -> Bool{
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        if description == nil {
+            
+            stories[indexOfStory!].descpath.append("")
+            return false
+            
+        }else {
+            
+            stories[indexOfStory!].descpath.append(description!)
+            return true
+            
+        }
+        
+    }
+    
     private  func appendStoryChunkToPath(_ storyChunk: StoryChunk?) -> Bool{
         
         let indexOfStory = getTheIndex(of: tappedStory)
@@ -319,7 +339,6 @@ class StoriesStore : ObservableObject{
         }
         
     }
-    
     
    
     

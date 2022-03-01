@@ -91,7 +91,7 @@ struct BookView: View {
         return tempParagraph
     }
     
-    @State var descpath : [String] = []
+    //@State var descpath : [String] = []
     
     var body: some View {
         
@@ -119,7 +119,7 @@ struct BookView: View {
                                                             
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
-                                                            descpath.append(command.descriptionToBeDisplayed)
+                                                            storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
                                                             
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                                                 withAnimation(.easeIn(duration: 3.0)){
@@ -166,9 +166,9 @@ struct BookView: View {
                                 }
                             }
                         }
-                        if (descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1) {
+                        if (storiesStore.tappedStory.descpath.count > 0 && storyChunkindex < storiesStore.tappedStory.path.count - 1 && storiesStore.tappedStory.descpath[storyChunkindex] != "") {
                             
-                            Text("\(descpath[storyChunkindex])")
+                            Text("\(storiesStore.tappedStory.descpath[storyChunkindex])")
                                 .font(.system(size: 20, weight: .light))
                                 .frame(maxWidth: 346, minHeight: 71)
                                 .padding(.horizontal, 10)
