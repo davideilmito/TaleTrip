@@ -259,7 +259,7 @@ class StoriesStore : ObservableObject{
         if stories[indexOfStory!].inventory.isEmpty{
             
             
-            description = "You don't have nothing."
+            description = "You don't have anything."
             
             
         }
