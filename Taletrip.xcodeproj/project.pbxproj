@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694BDF3F27CF7BC9006E3747 /* Soundtrack.wav in Resources */ = {isa = PBXBuildFile; fileRef = 694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */; };
 		6976B14427B16A1500F08FEA /* TaletripApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6976B14327B16A1500F08FEA /* TaletripApp.swift */; };
 		6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6976B14727B16A1600F08FEA /* Assets.xcassets */; };
 		6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6976B14A27B16A1600F08FEA /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Soundtrack.wav; sourceTree = "<group>"; };
 		6976B14027B16A1500F08FEA /* Taletrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taletrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6976B14327B16A1500F08FEA /* TaletripApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaletripApp.swift; sourceTree = "<group>"; };
 		6976B14727B16A1600F08FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		D772A1B327C1A723006EB1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */,
 				D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */,
 				69B35AB527CE24C50072D8E0 /* footsteps_outside.wav */,
 				7632031027CE8AC200AF3740 /* zip_1.wav */,
@@ -334,6 +337,7 @@
 				69B35AAE27CE22FB0072D8E0 /* cigarette.wav in Resources */,
 				6976B14827B16A1600F08FEA /* Assets.xcassets in Resources */,
 				D943B33827C3FBF100871C0B /* TitleTwo.json in Resources */,
+				694BDF3F27CF7BC9006E3747 /* Soundtrack.wav in Resources */,
 				69B35AB427CE23380072D8E0 /* bar.wav in Resources */,
 				D943B34127C4ECB000871C0B /* TitleFive.json in Resources */,
 				7632031127CE8AC200AF3740 /* zip_1.wav in Resources */,
@@ -511,7 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
+				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
@@ -544,7 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
+				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;

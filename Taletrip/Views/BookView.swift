@@ -92,6 +92,7 @@ struct BookView: View {
     }
     
     @State var audioPlayer : AVAudioPlayer!
+    @State var audioPlayer1: AVAudioPlayer!
     
     var body: some View {
         
@@ -135,11 +136,11 @@ struct BookView: View {
                                                                 let sound = Bundle.main.path(forResource: "cigarette", ofType: "wav")
                                                                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
                                                                 self.audioPlayer.play()
-                                                            } else if(button.name == "pub" && command.name == "Go to") {
+                                                            } else if(button.name == "pub" && (command.name == "Go to Beergarden" || command.name == "Go to Puzzles")) {
                                                                 let sound = Bundle.main.path(forResource: "footsteps_outside", ofType: "wav")
                                                                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
                                                                 self.audioPlayer.play()
-                                                            } else if(button.name == "map" && command.name == "use") {
+                                                            } else if(button.name == "map" && command.name == "Use") {
                                                                 let sound = Bundle.main.path(forResource: "Map", ofType: "wav")
                                                                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
                                                                 self.audioPlayer.play()
@@ -242,6 +243,13 @@ struct BookView: View {
             .accentColor(Color.suyashBlue)
             
         }
+        .onAppear{
+            let sound = Bundle.main.path(forResource: "Soundtrack", ofType: "wav")
+            self.audioPlayer1 = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            self.audioPlayer1.play()
+            audioPlayer1.volume = 0.03
+            audioPlayer1.numberOfLoops = -1
+        }
         .onDisappear(perform: {
             storiesStore.reLoad()
         })
@@ -253,4 +261,6 @@ struct BookView: View {
     }
     
 }
+
+
 
