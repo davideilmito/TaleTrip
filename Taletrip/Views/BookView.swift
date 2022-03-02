@@ -23,6 +23,8 @@ struct BookView: View {
     }
     
     var btnBack : some View { Button(action: {
+        impact.impactOccurred()
+        
         self.presentationMode.wrappedValue.dismiss()
         
         storiesStore.emptyPathArray()
@@ -94,6 +96,8 @@ struct BookView: View {
     @State var audioPlayer : AVAudioPlayer!
     @State var audioPlayer1: AVAudioPlayer!
     
+    let impact = UIImpactFeedbackGenerator(style: .soft)
+    
     var body: some View {
         
         ScrollView{
@@ -116,12 +120,12 @@ struct BookView: View {
                                                     if !command.isFaded{
                                                         
                                                         Button {
-                                                            
+                                                            impact.impactOccurred()
                                                             storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
                                                             
-                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                                                withAnimation(.easeIn(duration: 3.0)){
+                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                                                withAnimation(.easeIn(duration: 4.5)){
                                                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
                                                                     
                                                                 }
@@ -163,6 +167,9 @@ struct BookView: View {
                                             .padding(3)
                                             .background(Color.suyashBlue)
                                             .cornerRadius(12)
+                                            .onTapGesture(perform: {
+                                                impact.impactOccurred()
+                                            })
                                             
                                         }
                                         else {
