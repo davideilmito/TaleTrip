@@ -240,7 +240,7 @@ struct BookView: View {
                         }
                     }
                     
-                }.accentColor(Color.suyashBlue)
+                }
                 
             }
             
@@ -249,7 +249,7 @@ struct BookView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
             
-            
+            .accentColor(Color.suyashBlue)
             
             
         }
