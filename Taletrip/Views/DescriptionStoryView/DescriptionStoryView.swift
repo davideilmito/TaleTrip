@@ -16,57 +16,63 @@ struct DescriptionStoryView: View {
     var body: some View {
         
         NavigationView{
+            
             ZStack{
-            ScrollView(.vertical,showsIndicators: false){
-            
- 
-                VStack(spacing: 10){
+                
+                ScrollView(.vertical,showsIndicators: false){
                     
-                    DescriptionImageView(imageName: story.imageName)
-            
-                    DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.titleCard, genre: story.genre.rawValue,author:story.author)
+                    VStack(spacing: 10){
                         
-                    Spacer()
-                    
-                    NavigationLink(destination: BookView()) {
+                        DescriptionImageView(imageName: story.imageName)
                         
-                        if story.title == "The Detective's Day Off"{
+                        DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.titleCard, genre: story.genre.rawValue,author:story.author)
                         
-                        SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
-                        }
-                        else
-                        {
-                            
+                        
+                        
+                        if  story.title != "The Detective's Day Off"{
+                         
                             TextView(title: "Coming Soon".uppercased(), size: 18, weight: .bold)
                                 .foregroundColor(Color.longRed)
                             
                         }
-                              
-                
-                    }.simultaneousGesture(TapGesture().onEnded({ _ in
                         
-                        storiesStore.firstChunkInPath(of: story)
-                       
                         
-                    
-                    }))
-                    
+                        Spacer()
+                        
+                        NavigationLink(destination: BookView()) {
+                            
+                            if story.title == "The Detective's Day Off"{
+                                
+                                SuyashButton(textOfTheButton: "Play", sfSymbol: "play.fill")
+                            }
+                            else
+                            {
+                                EmptyView()
+                            }
+                            
+                            
+                        }.simultaneousGesture(TapGesture().onEnded({ _ in
+                            
+                            storiesStore.firstChunkInPath(of: story)
+                            
+                        }))
+                        
                         
                     }
                     
-                
                     
-                .padding(.bottom,22)
+                    
+                    .padding(.bottom,22)
                 }
                 StatusBarDescriptionStoryView(lengthOfTheStory: story.length,showModal: $showModal)
-        
+                
                 
             }
             
             .ignoresSafeArea()
-                .background(Color.backgroundBeige)
-                .navigationTitle("")
-                .navigationBarHidden(true)
+            .background(Color.backgroundBeige)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
         .statusBar(hidden: true)
         
@@ -85,7 +91,7 @@ struct DescriptionStoryView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        DescriptionStoryView(story: viewModel.stories[2],showModal: .constant(true))
+        DescriptionStoryView(story: viewModel.stories[0],showModal: .constant(true))
         
     }
 }
