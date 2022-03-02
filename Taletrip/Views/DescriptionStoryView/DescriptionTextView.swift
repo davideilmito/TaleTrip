@@ -21,12 +21,10 @@ struct DescriptionTextView: View {
                 TextView(title: genre, size: 21, weight: .regular, italic: true)
                     .foregroundColor(.longRed)
                 
-                
                 VStack(alignment: .leading, spacing: 10){
                     
                     CustomText(text: titleOfTheStory.uppercased(), font: UIFont.init(name: "NewYorkMedium-Bold", size: 37)!)
                         .fixedSize()
-                        
                         
                     TextView(title: descriptionOfTheStory, size: 18, weight: .regular)
                         .foregroundColor(.descriptionColor)

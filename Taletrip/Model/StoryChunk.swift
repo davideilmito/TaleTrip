@@ -28,7 +28,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let objectGiven : String?
     let objectTaken : String?
     
-   
+    
     enum CodingKeys: String, CodingKey {
         
         case description

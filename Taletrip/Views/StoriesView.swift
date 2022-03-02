@@ -11,9 +11,8 @@ struct StoriesView: View {
     
     @StateObject var storiesStore = StoriesStore()
     
-    
     @State var showModal : Bool = false
-    
+   
     init() {
         
         UITableView.appearance().separatorStyle = .singleLine
