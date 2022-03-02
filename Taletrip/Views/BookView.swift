@@ -206,41 +206,51 @@ struct BookView: View {
                     .padding([.leading,.trailing],22)
                     
                 }
+                
+                .toolbar {
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Button(action: {
+                            print("Pressed 1")
+                        }) {
+                            Image(systemName: "lightbulb")
+                        }
+                        Spacer()
+                        Button(action: {
+                            print("Pressed 2")
+                        }) {
+                            Image(systemName: "mic")
+                        }
+                        Spacer()
+                        Button(action: {
+                            
+                            storiesStore.tellMeTheInventoryItems()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                withAnimation(.easeIn(duration: 3.0)){
+                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
+                                    
+                                }
+                                
+                            }
+                            
+                            let sound = Bundle.main.path(forResource: "zip_1", ofType: "wav")
+                            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                            self.audioPlayer.play()
+                        }) {
+                            Image(systemName: "archivebox")
+                        }
+                    }
+                    
+                }.accentColor(Color.suyashBlue)
+                
             }
             
             .navigationTitle(storiesStore.tappedStory.title)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: {
-                        print("Pressed 1")
-                    }) {
-                        Image(systemName: "lightbulb")
-                    }
-                    Spacer()
-                    Button(action: {
-                        print("Pressed 2")
-                    }) {
-                        Image(systemName: "mic")
-                    }
-                    Spacer()
-                    Button(action: {
-                        
-                        storiesStore.tellMeTheInventoryItems()
-                        
-                        let sound = Bundle.main.path(forResource: "zip_1", ofType: "wav")
-                        self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-                        self.audioPlayer.play()
-                    }) {
-                        Image(systemName: "archivebox")
-                    }
-                }
-                
-            }
             
-            .accentColor(Color.suyashBlue)
+            
+            
             
         }
         .onAppear{
