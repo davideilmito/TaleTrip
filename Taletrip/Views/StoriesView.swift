@@ -12,7 +12,9 @@ struct StoriesView: View {
     @StateObject var storiesStore = StoriesStore()
     
     @State var showModal : Bool = false
-   
+    
+    let impact = UIImpactFeedbackGenerator(style: .soft)
+    
     init() {
         
         UITableView.appearance().separatorStyle = .singleLine
@@ -38,6 +40,7 @@ struct StoriesView: View {
                         HighlightedCardView(storyToBeHighlighted: storyYouWillLike,title: "Story You'll Like")
                             
                             .onTapGesture {
+                                impact.impactOccurred()
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyYouWillLike)
                                 
@@ -56,6 +59,7 @@ struct StoriesView: View {
                         HighlightedCardView(storyToBeHighlighted: storyOfTheMonth,title: "Story Of The Month")
                             
                             .onTapGesture {
+                                impact.impactOccurred()
                                 showModal.toggle()
                                 storiesStore.showStory(of: storyOfTheMonth)
                                  

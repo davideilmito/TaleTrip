@@ -12,6 +12,7 @@ struct DescriptionStoryView: View {
     let story: Story
     @Binding var showModal : Bool
     @EnvironmentObject var storiesStore : StoriesStore
+    let impact = UIImpactFeedbackGenerator(style: .soft)
     
     var body: some View {
         
@@ -52,7 +53,7 @@ struct DescriptionStoryView: View {
                             
                             
                         }.simultaneousGesture(TapGesture().onEnded({ _ in
-                            
+                            impact.impactOccurred()
                             storiesStore.firstChunkInPath(of: story)
                             
                         }))
