@@ -17,7 +17,7 @@ struct HighlightedCardView: View {
         
         VStack(alignment: .leading, spacing: 12){
             
-            TextView(title:title,size: 21,weight: .semibold)
+            TextView(title:title ,size: 21,weight: .semibold)
             
             LargeCard(storyImageName: storyToBeHighlighted.imageName, storyType: storyToBeHighlighted.genre, length: storyToBeHighlighted.length, storyTitle: storyToBeHighlighted.titleCard)
             

@@ -20,7 +20,7 @@ struct LargeCardLongevity: View {
                 .foregroundColor(longevity.associatedColor())
                 .frame(width: 82, height: 24)
                 .clipShape(Capsule())
-            TextView(title: longevity.rawValue.uppercased(),size: 13,weight: .regular)
+            TextView(title: longevity.label ,size: 13,weight: .regular)
                 .foregroundColor(.white)
                 
             
