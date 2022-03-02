@@ -209,10 +209,12 @@ class StoriesStore : ObservableObject{
     }
     
     
+    
+    
     private func checkChapterCondition() -> Bool{
         
         let triggerOfCurrentChapter = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger
-           
+        
         if !triggerOfCurrentChapter.indicesDescriptionInPath.isEmpty{
             
             for indexStoryChunk in triggerOfCurrentChapter.indicesDescriptionInPath {
@@ -232,11 +234,86 @@ class StoriesStore : ObservableObject{
             
         }
         
+    }
+    
+    func tellMeTheInventoryItems(){
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        appendIndexToDescPath("You check your backpack.")
+        
+        
+        let inventoryStoryChunk = createStoryChunkFromInventory()
+        
+    
+        appendStoryChunkToPath(inventoryStoryChunk)
+        
+  
+    }
+    
+    private func createStoryChunkFromInventory() -> StoryChunk{
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        var description : String
+        
+        if stories[indexOfStory!].inventory.isEmpty{
+            
+            
+            description = "You don't have nothing."
+            
+            
+        }
+        else
+        {
+            
+            description = "You have"
+            
+        }
+        
+        for item in stories[indexOfStory!].inventory{
+            
+            
+            if item == stories[indexOfStory!].inventory.last && stories[indexOfStory!].inventory.count != 1 {
+                
+                description = description + " and a " + item + "."
+                
+                
+            }
+            else if stories[indexOfStory!].inventory.count == 1{
+                
+                description = description + " only a " + item + "."
+                
+                
+                
+            }
+            else
+            {
+                
+            description = description + " a " + item + ","
+            
+            }
+          
+            
+            
+        }
+        
+        
+        
+        let vocalResponses = getVocalresponsesOfLastChunk()
+        
+        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],objectGiven: nil,objectTaken: nil)
         
         
     }
     
     
+    private func getVocalresponsesOfLastChunk()-> [PossibleVocalResponse]{
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        return stories[indexOfStory!].path[stories[indexOfStory!].path.count - 1].possibleVocalResponses
+        
+    }
     
     private func incrementHowManyTimesInStory(of button : InteractiveButton, and command : Command){
         
@@ -321,7 +398,7 @@ class StoriesStore : ObservableObject{
         
     }
     
-    private func removeItemfromInventory(_ storyChunk: StoryChunk) -> Bool {
+    private func removeItemfromInventory(_ storyChunk: StoryChunk)-> Bool {
         
         let indexOfStory = getTheIndex(of: tappedStory)
         
@@ -406,7 +483,7 @@ class StoriesStore : ObservableObject{
         
     }
     
-   
+    
     
 }
 

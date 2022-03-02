@@ -235,7 +235,7 @@ struct BookView: View {
                     Spacer()
                     Button(action: {
                         
-                        print(storiesStore.tappedStory.inventory)
+                        storiesStore.tellMeTheInventoryItems()
                         
                         let sound = Bundle.main.path(forResource: "zip_1", ofType: "wav")
                         self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
