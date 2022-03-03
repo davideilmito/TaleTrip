@@ -217,7 +217,14 @@ struct BookView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Button(action: {
-                            print("Pressed 1")
+                            storiesStore.giveMeaHint()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                withAnimation(.easeIn(duration: 3.0)){
+                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
+                                    
+                                }
+                                
+                            }
                         }) {
                             Image(systemName: "lightbulb")
                         }
