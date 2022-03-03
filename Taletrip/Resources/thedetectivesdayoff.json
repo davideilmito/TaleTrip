@@ -27,7 +27,7 @@
             },
             "storyChunks": [
                 {
-                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a pub , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
+                    "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case, you wanted to take some days off work. You had the idea to go together to a pub , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden?",
                     "possibleVocalResponses": [
                         {
                             "description": "Beergarden",
@@ -75,13 +75,13 @@
                     ]
                 },
                 {
-                    "description": "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
+                    "description": "Perfect. Some choices require the use of items. You can check your inventory with the button on the bottom right or by using the vocal command “Inventory“. You can also tap on the button on the bottom left, or use the vocal command “Give me a hint“, for help. You don’t truly remember how to get to there, but fortunately you have a map . Try using it.",
                     "possibleVocalResponses": [
                         {
                             "description": "Use map",
                             "descriptionToBeDisplayed": "You consult the map.",
                             "arrayIndexOfTheStory": [
-                                3
+                                2
                             ]
                         }
                     ],
@@ -1130,7 +1130,7 @@
                     "interactiveButtons": []
                 },
                 {
-                    "description": "Oh… that’s nice of you. I’m Omar . As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
+                    "description": "Oh… that’s nice of you. I’m Omar. As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
                     "possibleVocalResponses": [],
                     "interactiveButtons": [],
                     "objectTaken" : "cigarette"
@@ -1643,9 +1643,7 @@
                                     "descriptionToBeDisplayed": "You approach the chief of police.",
                                     "arrayIndexOfTheStory": [
                                         26,
-                                        27,
                                         28,
-                                        29,
                                         30
                                     ],
                                     "hasToBeDisplayed": true,
@@ -1674,7 +1672,6 @@
                                     "descriptionToBeDisplayed": "You talk with the ladies.",
                                     "arrayIndexOfTheStory": [
                                         40,
-                                        41,
                                         42,
                                         43
                                     ],
@@ -2112,9 +2109,7 @@
                                     "descriptionToBeDisplayed": "You approach the chief of police.",
                                     "arrayIndexOfTheStory": [
                                         26,
-                                        27,
                                         28,
-                                        29,
                                         30
                                     ],
                                     "hasToBeDisplayed": true,
@@ -4363,9 +4358,7 @@
                                     "descriptionToBeDisplayed": "You approach the chief of police.",
                                     "arrayIndexOfTheStory": [
                                         26,
-                                        27,
                                         28,
-                                        29,
                                         30
                                     ],
                                     "hasToBeDisplayed": true,
@@ -5112,7 +5105,6 @@
                                     "descriptionToBeDisplayed": "You talk with the ladies.",
                                     "arrayIndexOfTheStory": [
                                         40,
-                                        41,
                                         42,
                                         43
                                     ],
@@ -6007,9 +5999,7 @@
                                     "descriptionToBeDisplayed": "You approach the chief of police.",
                                     "arrayIndexOfTheStory": [
                                         26,
-                                        27,
                                         28,
-                                        29,
                                         30
                                     ],
                                     "hasToBeDisplayed": true,
@@ -7854,10 +7844,10 @@
     ],
     "length": "Brief",
     "path": [],
-    "description": "You, private investigators in Cramwood, wanted to take some days off work after you got paid for a very difficult case solved. You decide to go to a bar, but soon things turn out for the worst... \nInspect the whole bar, talk to the bartender and the customers and solve this crazy mystery in an otherwise peaceful night.",
+    "description": "You, private investigators in Cramwood, wanted to take some days off work after you got paid for a very difficult case. You decide to go to a bar, but soon things turn out for the worst... \nInspect the whole bar, talk to the bartender and the customers and solve this crazy mystery in an otherwise peaceful night.",
     "allStoryChunksDescription": [
-        "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a bar , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
-        "Perfect. Some choices are more difficult than others and will require the roll of dice. You don’t truly remember how to get to the bar , but fortunately you have a map . Try using it.",
+        "You are working as private investigators in Cramwood. After you got paid for a very difficult case, you wanted to take some days off work. You had the idea to go together to a pub , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden?",
+        "Perfect. Some choices require the use of items. You can check your inventory with the button on the bottom right or by using the vocal command “Inventory“. You can also tap on the button on the bottom left, or use the vocal command “Give me a hint“, for help. You don’t truly remember how to get to there, but fortunately you have a map . Try using it.",
         "You get lost a couple of times, but in the end you arrive at your destination.",
         "With the help of the map you easily arrive at your destination.",
         "From outside the bar seems to be really small. There are a couple of windows, but you can’t see the inside because they are completely covered by some old and dusty curtains. The neon signboard flickers from time to time, leaving the rest of the alleyway in darkness for short periods of time. You push the metal door, with the open sign hanging, and enter the establishment. The whole place is a lot bigger than it seemed, but it’s still not that spacious. Maybe it’s just because it’s crowded with tables and seats, which, except for two ladies talking, are empty. The walls are covered in an old purple wallpaper. At the right there's the counter, with a bartender working behind it. At the left there is an old jukebox with a weirdo desperately trying to make it stop playing and a pool table with two players . At the back of the room there are the toilets .",
@@ -7871,7 +7861,7 @@
         "You don’t think it’s a good idea.",
         "A dude of eastern origin in his thirties. He is so nervous that he is trembling. Even his fixation with the jukebox tells you that something is wrong with him.",
         "I really hate this stupid song. Why won’t this jukebox just shut up? I have an important meeting here in a bit. Yeah, I know, I know… It’s not the best place to do so, but I needed an inconspicuous place. Ok, I’m talking too much maybe… I need a cigarette .",
-        "Oh… that’s nice of you. I’m Omar . As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
+        "Oh… that’s nice of you. I’m Omar. As I said I have to meet someone really important in a bit, this will help me relax. Thanks.",
         "Two ladies are talking while sipping really colorful drinks with straws. They seem to be old friends catching up on their lives. They are talking friendly, but they are somewhat stiff.",
         "Hi, we are Veronica and Jessica . Maybe join us for a smoke after we finish this conversation.",
         "A cigarette for that weirdo over there? Yeah sure, if he’d help him calm down, he’s been really annoying… and I wanted to quit smoking anyway…",
