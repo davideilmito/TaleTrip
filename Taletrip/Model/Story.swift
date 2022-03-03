@@ -61,37 +61,17 @@ struct Story : Decodable{
 
 enum Genre: String , Codable {
     
-    case crime
-    case adventure
-    case mystery
-    var label: String{
-        switch self {
-        case .crime:
-            return String(localized: "Crime")
-        case .adventure:
-            return String(localized: "Adventure")
-        case .mystery:
-            return String(localized: "Mystery")
-        }
-    }
+    case crime = "Crime"
+    case adventure = "Adventure"
+    case mystery = "Mystery"
     
 }
 
 enum Longevity: String ,Codable{
     
-    case brief
-    case medium
-    case long
-    var label: String {
-        switch self {
-        case .brief:
-            return String(localized: "Brief")
-        case .medium:
-            return String(localized: "Medium")
-        case .long:
-            return String(localized: "Long")
-        }
-    }
+    case brief = "Brief"
+    case medium = "Medium"
+    case long = "Long"
     
     
     func associatedColor() -> Color{
@@ -110,12 +90,10 @@ enum Longevity: String ,Codable{
         
         switch self {
             
-        case .brief :
-            return String(localized: "30 MIN")
-        case .medium :
-            return String(localized: "60 MIN")
-        case .long :
-            return String(localized: "120 MIN")
+        case .brief : return  "30 MIN"
+        case .medium : return "60 MIN"
+        case .long : return "120 MIN"
+            
         }
     }
 

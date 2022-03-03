@@ -30,7 +30,7 @@ struct StoriesView: View {
                 
                 VStack(alignment: .center, spacing: 35){
                     
-                    TextView(title: String(localized: "Stories") ,size: 37,weight: .bold)
+                    TextView(title: "Stories",size: 37,weight: .bold)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding(.leading,40)
                     

@@ -26,7 +26,7 @@ struct DescriptionStoryView: View {
                         
                         DescriptionImageView(imageName: story.imageName)
                         
-                        DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.titleCard, genre: story.genre.label,author:story.author)
+                        DescriptionTextView(descriptionOfTheStory: story.description, titleOfTheStory: story.titleCard, genre: story.genre.rawValue,author:story.author)
                         
                         
                         
