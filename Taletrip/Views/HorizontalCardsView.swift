@@ -14,7 +14,9 @@ struct HorizontalCardsView: View {
     @Binding var showModal : Bool
     @EnvironmentObject var storiesStore : StoriesStore
     var height : CGFloat = ((UIScreen.main.bounds.size.width - 240) * 200) / 149
-
+    
+    let impact = UIImpactFeedbackGenerator(style: .soft)
+    
     var body: some View {
         
         //  PLEASE NOTE :  WE CANNOT HAVE STORIES WITH THE SAME TITLE
@@ -31,6 +33,7 @@ struct HorizontalCardsView: View {
                 
                 ForEach(stories,id: \.title){story in
                         SmallCardView(storyImageName: story.imageName, storyTitle: story.title, length: story.length)  .onTapGesture {
+                            impact.impactOccurred()
                             showModal.toggle()
                             storiesStore.showStory(of: story)
                             
