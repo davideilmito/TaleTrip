@@ -12,20 +12,21 @@ struct StoriesView: View {
     @StateObject var storiesStore = StoriesStore()
     
     @State var showModal : Bool = false
-    
-    let impact = UIImpactFeedbackGenerator(style: .soft)
-    
+    @State var isActive: Bool = false
+   
     init() {
         
         UITableView.appearance().separatorStyle = .singleLine
         
     }
     
+    let impact = UIImpactFeedbackGenerator(style: .soft)
+    
     
     var body: some View {
         
         NavigationView{
-            
+            if self.isActive {
             ScrollView(showsIndicators: false){
                 
                 VStack(alignment: .center, spacing: 35){
@@ -78,9 +79,30 @@ struct StoriesView: View {
                 
                 
             }
-        }.padding(.top, 1)
+            } else {
+                withAnimation{
+                    LaunchScreen()
+                        .onDisappear{
+                            withAnimation{
+                            
+                            }
+                        }
+                      //  .animation(.easeInOut(duration: 1))
+                }
+               
+            }
+            
+        }
+        .padding(.top, isActive ? 1 : -10)
             .environmentObject(storiesStore)
-        
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.7) {
+                    withAnimation {
+                        self.isActive = true
+                    }
+                }
+            }
+            .transition(.scale)
     }
 }
 
