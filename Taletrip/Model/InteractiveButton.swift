@@ -15,7 +15,7 @@ struct InteractiveButton : Decodable,Identifiable {
     let isObject: Bool
     var isTappable: Bool {
         
-        if (listOfCommands.allSatisfy({ $0.isFaded == true })){
+        get {if (listOfCommands.allSatisfy({ $0.isFaded == true })){
             
             return false
             
@@ -24,8 +24,12 @@ struct InteractiveButton : Decodable,Identifiable {
             return true
             
         }
+            
+        }
+        
         
     }
+        
     
     enum CodingKeys: String, CodingKey {
         

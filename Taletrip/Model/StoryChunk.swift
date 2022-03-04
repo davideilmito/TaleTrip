@@ -8,6 +8,7 @@
 import Foundation
 
 struct StoryChunk : Decodable , Identifiable,Hashable{
+    
     static func == (lhs: StoryChunk, rhs: StoryChunk) -> Bool {
         
         lhs.description  == rhs.description
@@ -27,7 +28,6 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let doesAdvanceHint : Bool = false
     let objectGiven : String?
     let objectTaken : String?
-    
     
     enum CodingKeys: String, CodingKey {
         

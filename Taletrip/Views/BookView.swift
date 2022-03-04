@@ -113,7 +113,7 @@ struct BookView: View {
                             HStack(spacing: 3) {
                                 ForEach(line.words) { word in
                                     if let button = word.isButton {
-                                        if (button.isTappable && ( (button.isObject && storiesStore.isIteminInventory(item: button.name, in: storiesStore.tappedStory)) || !button.isObject)) {
+                                        if (button.isTappable && ((button.isObject && storiesStore.isIteminInventory(item: button.name, in: storiesStore.tappedStory)) || !button.isObject)) {
                                             Menu("\(button.name)") {
                                                 ForEach(button.listOfCommands){ command in
                                                     

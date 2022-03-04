@@ -24,6 +24,8 @@ struct Command : Decodable,Identifiable{
         
     }
     
+   
+    
     enum CodingKeys: String, CodingKey {
         
         case sfSymbol

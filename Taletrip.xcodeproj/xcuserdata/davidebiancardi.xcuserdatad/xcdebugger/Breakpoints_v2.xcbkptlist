@@ -30,8 +30,8 @@
             filePath = "Taletrip/ViewModel/StoriesStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "getStoryChunk(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Taletrip/ViewModel/StoriesStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "nextPieceOfStory(from:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Taletrip/ViewModel/StoriesStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "nextPieceOfStory(from:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,9 +110,25 @@
             filePath = "Taletrip/ViewModel/StoriesStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "tellMeTheInventoryItems()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95196B93-948B-41DD-BEA5-03B8964B5D69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Taletrip/ViewModel/StoriesStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "disableButtonsOfTheChapter(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

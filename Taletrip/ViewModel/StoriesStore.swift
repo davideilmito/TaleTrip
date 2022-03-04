@@ -66,7 +66,7 @@ class StoriesStore : ObservableObject{
     init(){
         
         self.stories = []
-        //        ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
+        //  ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
         self.stories.append(load("thedetectivesdayoff.json"))
         self.stories.append(load("MortalPortrait.json"))
         self.stories.append(load("TitleSix.json"))
@@ -74,6 +74,7 @@ class StoriesStore : ObservableObject{
         self.stories.append(load("TitleTwo.json"))
         self.stories.append(load("TitleThree.json"))
         self.stories.append(load("TitleOne.json"))
+        
     }
     
     private func load<T: Decodable>(_ filename: String) -> T {
@@ -107,6 +108,37 @@ class StoriesStore : ObservableObject{
         
     }
     
+    private func disableButtonsOfTheChapterInPath(_ chapter : Int){
+        
+        let index = getTheIndex(of: tappedStory)!
+        
+        for chunkIndex in stories[index].path.indices{
+            
+            
+            for buttonIndex in stories[index].path[chunkIndex].interactiveButtons.indices{
+                
+                for commandIndex in stories[index].path[chunkIndex].interactiveButtons[buttonIndex].listOfCommands.indices{
+                    
+                    stories[index].path[chunkIndex].interactiveButtons[buttonIndex].listOfCommands[commandIndex].howManyTimes = stories[index].path[chunkIndex].interactiveButtons[buttonIndex].listOfCommands[commandIndex].arrayIndexOfTheStory.count
+                    
+                    
+                    
+                }
+                
+                
+            }
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     func reLoad(){
         
         let index = getTheIndex(of: tappedStory)!
@@ -125,7 +157,6 @@ class StoriesStore : ObservableObject{
     }
     
     private func getStoryChunk(_ index: Int,_ story : Story) -> StoryChunk? {
-        
         
         let indexOfTheStory = getTheIndex(of: story)
         let chunkDescriptionToBeMatched = stories[indexOfTheStory!].allStoryChunksDescription[index]
@@ -198,9 +229,13 @@ class StoriesStore : ObservableObject{
             
             let indexOfTheStoryToAddInPath = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger.indexOfTheStory
             
+            disableButtonsOfTheChapterInPath(currentChapter)
+            
             appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))
             
             appendIndexToDescPath(nil)
+            
+           
             
             currentChapter += 1
             
