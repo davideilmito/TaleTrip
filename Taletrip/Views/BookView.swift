@@ -238,7 +238,14 @@ struct BookView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Button(action: {
-                            print("Pressed 1")
+                            storiesStore.giveMeaHint()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                withAnimation(.easeIn(duration: 3.0)){
+                                    value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
+                                    
+                                }
+                                
+                            }
                         }) {
                             Image(systemName: "lightbulb")
                         }
@@ -311,6 +318,7 @@ struct BookView: View {
             
         }
         .onAppear{
+            storiesStore.firstChunkInPath(of: storiesStore.tappedStory) //fuck you nello
             let sound = Bundle.main.path(forResource: "Soundtrack", ofType: "wav")
             self.audioPlayer1 = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             self.audioPlayer1.play()
