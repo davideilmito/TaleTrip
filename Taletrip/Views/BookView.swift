@@ -268,6 +268,7 @@ struct BookView: View {
                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
                                     
                                 }
+                                text2Speech(synthesizer, chunk: storiesStore.tappedStory.path[storiesStore.tappedStory.path.count - 1])
                                 
                             }
                         }) {
@@ -317,6 +318,7 @@ struct BookView: View {
                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
                                     
                                 }
+                                text2Speech(synthesizer, chunk: storiesStore.tappedStory.path[storiesStore.tappedStory.path.count - 1])
                                 
                             }
                             
