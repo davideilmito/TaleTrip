@@ -14,30 +14,29 @@ struct BookView: View {
     
     @EnvironmentObject var storiesStore : StoriesStore
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
- 
+    var locale: Locale
+    
+    @State private var text = "Tap to Speak"
     
     
-    init() {
+    
+    init(locale: Locale = .autoupdatingCurrent) {
         
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.suyashBlue)]
         UINavigationBar.appearance().barTintColor = UIColor(Color.backgroundBeige)
         UINavigationBar.appearance().backgroundColor = UIColor(Color.backgroundBeige)
         UIToolbar.appearance().barTintColor = UIColor(Color.backgroundBeige)
+        self.locale = locale
         
     }
     
-    var locale: Locale
+   
+      
+       
         
-        @State private var text = "Tap to Speak"
-        
-        public init(locale: Locale = .autoupdatingCurrent) {
-            self.locale = locale
-        }
-        
-        public init(localeIdentifier: String) {
-            self.locale = Locale(identifier: localeIdentifier)
-        }
+//        public init(localeIdentifier: String) {
+//            self.locale = Locale(identifier: localeIdentifier)
+//        }
     
     var btnBack : some View { Button(action: {
         impact.impactOccurred()
