@@ -109,8 +109,32 @@ struct BookView: View {
         return tempParagraph
     }
     
+    func getUtterance(_ speechString: String) -> AVSpeechUtterance {
+        let utterance = AVSpeechUtterance(string: speechString)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+//        utterance.pitchMultiplier = ...
+        utterance.volume = 0.75
+//        utterance.preUtteranceDelay = ...
+//        utterance.postUtteranceDelay = ...
+        return utterance
+    }
+    
+    func text2Speech(_ synthesizer: AVSpeechSynthesizer, chunk: StoryChunk) {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
+
+        } catch let error {
+            print("\(error.localizedDescription)")
+        }
+        synthesizer.speak(getUtterance(chunk.description))
+    }
+    
+    
+    
     @State var audioPlayer : AVAudioPlayer!
     @State var audioPlayer1: AVAudioPlayer!
+    @State var synthesizer = AVSpeechSynthesizer()
     
    
     
@@ -148,6 +172,7 @@ struct BookView: View {
                                                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
 
                                                                 }
+                                                                text2Speech(synthesizer, chunk: storiesStore.tappedStory.path[storiesStore.tappedStory.path.count - 1])
 
                                                             }
 
@@ -318,6 +343,7 @@ struct BookView: View {
         }
         .onAppear{
             storiesStore.firstChunkInPath(of: storiesStore.tappedStory) //fuck you nello
+            text2Speech(synthesizer, chunk: storiesStore.tappedStory.path[storiesStore.tappedStory.path.count - 1])
             let sound = Bundle.main.path(forResource: "Soundtrack", ofType: "wav")
             self.audioPlayer1 = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             self.audioPlayer1.play()
