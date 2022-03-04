@@ -112,8 +112,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "274"
             endingLineNumber = "274"
-            landmarkName = "tellMeTheInventoryItems()"
-            landmarkType = "7">
+            landmarkName = "StoriesStore"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "disableButtonsOfTheChapter(_:)"
+            landmarkName = "disableButtonsOfTheChapterInPath(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

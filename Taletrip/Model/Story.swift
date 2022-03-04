@@ -22,6 +22,7 @@ struct Story : Decodable{
     var isStoryOfTheMonth : Bool
     var isStoryYouWillLike: Bool
     var hints: [String]
+    var hintIndex: Int = 0
     var isPaused: Bool
     var completed: Bool
     var dictionaryOfButtons: [String : InteractiveButton] = [:]

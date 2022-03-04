@@ -25,7 +25,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]
     var interactiveButtons : [InteractiveButton]
-    let doesAdvanceHint : Bool = false
+    let doesAdvanceHint : Bool?
     let objectGiven : String?
     let objectTaken : String?
     
@@ -34,6 +34,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
         case description
         case possibleVocalResponses
         case interactiveButtons
+        case doesAdvanceHint
         case objectGiven
         case objectTaken
     

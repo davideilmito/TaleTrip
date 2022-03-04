@@ -145,7 +145,9 @@ class StoriesStore : ObservableObject{
         
         stories[index] = load(stories[index].jsonTitle)
         stories[index].showDetails = true
+        stories[index].hintIndex = 0 
         self.currentChapter = 0
+        
         
     }
     
@@ -210,7 +212,6 @@ class StoriesStore : ObservableObject{
         
         let storyChunk =  getStoryChunk(commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes], tappedStory)
         
-        
         incrementHowManyTimesInStory(of: buttonToSearchFor, and: commandToSearchFor)
         
         incrementHowManyTimesInPath(of: buttonToSearchFor, and: commandToSearchFor)
@@ -229,9 +230,11 @@ class StoriesStore : ObservableObject{
             
             let indexOfTheStoryToAddInPath = stories[getTheIndex(of: tappedStory)!].chapters[currentChapter].trigger.indexOfTheStory
             
-            disableButtonsOfTheChapterInPath(currentChapter)
+            let nextStoryChunk = getStoryChunk(indexOfTheStoryToAddInPath, tappedStory)
             
-            appendStoryChunkToPath(getStoryChunk(indexOfTheStoryToAddInPath, tappedStory))
+            appendStoryChunkToPath(nextStoryChunk)
+            
+            advanceHint(nextStoryChunk!)
             
             appendIndexToDescPath(nil)
             
@@ -239,11 +242,29 @@ class StoriesStore : ObservableObject{
             
             currentChapter += 1
             
+        } else {
+            advanceHint(storyChunk!)
         }
         
     }
     
-    
+    private func advanceHint(_ nextStoryChunk: StoryChunk) -> Bool {
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        if nextStoryChunk.doesAdvanceHint != nil {
+            if (nextStoryChunk.doesAdvanceHint!) {
+                stories[indexOfStory!].hintIndex += 1
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        else {
+            return false
+        }
+    }
     
     
     private func checkChapterCondition() -> Bool{
@@ -336,11 +357,35 @@ class StoriesStore : ObservableObject{
         
         let vocalResponses = getVocalresponsesOfLastChunk()
         
-        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],objectGiven: nil,objectTaken: nil)
+        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],doesAdvanceHint: nil ,objectGiven: nil,objectTaken: nil)
         
         
     }
     
+    func giveMeaHint(){
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        
+        appendIndexToDescPath("You think hard about your options.")
+        
+        let hintStoryChunk = createStoryChunkFromHint()
+    
+        appendStoryChunkToPath(hintStoryChunk)
+        
+    }
+    
+    private func createStoryChunkFromHint() -> StoryChunk{
+        
+        let indexOfStory = getTheIndex(of: tappedStory)
+        let indexOfHint = stories[indexOfStory!].hintIndex
+        
+        let description : String = stories[indexOfStory!].hints[indexOfHint]
+        
+        let vocalResponses = getVocalresponsesOfLastChunk()
+        
+        return StoryChunk(description: description, possibleVocalResponses: vocalResponses, interactiveButtons: [], doesAdvanceHint: nil , objectGiven: nil, objectTaken: nil)
+        
+    }
     
     private func getVocalresponsesOfLastChunk()-> [PossibleVocalResponse]{
         
