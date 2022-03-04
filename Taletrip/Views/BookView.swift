@@ -354,6 +354,7 @@ struct BookView: View {
         }
         .onDisappear(perform: {
             storiesStore.reLoad()
+            synthesizer.stopSpeaking(at: .immediate)
         })
         .frame(width: UIScreen.main.bounds.size.width)
         .background(Color.backgroundBeige)
