@@ -28,6 +28,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     let doesAdvanceHint : Bool?
     let objectGiven : String?
     let objectTaken : String?
+    let isMutualExclusive : Bool?
     
     enum CodingKeys: String, CodingKey {
         
@@ -37,6 +38,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
         case doesAdvanceHint
         case objectGiven
         case objectTaken
+        case isMutualExclusive
     
     }
     

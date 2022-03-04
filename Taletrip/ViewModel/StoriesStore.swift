@@ -145,7 +145,7 @@ class StoriesStore : ObservableObject{
         
         stories[index] = load(stories[index].jsonTitle)
         stories[index].showDetails = true
-        stories[index].hintIndex = 0 
+        stories[index].hintIndex = 0
         self.currentChapter = 0
         
         
@@ -189,10 +189,10 @@ class StoriesStore : ObservableObject{
     
     func appendStoryChunkFromVocalResponse(){
         
-
-       let textToBematched = storedAnswers[storedAnswers.count - 1].text
         
-       let lastStoryChunkInPath = stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1]
+        let textToBematched = storedAnswers[storedAnswers.count - 1].text
+        
+        let lastStoryChunkInPath = stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1]
         
         for vocalResponse in lastStoryChunkInPath.possibleVocalResponses{
             
@@ -203,7 +203,7 @@ class StoriesStore : ObservableObject{
                 appendStoryChunkToPath(storyChunkToAppendInPath)
                 break
             }
-        }   
+        }
     }
     
     
@@ -211,7 +211,11 @@ class StoriesStore : ObservableObject{
         
         let indexOfStory = getTheIndex(of: tappedStory)
         
+        let previousStoryChunk = storyChunk
+        
         let IndexOfStoryChunkInPath = stories[getTheIndex(of: tappedStory)!].path.indices.filter { stories[getTheIndex(of: tappedStory)!].path[$0] == storyChunk}.first
+        
+        
         
         let indexOfButton = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons.firstIndex {
             $0.name == button.name
@@ -229,6 +233,22 @@ class StoriesStore : ObservableObject{
         let buttonToSearchFor = stories[indexOfStory!].path[IndexOfStoryChunkInPath!].interactiveButtons[indexOfButton!]
         
         let storyChunk =  getStoryChunk(commandToSearchFor.arrayIndexOfTheStory[commandToSearchFor.howManyTimes], tappedStory)
+        
+        
+        if  previousStoryChunk.isMutualExclusive != nil{
+            
+            for buttonIndex in  stories[getTheIndex(of: tappedStory)!].path[IndexOfStoryChunkInPath!].interactiveButtons.indices{
+                
+                for commandIndex in stories[getTheIndex(of: tappedStory)!].path[IndexOfStoryChunkInPath!].interactiveButtons[buttonIndex].listOfCommands.indices{
+                    
+                    stories[getTheIndex(of: tappedStory)!].path[IndexOfStoryChunkInPath!].interactiveButtons[buttonIndex].listOfCommands[commandIndex].howManyTimes =  stories[getTheIndex(of: tappedStory)!].path[IndexOfStoryChunkInPath!].interactiveButtons[buttonIndex].listOfCommands[commandIndex].arrayIndexOfTheStory.count
+                    
+                }
+                
+                
+            }
+            
+        }
         
         incrementHowManyTimesInStory(of: buttonToSearchFor, and: commandToSearchFor)
         
@@ -258,7 +278,7 @@ class StoriesStore : ObservableObject{
             
             appendIndexToDescPath(nil)
             
-           
+            
             
             currentChapter += 1
             
@@ -321,10 +341,10 @@ class StoriesStore : ObservableObject{
         
         let inventoryStoryChunk = createStoryChunkFromInventory()
         
-    
+        
         appendStoryChunkToPath(inventoryStoryChunk)
         
-  
+        
     }
     
     private func createStoryChunkFromInventory() -> StoryChunk{
@@ -365,10 +385,10 @@ class StoriesStore : ObservableObject{
             else
             {
                 
-            description = description + " a " + item + ","
-            
+                description = description + " a " + item + ","
+                
             }
-          
+            
             
             
         }
@@ -377,7 +397,7 @@ class StoriesStore : ObservableObject{
         
         let vocalResponses = getVocalresponsesOfLastChunk()
         
-        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],doesAdvanceHint: nil ,objectGiven: nil,objectTaken: nil)
+        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],doesAdvanceHint: nil ,objectGiven: nil,objectTaken: nil,isMutualExclusive: nil)
         
         
     }
@@ -389,7 +409,7 @@ class StoriesStore : ObservableObject{
         appendIndexToDescPath("You think hard about your options.")
         
         let hintStoryChunk = createStoryChunkFromHint()
-    
+        
         appendStoryChunkToPath(hintStoryChunk)
         
     }
@@ -403,7 +423,7 @@ class StoriesStore : ObservableObject{
         
         let vocalResponses = getVocalresponsesOfLastChunk()
         
-        return StoryChunk(description: description, possibleVocalResponses: vocalResponses, interactiveButtons: [], doesAdvanceHint: nil , objectGiven: nil, objectTaken: nil)
+        return StoryChunk(description: description, possibleVocalResponses: vocalResponses, interactiveButtons: [], doesAdvanceHint: nil , objectGiven: nil, objectTaken: nil,isMutualExclusive: nil)
         
     }
     
