@@ -20,7 +20,6 @@ struct LaunchScreen: View {
             VStack{
             Text(text).animation(.spring())
                     .font(.system(size: 40, weight: .bold , design: .serif))
-                    .foregroundColor(.black)
                     .frame(height: 25)
                     .padding(.bottom, 15)
             Image("launch")

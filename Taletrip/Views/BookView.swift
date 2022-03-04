@@ -262,7 +262,7 @@ struct BookView: View {
                                 .onStartRecording { session in
                                     storiesStore.storedAnswers.append((session, ""))
                                 }.onCancelRecording { session in
-                                    _ = list.firstIndex { $0.session.id == session.id }
+                                    _ = storiesStore.storedAnswers.firstIndex { $0.session.id == session.id }
                                     .map { storiesStore.storedAnswers.remove(at: $0) }
                                    
                                     
