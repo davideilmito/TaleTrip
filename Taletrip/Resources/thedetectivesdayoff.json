@@ -30,7 +30,7 @@
                     "description": "You are working as private investigators in Cramwood. After you got paid for a very difficult case solved, you wanted to take some days off work. You had the idea to go together to a pub , but living in such a small city, there are very few options when it comes to it. Let’s try to make a choice. This is the first one of many that you are going to do in this adventure. Would you like to go to Puzzles or Beergarden ?",
                     "possibleVocalResponses": [
                         {
-                            "description": "Beergarden",
+                            "description": "Beer garden",
                             "descriptionToBeDisplayed": "You decided to go to Beergarden",
                             "arrayIndexOfTheStory": [
                                 1

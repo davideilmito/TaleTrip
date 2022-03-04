@@ -46,7 +46,7 @@ struct LaunchScreen: View {
             
             }
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
-            .opacity(easeout ? 0 : 1)
+            .opacity(easeout ? 0.5 : 1)
             .edgesIgnoringSafeArea(.all)
             .onChange(of: toggle) { toggle in
                 if toggle {

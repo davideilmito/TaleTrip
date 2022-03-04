@@ -7,11 +7,16 @@
 
 import SwiftUI
 import AVKit
+import AVFoundation
+import SwiftSpeech
 
 struct BookView: View {
     
     @EnvironmentObject var storiesStore : StoriesStore
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+ 
+    
     
     init() {
         
@@ -21,6 +26,18 @@ struct BookView: View {
         UIToolbar.appearance().barTintColor = UIColor(Color.backgroundBeige)
         
     }
+    
+    var locale: Locale
+        
+        @State private var text = "Tap to Speak"
+        
+        public init(locale: Locale = .autoupdatingCurrent) {
+            self.locale = locale
+        }
+        
+        public init(localeIdentifier: String) {
+            self.locale = Locale(identifier: localeIdentifier)
+        }
     
     var btnBack : some View { Button(action: {
         impact.impactOccurred()
@@ -96,8 +113,11 @@ struct BookView: View {
     @State var audioPlayer : AVAudioPlayer!
     @State var audioPlayer1: AVAudioPlayer!
     
-    let impact = UIImpactFeedbackGenerator(style: .soft)
+   
     
+    let impact = UIImpactFeedbackGenerator(style: .soft)
+//    @State var list: [(session: SwiftSpeech.Session, text: String)] = []
+//    storiesStore.storedAnswer
     var body: some View {
         
         ScrollView{
@@ -123,15 +143,15 @@ struct BookView: View {
                                                             impact.impactOccurred()
                                                             storiesStore.appendIndexToDescPath(command.descriptionToBeDisplayed)
                                                             storiesStore.nextPieceOfStory(from: storiesStore.tappedStory.path[storyChunkindex], command, button)
-                                                            
+
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                                                 withAnimation(.easeIn(duration: 4.5)){
                                                                     value.scrollTo(storiesStore.tappedStory.path.indices[storiesStore.tappedStory.path.indices.count - 1],anchor: .bottom)
-                                                                    
+
                                                                 }
-                                                                
+
                                                             }
-                                                            
+
                                                             if(button.name == "drink" && command.name == "Use"){
                                                                 let sound = Bundle.main.path(forResource: "pouring_liquor", ofType: "wav")
                                                                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
@@ -149,13 +169,13 @@ struct BookView: View {
                                                                 self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
                                                                 self.audioPlayer.play()
                                                             }
-                                                            
+
                                                         } label: {
-                                                            
+
                                                             Label(command.name,systemImage:command.sfSymbol)
-                                                            
+
                                                         }
-                                                        
+                                                                                                                
                                                         
                                                     }
                                                     
@@ -206,8 +226,9 @@ struct BookView: View {
                                 .padding(.bottom,10)
                         }
                         else {
-                            
+                         
                         }
+
                     }
                     
                     .padding([.leading,.trailing],22)
@@ -222,11 +243,40 @@ struct BookView: View {
                             Image(systemName: "lightbulb")
                         }
                         Spacer()
-                        Button(action: {
-                            print("Pressed 2")
-                        }) {
-                            Image(systemName: "mic")
-                        }
+//                        Button(action: {
+//
+//                        }) {
+//                            Image(systemName: "mic")
+//                        }
+                       
+                            SwiftSpeech.RecordButton()
+                                .swiftSpeechToggleRecordingOnTap(locale: self.locale,
+                                                                 animation: .spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0))
+                                .onStartRecording { session in
+                                    storiesStore.storedAnswers.append((session, ""))
+                                }.onCancelRecording { session in
+                                    _ = list.firstIndex { $0.session.id == session.id }
+                                    .map { storiesStore.storedAnswers.remove(at: $0) }
+                                   
+                                    
+                                }.onRecognize(includePartialResults: true) { session, result in
+                                    storiesStore.storedAnswers.firstIndex { $0.session.id == session.id }
+                                    .map { index in
+                                        storiesStore.storedAnswers[index].text = result.bestTranscription.formattedString + (result.isFinal ? "" : "...")
+                                    }
+                                    storiesStore.appendStoryChunkFromVocalResponse()
+                                   
+                                } handleError: { session, error in
+                                    storiesStore.storedAnswers.firstIndex { $0.session.id == session.id }
+                                    .map { index in
+                                        storiesStore.storedAnswers[index].text = "Error \((error as NSError).code)"
+                                    }
+                                }
+                              
+                             
+
+                      
+                        
                         Spacer()
                         Button(action: {
                             
