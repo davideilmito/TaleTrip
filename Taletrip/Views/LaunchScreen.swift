@@ -20,7 +20,6 @@ struct LaunchScreen: View {
             VStack{
             Text(text).animation(.spring())
                     .font(.system(size: 40, weight: .bold , design: .serif))
-                    .foregroundColor(.black)
                     .frame(height: 25)
                     .padding(.bottom, 15)
             Image("launch")
@@ -46,7 +45,7 @@ struct LaunchScreen: View {
             
             }
             .transition(.asymmetric(insertion: .scale, removal: .opacity))
-            .opacity(easeout ? 0 : 1)
+            .opacity(easeout ? 0.5 : 1)
             .edgesIgnoringSafeArea(.all)
             .onChange(of: toggle) { toggle in
                 if toggle {

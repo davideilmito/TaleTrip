@@ -187,6 +187,24 @@ class StoriesStore : ObservableObject{
     }
     
     
+    func appendStoryChunkFromVocalResponse(){
+        
+
+       let textToBematched = storedAnswers[storedAnswers.count - 1].text
+        
+       let lastStoryChunkInPath = stories[getTheIndex(of: tappedStory)!].path[stories[getTheIndex(of: tappedStory)!].path.count - 1]
+        
+        for vocalResponse in lastStoryChunkInPath.possibleVocalResponses{
+            
+            if textToBematched == vocalResponse.description{
+                
+                appendIndexToDescPath(vocalResponse.descriptionToBeDisplayed)
+                let storyChunkToAppendInPath = getStoryChunk(vocalResponse.arrayIndexOfTheStory[0], tappedStory)
+                appendStoryChunkToPath(storyChunkToAppendInPath)
+                break
+            }
+        }   
+    }
     
     
     func nextPieceOfStory(from storyChunk: StoryChunk, _ command :Command,_ button: InteractiveButton){
