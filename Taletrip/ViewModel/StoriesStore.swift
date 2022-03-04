@@ -232,6 +232,8 @@ class StoriesStore : ObservableObject{
             
             let nextStoryChunk = getStoryChunk(indexOfTheStoryToAddInPath, tappedStory)
             
+            disableButtonsOfTheChapterInPath(currentChapter)
+            
             appendStoryChunkToPath(nextStoryChunk)
             
             advanceHint(nextStoryChunk!)
