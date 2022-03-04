@@ -268,6 +268,7 @@ struct BookView: View {
             
         }
         .onAppear{
+            storiesStore.firstChunkInPath(of: storiesStore.tappedStory) //fuck you nello
             let sound = Bundle.main.path(forResource: "Soundtrack", ofType: "wav")
             self.audioPlayer1 = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             self.audioPlayer1.play()

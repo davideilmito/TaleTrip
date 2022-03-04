@@ -54,8 +54,6 @@ struct DescriptionStoryView: View {
                             
                         }.simultaneousGesture(TapGesture().onEnded({ _ in
                             impact.impactOccurred()
-                            storiesStore.firstChunkInPath(of: story)
-                            
                         }))
                         
                         
