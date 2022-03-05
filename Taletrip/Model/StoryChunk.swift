@@ -22,6 +22,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
     }
     
     let id = UUID()
+    let isChapterFirstChunk: String?
     let description : String
     let possibleVocalResponses : [PossibleVocalResponse]
     var interactiveButtons : [InteractiveButton]
@@ -39,7 +40,7 @@ struct StoryChunk : Decodable , Identifiable,Hashable{
         case objectGiven
         case objectTaken
         case isMutualExclusive
-    
+        case isChapterFirstChunk
     }
     
     

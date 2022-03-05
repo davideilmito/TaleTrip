@@ -23,7 +23,7 @@ struct DescriptionTextView: View {
                 
                 VStack(alignment: .leading, spacing: 10){
                     
-                    CustomText(text: titleOfTheStory.uppercased(), font: UIFont.init(name: "NewYorkMedium-Bold", size: 37)!)
+                    CustomText(text: titleOfTheStory.uppercased(), font: UIFont.init(name: "NewYorkMedium-Bold", size: 37)!, interline: 0.78)
                         .fixedSize()
                         
                     TextView(title: descriptionOfTheStory, size: 18, weight: .regular)

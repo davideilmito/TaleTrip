@@ -152,6 +152,16 @@ struct BookView: View {
                     let paragraph = stringtoParagraph(chunk: storiesStore.tappedStory.path[storyChunkindex])
                     
                     VStack(alignment: .leading, spacing: 3) {
+                        
+                        if let chapterTitle = storiesStore.tappedStory.path[storyChunkindex].isChapterFirstChunk {
+                            
+                            CustomText(text: chapterTitle, font: UIFont.init(name: "NewYorkMedium-Bold", size: 20)!,interline : 0.9)
+                            
+                                .padding(.bottom,10)
+                            
+                            
+                        }
+                        
                         ForEach(paragraph) { line in
                             HStack(spacing: 3) {
                                 ForEach(line.words) { word in
@@ -253,9 +263,7 @@ struct BookView: View {
                          
                         }
 
-                    }
-                    
-                    .padding([.leading,.trailing],22)
+                    }.padding([.leading,.trailing],22)
                     
                 }
                 

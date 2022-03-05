@@ -397,7 +397,7 @@ class StoriesStore : ObservableObject{
         
         let vocalResponses = getVocalresponsesOfLastChunk()
         
-        return StoryChunk(description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],doesAdvanceHint: nil ,objectGiven: nil,objectTaken: nil,isMutualExclusive: nil)
+        return StoryChunk(isChapterFirstChunk: nil, description: description, possibleVocalResponses: vocalResponses,interactiveButtons: [],doesAdvanceHint: nil ,objectGiven: nil,objectTaken: nil,isMutualExclusive: nil)
         
         
     }
@@ -423,7 +423,7 @@ class StoriesStore : ObservableObject{
         
         let vocalResponses = getVocalresponsesOfLastChunk()
         
-        return StoryChunk(description: description, possibleVocalResponses: vocalResponses, interactiveButtons: [], doesAdvanceHint: nil , objectGiven: nil, objectTaken: nil,isMutualExclusive: nil)
+        return StoryChunk(isChapterFirstChunk: nil, description: description, possibleVocalResponses: vocalResponses, interactiveButtons: [], doesAdvanceHint: nil , objectGiven: nil, objectTaken: nil,isMutualExclusive: nil)
         
     }
     
