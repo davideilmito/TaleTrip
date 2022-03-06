@@ -12,6 +12,7 @@ import SwiftSpeech
 
 struct BookView: View {
     
+    @Environment(\.swiftSpeechState) var state: SwiftSpeech.State
     @EnvironmentObject var storiesStore : StoriesStore
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var locale: Locale
@@ -135,6 +136,7 @@ struct BookView: View {
     @State var audioPlayer : AVAudioPlayer!
     @State var audioPlayer1: AVAudioPlayer!
     @State var synthesizer = AVSpeechSynthesizer()
+    @State var tapped = false
     
    
     
@@ -283,13 +285,16 @@ struct BookView: View {
                             Image(systemName: "lightbulb")
                         }
                         Spacer()
-//                        Button(action: {
-//
-//                        }) {
-//                            Image(systemName: "mic")
-//                        }
-                       
-                            SwiftSpeech.RecordButton()
+                        ZStack {
+                                                   
+                            Image(systemName: "mic")
+                                .font(.system(size: tapped ? 30 : 15, weight: .medium, design: .default))
+                                .foregroundColor(tapped ? .red : Color.suyashBlue)
+                                .onTapGesture{
+                                    tapped.toggle()
+                                             }
+                                                    
+                                }
                                 .swiftSpeechToggleRecordingOnTap(locale: self.locale,
                                                                  animation: .spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0))
                                 .onStartRecording { session in
