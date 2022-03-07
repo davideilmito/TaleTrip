@@ -439,33 +439,31 @@ class StoriesStore : ObservableObject{
         
         let indexOfStory = getTheIndex(of: tappedStory)
         
-        for chapterIndex in stories[indexOfStory!].chapters.indices{
+        for chunkIndex in stories[indexOfStory!].chapters[currentChapter].storyChunks.indices{
             
-            for chunkIndex in stories[indexOfStory!].chapters[chapterIndex].storyChunks.indices{
+            let bottonIndices = stories[indexOfStory!].chapters[currentChapter].storyChunks[chunkIndex]  .interactiveButtons.indices.filter {
                 
-                let bottonIndices = stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex]  .interactiveButtons.indices.filter {
-                    
-                    stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[$0].name == button.name
-                    
-                }
+                stories[indexOfStory!].chapters[currentChapter].storyChunks[chunkIndex].interactiveButtons[$0].name == button.name
                 
-                for i in bottonIndices {
+            }
+            
+            for i in bottonIndices {
+                
+                let commandIndexToIncrement =  stories[indexOfStory!].chapters[currentChapter].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands.indices.filter
+                {
                     
-                    let commandIndexToIncrement =  stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands.indices.filter
-                    {
-                        
-                        stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[$0].name == command.name
-                        
-                    }.first
+                    stories[indexOfStory!].chapters[currentChapter].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[$0].name == command.name
                     
-                    if commandIndexToIncrement != nil {
-                        
-                        stories[indexOfStory!].chapters[chapterIndex].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[commandIndexToIncrement!].howManyTimes += 1
-                        
-                    }
+                }.first
+                
+                if commandIndexToIncrement != nil {
+                    
+                    stories[indexOfStory!].chapters[currentChapter].storyChunks[chunkIndex].interactiveButtons[i].listOfCommands[commandIndexToIncrement!].howManyTimes += 1
+                    
                 }
             }
         }
+        
     }
     
     
