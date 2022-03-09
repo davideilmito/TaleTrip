@@ -28,6 +28,7 @@
 		69CD2EC527BA65A700EACAC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EC427BA65A700EACAC3 /* HomeView.swift */; };
 		69CD2EE827BAD8BD00EACAC3 /* Wechat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */; };
 		7632031127CE8AC200AF3740 /* zip_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7632031027CE8AC200AF3740 /* zip_1.wav */; };
+		76B6CFB627D8B63400C404C4 /* thedetectivesdayoff-it.json in Resources */ = {isa = PBXBuildFile; fileRef = 76B6CFB527D8B63400C404C4 /* thedetectivesdayoff-it.json */; };
 		D70CC07827CD6E0E00F1B791 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70CC07727CD6E0E00F1B791 /* NavigationView.swift */; };
 		D727478327C68B2B00608A8D /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727478227C68B2B00608A8D /* BookView.swift */; };
 		D772A1B227BFBBD9006EB1CE /* LargeCardLongevity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */; };
@@ -81,6 +82,7 @@
 		69CD2EC427BA65A700EACAC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		69CD2EE727BAD8BD00EACAC3 /* Wechat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wechat.swift; sourceTree = "<group>"; };
 		7632031027CE8AC200AF3740 /* zip_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zip_1.wav; sourceTree = "<group>"; };
+		76B6CFB527D8B63400C404C4 /* thedetectivesdayoff-it.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thedetectivesdayoff-it.json"; sourceTree = "<group>"; };
 		D70CC07727CD6E0E00F1B791 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		D727478227C68B2B00608A8D /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		D772A1B127BFBBD9006EB1CE /* LargeCardLongevity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardLongevity.swift; sourceTree = "<group>"; };
@@ -178,14 +180,15 @@
 		D772A1B327C1A723006EB1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */,
 				D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */,
+				694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */,
 				69B35AB527CE24C50072D8E0 /* footsteps_outside.wav */,
 				7632031027CE8AC200AF3740 /* zip_1.wav */,
 				69B35AB327CE23380072D8E0 /* bar.wav */,
 				69B35AB127CE23170072D8E0 /* pouring_liquor.wav */,
 				69B35AAF27CE23090072D8E0 /* Map.wav */,
 				69B35AAD27CE22FB0072D8E0 /* cigarette.wav */,
+				76B6CFB527D8B63400C404C4 /* thedetectivesdayoff-it.json */,
 				6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */,
 				D943B33627C3FBF100871C0B /* TitleSix.json */,
 				D943B33427C3FBF100871C0B /* TitleThree.json */,
@@ -346,6 +349,7 @@
 				7632031127CE8AC200AF3740 /* zip_1.wav in Resources */,
 				D943B33B27C3FBF100871C0B /* TitleSix.json in Resources */,
 				6978545727C4DC8D00128FC1 /* thedetectivesdayoff.json in Resources */,
+				76B6CFB627D8B63400C404C4 /* thedetectivesdayoff-it.json in Resources */,
 				D943B34027C4ECB000871C0B /* MortalPortrait.json in Resources */,
 				69B35AB027CE23090072D8E0 /* Map.wav in Resources */,
 			);
