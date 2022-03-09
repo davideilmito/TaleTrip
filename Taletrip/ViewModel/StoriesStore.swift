@@ -17,6 +17,8 @@ class StoriesStore : ObservableObject{
     
     @Published var storedAnswers : [(session: SwiftSpeech.Session, text: String)]   = []
     
+    
+    
     var tappedStory : Story {
         
         stories.filter { $0.showDetails == true }.first!
@@ -65,9 +67,25 @@ class StoriesStore : ObservableObject{
     
     init(){
         
+        let locale = Locale.current.languageCode!
+        
+        
+        
         self.stories = []
         //  ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
-        self.stories.append(load("thedetectivesdayoff.json"))
+        
+        if locale == "it"{
+            
+            
+            self.stories.append(load("thedetectivesdayoff-it.json"))
+            
+            
+        }else{
+            
+            self.stories.append(load("thedetectivesdayoff.json"))
+            
+        }
+        
         self.stories.append(load("MortalPortrait.json"))
         self.stories.append(load("TitleSix.json"))
         self.stories.append(load("TitleFive.json"))
