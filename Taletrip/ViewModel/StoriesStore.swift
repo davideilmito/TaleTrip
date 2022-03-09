@@ -67,14 +67,15 @@ class StoriesStore : ObservableObject{
     
     init(){
         
-        let locale = Locale.current.languageCode!
+        let locale = NSLocale.preferredLanguages[0]
         
-        
+     
+        print(locale)
         
         self.stories = []
         //  ALL THIS JSON SHOUL BE IN A SINGLE JSON FILE
         
-        if locale == "it"{
+        if locale == "it-IT" || locale == "it-CH" {
             
             
             self.stories.append(load("thedetectivesdayoff-it.json"))
