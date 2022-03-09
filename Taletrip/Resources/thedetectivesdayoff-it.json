@@ -2141,7 +2141,7 @@
                     ]
                 },
                 {
-                    "description": "Vedo che anche voi siete qui. Beh, ovviamente indagheremo su quello che è successo, ma aiutateci, ok? Ho delle informazioni che voi non avete, ma voi eravate qui durante l'omicidio, quindi anche il contrario è vero"",
+                    "description": "Vedo che anche voi siete qui. Beh, ovviamente indagheremo su quello che è successo, ma aiutateci, ok? Ho delle informazioni che voi non avete, ma voi eravate qui durante l'omicidio, quindi anche il contrario è vero",
                     "possibleVocalResponses": [
                         {
                             "description": "Ispeziona jukebox",
@@ -7916,3 +7916,4 @@
         "Il vecchio jukebox è bloccato in un loop. La stessa canzone si ripete ancora e ancora."
     ]
 }
+
