@@ -281,6 +281,9 @@ struct BookView: View {
                                 text2Speech(synthesizer, chunk: storiesStore.tappedStory.path[storiesStore.tappedStory.path.count - 1])
                                 
                             }
+                            let sound = Bundle.main.path(forResource: "hint", ofType: "wav")
+                            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                            self.audioPlayer.play()
                         }) {
                             Image(systemName: "lightbulb")
                         }
@@ -309,6 +312,7 @@ struct BookView: View {
                                     .map { index in
                                         storiesStore.storedAnswers[index].text = result.bestTranscription.formattedString + (result.isFinal ? "" : "...")
                                     }
+                                    
                                     storiesStore.appendStoryChunkFromVocalResponse()
                                    
                                 } handleError: { session, error in

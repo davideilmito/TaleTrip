@@ -19,6 +19,7 @@
 		6978545727C4DC8D00128FC1 /* thedetectivesdayoff.json in Resources */ = {isa = PBXBuildFile; fileRef = 6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */; };
 		6978545927C4DF2900128FC1 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978545827C4DF2900128FC1 /* SmallCardView.swift */; };
 		6978545B27C4DF2B00128FC1 /* SmallCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6978545A27C4DF2B00128FC1 /* SmallCardImage.swift */; };
+		69B0B52227D8F3100042525D /* hint.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69B0B52127D8F3100042525D /* hint.wav */; };
 		69B35AAE27CE22FB0072D8E0 /* cigarette.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69B35AAD27CE22FB0072D8E0 /* cigarette.wav */; };
 		69B35AB027CE23090072D8E0 /* Map.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69B35AAF27CE23090072D8E0 /* Map.wav */; };
 		69B35AB227CE23170072D8E0 /* pouring_liquor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69B35AB127CE23170072D8E0 /* pouring_liquor.wav */; };
@@ -70,6 +71,7 @@
 		6978545027C4DC8D00128FC1 /* thedetectivesdayoff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thedetectivesdayoff.json; sourceTree = "<group>"; };
 		6978545827C4DF2900128FC1 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
 		6978545A27C4DF2B00128FC1 /* SmallCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardImage.swift; sourceTree = "<group>"; };
+		69B0B52127D8F3100042525D /* hint.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hint.wav; sourceTree = "<group>"; };
 		69B35AAD27CE22FB0072D8E0 /* cigarette.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cigarette.wav; sourceTree = "<group>"; };
 		69B35AAF27CE23090072D8E0 /* Map.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Map.wav; sourceTree = "<group>"; };
 		69B35AB127CE23170072D8E0 /* pouring_liquor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pouring_liquor.wav; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		D772A1B327C1A723006EB1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				69B0B52127D8F3100042525D /* hint.wav */,
 				D7A7486627CE88F300F6A5BD /* NewYorkMedium-Bold.otf */,
 				694BDF3E27CF7BC9006E3747 /* Soundtrack.wav */,
 				69B35AB527CE24C50072D8E0 /* footsteps_outside.wav */,
@@ -325,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B0B52227D8F3100042525D /* hint.wav in Resources */,
 				69B35AB627CE24C50072D8E0 /* footsteps_outside.wav in Resources */,
 				6976B14B27B16A1600F08FEA /* Preview Assets.xcassets in Resources */,
 				69B35AB227CE23170072D8E0 /* pouring_liquor.wav in Resources */,
@@ -511,7 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
+				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
@@ -544,7 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Taletrip/Preview Content\"";
-				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
+				DEVELOPMENT_TEAM = 4V7K684LPH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Taletrip/Info.plist;
