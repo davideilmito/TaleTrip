@@ -1,4 +1,4 @@
-# TaleTrip
+# TaleTrip: a Voice First Game
 
 
 
