@@ -1,8 +1,7 @@
-# TaleTrip: a Voice First Game
+# TaleTrip
 
 
-
-
+## TaleTrip: a voice first game ##
 Choose one interactive adventure from the app's long list and play it whenever and wherever you want. Thanks to TaleTrip's voice recognition's features and ability to read you the story, everything is possible. These optional features
 make the game also very accessible to everyone. Connect your phone to your car and play with your family during a roadtrip, use your headphones while on the subway and use the in-story buttons instead of your voice; have fun as
 you prefer. We shape the story, you shape the outcome.
